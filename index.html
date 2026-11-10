@@ -46,6 +46,27 @@
         </a>
 
         <div class="topbar__meta">
+          <button
+            id="topbar-chat-btn"
+            type="button"
+            class="topbar-chat-btn"
+            aria-label="باز کردن چت مستقیم با آرنا"
+          >
+            <span id="topbar-chat-dot" class="topbar-chat-btn__dot" aria-hidden="true"></span>
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            <span>گفتگو با چت آرنا</span>
+          </button>
           <span class="pill-stack">
             <svg
               width="14"
@@ -209,6 +230,236 @@
       </div>
     </div>
 
+    <!-- Floating Arena Direct Chatbot Launcher -->
+    <button
+      id="chat-fab"
+      type="button"
+      class="chat-fab"
+      aria-expanded="false"
+      aria-controls="chat-panel"
+    >
+      <span class="chat-fab__icon" aria-hidden="true">
+        <svg
+          width="17"
+          height="17"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+        </svg>
+      </span>
+      <span>گفتگو با چت آرنا</span>
+      <span id="chat-fab-badge" class="chat-fab__badge" hidden>۰</span>
+    </button>
+
+    <!-- Floating Arena Direct Chatbot Window -->
+    <section
+      id="chat-panel"
+      class="chat-panel"
+      role="dialog"
+      aria-label="پنجره گفتگوی مستقیم با چت آرنا"
+      aria-hidden="true"
+    >
+      <header class="chat-head">
+        <div class="chat-head__identity">
+          <span class="chat-head__avatar" aria-hidden="true">
+            <svg
+              width="19"
+              height="19"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 3l1.9 5.8L20 10.8l-5.8 1.9L12 18.5l-1.9-5.8L4.3 10.8l5.8-2z" />
+            </svg>
+          </span>
+          <div class="chat-head__titles">
+            <span class="chat-head__title">پل مستقیم چت آرنا</span>
+            <span id="chat-status-pill" class="chat-status-pill">
+              <span class="chat-status-pill__dot" aria-hidden="true"></span>
+              <span id="chat-status-text">در حال بررسی اتصال...</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="chat-head__actions">
+          <button
+            id="chat-settings-toggle"
+            type="button"
+            class="chat-icon-btn"
+            title="تنظیم آدرس سرور زنده پیش‌نمایش آرنا"
+            aria-label="تنظیم اتصال سرور"
+          >
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+            </svg>
+          </button>
+          <button
+            id="chat-clear-btn"
+            type="button"
+            class="chat-icon-btn"
+            title="پاک‌سازی تاریخچه گفتگو"
+            aria-label="پاک‌سازی گفتگو"
+          >
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="3 6 5 6 21 6" />
+              <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+              <path d="M10 11v6M14 11v6" />
+            </svg>
+          </button>
+          <button
+            id="chat-close-btn"
+            type="button"
+            class="chat-icon-btn"
+            title="بستن پنجره چت"
+            aria-label="بستن پنجره چت"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.1"
+              stroke-linecap="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Collapsible Live Bridge URL Configuration (for GitHub Pages -> Arena Live Sandbox) -->
+      <div id="chat-settings-box" class="chat-settings" hidden>
+        <label for="chat-bridge-input" class="chat-settings__label">
+          آدرس سرور پیش‌نمایش زنده آرنا (اختیاری در GitHub Pages):
+        </label>
+        <div class="chat-settings__row">
+          <input
+            id="chat-bridge-input"
+            type="url"
+            class="chat-settings__input"
+            placeholder="https://8080-....e2b.app"
+          />
+          <button id="chat-bridge-save" type="button" class="chat-settings__btn">
+            اتصال زنده
+          </button>
+        </div>
+        <p class="chat-settings__hint">
+          در تب پیش‌نمایش آرنا اتصال به‌صورت خودکار برقرار است. در GitHub Pages با وارد کردن لینک پیش‌نمایش، چت به حالت زنده دوطرفه (SSE) تبدیل می‌شود.
+        </p>
+      </div>
+
+      <!-- Messages Stream -->
+      <div id="chat-stream" class="chat-stream" aria-live="polite"></div>
+
+      <!-- Pending Inbox Wake-up Helper -->
+      <div id="chat-wakeup-bar" class="chat-wakeup" hidden>
+        <span id="chat-wakeup-text">۱ پیام در صندوق آرنا منتظر بررسی است</span>
+        <button id="chat-wakeup-copy" type="button" class="chat-wakeup__btn">
+          کپی دستور بیدارباش
+        </button>
+      </div>
+
+      <!-- Quick Action Prompts -->
+      <div id="chat-quick-row" class="chat-quick-row" aria-label="پیشنهادهای سریع">
+        <button
+          type="button"
+          class="chat-quick-chip"
+          data-quick-prompt="بخش بعدی (هیرو اسلایدر صفحه اصلی) را ۱۰۰٪ با المنتور بدون کد بساز"
+        >
+          + ساخت بخش بعدی (هیرو)
+        </button>
+        <button
+          type="button"
+          class="chat-quick-chip"
+          data-quick-prompt="راهنمای نصب هدر در وودمارت"
+        >
+          راهنمای نصب هدر
+        </button>
+        <button
+          type="button"
+          class="chat-quick-chip"
+          data-quick-prompt="دانلود هدر"
+        >
+          دانلود فایل هدر
+        </button>
+      </div>
+
+      <!-- Attached Section Context Pill -->
+      <div id="chat-context-bar" class="chat-context-bar" hidden>
+        <span id="chat-context-label"></span>
+        <button
+          id="chat-context-remove"
+          type="button"
+          class="chat-context-bar__remove"
+          aria-label="حذف بخش انتخابی"
+        >
+          ×
+        </button>
+      </div>
+
+      <!-- Message Composer -->
+      <form id="chat-composer-form" class="chat-composer">
+        <textarea
+          id="chat-composer-input"
+          class="chat-composer__input"
+          rows="1"
+          maxlength="4000"
+          placeholder="پیام خود را برای این چت در آرنا بنویسید..."
+          aria-label="متن پیام به چت آرنا"
+        ></textarea>
+        <button
+          id="chat-composer-send"
+          type="submit"
+          class="chat-composer__send"
+          aria-label="ارسال پیام"
+          title="ارسال پیام (Enter)"
+        >
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="22" y1="2" x2="11" y2="13" />
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg>
+        </button>
+      </form>
+    </section>
+
     <!-- Toast Notification -->
     <div id="toast" class="toast" role="status" aria-live="polite">
       <svg
@@ -228,5 +479,6 @@
 
     <script src="./assets/catalog.js"></script>
     <script src="./assets/app.js"></script>
+    <script src="./assets/chat-widget.js"></script>
   </body>
 </html>

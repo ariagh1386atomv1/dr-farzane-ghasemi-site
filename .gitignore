@@ -4,8 +4,12 @@ darunik/
 .claude/
 agent/
 skills-lock.json
+.chat/
 
-# Node / Build / OS
+# Python / Node / Build / OS
+__pycache__/
+*.pyc
+.pytest_cache/
 node_modules/
 .next/
 dist/
