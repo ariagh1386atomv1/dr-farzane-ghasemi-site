@@ -1,0 +1,14 @@
+# Local reference extract & agent skills workspace
+darunik/
+.agents/
+.claude/
+agent/
+skills-lock.json
+
+# Node / Build / OS
+node_modules/
+.next/
+dist/
+out/
+.DS_Store
+*.log
