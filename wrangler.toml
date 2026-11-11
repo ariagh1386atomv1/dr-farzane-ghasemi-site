@@ -1,7 +1,18 @@
-# Cloudflare Pages Configuration (for Git-connected 24/7 Cloud Hosting + Functions)
+# Cloudflare Worker + Static Assets + Built-in Workers AI (Zero-Config Git Deploy!)
+# In Cloudflare Dashboard -> Workers & Pages -> Create -> Import a repository:
+#   Repository: ariagh1386atomv1/dr-farzane-ghasemi-site
+#   Production branch: arena/3c1e42b5-dr-farzane-ghasemi-site
+#   Build command: (leave empty)
+#   Deploy command: npx wrangler deploy
+
 name = "dr-farzane-ghasemi-studio"
+main = "cloudflare-worker/worker.js"
 compatibility_date = "2025-02-01"
-pages_build_output_dir = "."
+
+[assets]
+directory = "."
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
 
 [ai]
 binding = "AI"

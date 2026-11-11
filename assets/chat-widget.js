@@ -522,7 +522,11 @@
       candidates = [normalized];
     } else {
       const defWorker = normalizeBaseUrl(window.STUDIO_DEFAULT_WORKER_URL || "");
-      candidates = [...new Set([state.bridgeUrl, defWorker, ""])];
+      const host = String(window.location?.hostname || "").toLowerCase();
+      const isCloudflareHost = host.endsWith(".workers.dev") || host.endsWith(".pages.dev");
+      candidates = isCloudflareHost
+        ? [...new Set(["", safeGetStorage(STORAGE_BRIDGE_KEY), defWorker])]
+        : [...new Set([state.bridgeUrl, defWorker, ""])];
     }
 
     let statusJson = null;

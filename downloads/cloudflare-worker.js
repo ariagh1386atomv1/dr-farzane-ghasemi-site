@@ -568,6 +568,13 @@ async function handleChatRequest(request, env, ctx) {
     });
   }
 
+  try {
+    if (env && env.ASSETS && typeof env.ASSETS.fetch === "function") {
+      return await env.ASSETS.fetch(request);
+    }
+  } catch {
+    /* ignore asset fallback error */
+  }
   return jsonResponse(404, { ok: false, error: "مسیر مورد نظر در Worker یافت نشد." });
 }
 

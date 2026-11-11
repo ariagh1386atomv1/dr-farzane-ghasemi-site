@@ -9,6 +9,7 @@ darunik-complete-project.zip
 tools
 tests
 cloudflare-worker
+functions
 wrangler.toml
 skills-lock.json
 node_modules
