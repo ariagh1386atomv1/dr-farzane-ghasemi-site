@@ -1,0 +1,3534 @@
+{
+  "version": "0.4",
+  "title": "۰۱ — هدر چسبان و مگامنوی چندستونه داروخانه (نسخه نهایی ریسپانسیو)",
+  "type": "header",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "h1000001",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_title": "نوار بالای هدر (پشتیبانی و لینک‌های سریع — دسکتاپ)",
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1440,
+          "sizes": []
+        },
+        "min_height": {
+          "unit": "px",
+          "size": 36,
+          "sizes": []
+        },
+        "flex_direction": "row",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "flex_wrap": "nowrap",
+        "flex_gap": {
+          "column": "16",
+          "row": "0",
+          "isLinked": false,
+          "unit": "px"
+        },
+        "background_background": "classic",
+        "background_color": "#14212E",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "24",
+          "bottom": "0",
+          "left": "24",
+          "isLinked": false
+        },
+        "hide_tablet": "hidden-tablet",
+        "hide_mobile": "hidden-mobile"
+      },
+      "elements": [
+        {
+          "id": "h1000002",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "_title": "بخش راست نوار بالا (پشتیبانی، شرایط ارسال، سؤالات متداول)",
+            "content_width": "full",
+            "_flex_size": "none",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "flex_wrap": "nowrap",
+            "flex_gap": {
+              "column": "20",
+              "row": "0",
+              "isLinked": false,
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "h1000003",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "isInner": false,
+              "settings": {
+                "_title": "شماره تماس پشتیبانی داروخانه",
+                "view": "inline",
+                "icon_list": [
+                  {
+                    "_id": "tp1001",
+                    "text": "پشتیبانی: ۰۲۱-۰۰۰۰۰۰۰۰",
+                    "selected_icon": {
+                      "value": "fas fa-phone-alt",
+                      "library": "fa-solid"
+                    },
+                    "link": {
+                      "url": "tel:02100000000",
+                      "is_external": false,
+                      "nofollow": false
+                    }
+                  }
+                ],
+                "icon_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "icon_color": "#FFFFFF",
+                "text_color": "#FFFFFF",
+                "text_color_hover": "#99E6CD",
+                "text_indent": {
+                  "unit": "px",
+                  "size": 6,
+                  "sizes": []
+                },
+                "icon_typography_typography": "custom",
+                "icon_typography_font_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "icon_typography_font_weight": "700",
+                "_element_width": "auto"
+              },
+              "elements": []
+            },
+            {
+              "id": "h1000004",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "_title": "لینک ناوبری: شرایط ارسال",
+                "title": "شرایط ارسال",
+                "header_size": "span",
+                "align": "right",
+                "link": {
+                  "url": "/shipping/",
+                  "is_external": false,
+                  "nofollow": false
+                },
+                "title_color": "rgba(255, 255, 255, 0.76)",
+                "title_hover_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "typography_font_weight": "500",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.5,
+                  "sizes": []
+                },
+                "_element_width": "auto",
+                "_flex_size": "none"
+              },
+              "elements": []
+            },
+            {
+              "id": "h1000005",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "_title": "لینک ناوبری: سؤالات متداول",
+                "title": "سؤالات متداول",
+                "header_size": "span",
+                "align": "right",
+                "link": {
+                  "url": "/faq/",
+                  "is_external": false,
+                  "nofollow": false
+                },
+                "title_color": "rgba(255, 255, 255, 0.76)",
+                "title_hover_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "typography_font_weight": "500",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.5,
+                  "sizes": []
+                },
+                "_element_width": "auto",
+                "_flex_size": "none"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "h1000006",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "_title": "بخش چپ نوار بالا (پیگیری سفارش، مجله سلامت، درباره داروخانه)",
+            "content_width": "full",
+            "_flex_size": "none",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "flex_wrap": "nowrap",
+            "flex_gap": {
+              "column": "20",
+              "row": "0",
+              "isLinked": false,
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "h1000007",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "_title": "لینک ناوبری: پیگیری سفارش",
+                "title": "پیگیری سفارش",
+                "header_size": "span",
+                "align": "right",
+                "link": {
+                  "url": "/my-account/orders/",
+                  "is_external": false,
+                  "nofollow": false
+                },
+                "title_color": "rgba(255, 255, 255, 0.76)",
+                "title_hover_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "typography_font_weight": "500",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.5,
+                  "sizes": []
+                },
+                "_element_width": "auto",
+                "_flex_size": "none"
+              },
+              "elements": []
+            },
+            {
+              "id": "h1000008",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "_title": "لینک ناوبری: مجله سلامت",
+                "title": "مجله سلامت",
+                "header_size": "span",
+                "align": "right",
+                "link": {
+                  "url": "/blog/",
+                  "is_external": false,
+                  "nofollow": false
+                },
+                "title_color": "rgba(255, 255, 255, 0.76)",
+                "title_hover_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "typography_font_weight": "500",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.5,
+                  "sizes": []
+                },
+                "_element_width": "auto",
+                "_flex_size": "none"
+              },
+              "elements": []
+            },
+            {
+              "id": "h1000009",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "_title": "لینک ناوبری: درباره داروخانه",
+                "title": "درباره داروخانه",
+                "header_size": "span",
+                "align": "right",
+                "link": {
+                  "url": "/about/",
+                  "is_external": false,
+                  "nofollow": false
+                },
+                "title_color": "rgba(255, 255, 255, 0.76)",
+                "title_hover_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "typography_font_weight": "500",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.5,
+                  "sizes": []
+                },
+                "_element_width": "auto",
+                "_flex_size": "none"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "h1000010",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_title": "هدر چسبان اصلی داروخانه (شامل مگامنوی دسکتاپ و منوی آکاردئونی موبایل)",
+        "html_tag": "header",
+        "content_width": "full",
+        "flex_direction": "column",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "isLinked": true,
+          "unit": "px"
+        },
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "border_border": "solid",
+        "border_width": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "1",
+          "left": "0",
+          "isLinked": false
+        },
+        "border_color": "#E6ECF1",
+        "box_shadow_box_shadow_type": "yes",
+        "box_shadow_box_shadow": {
+          "horizontal": 0,
+          "vertical": 2,
+          "blur": 10,
+          "spread": 0,
+          "color": "rgba(20, 33, 46, 0.04)"
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "sticky": "top",
+        "sticky_on": [
+          "desktop",
+          "tablet",
+          "mobile"
+        ],
+        "sticky_offset": 0,
+        "z_index": 999
+      },
+      "elements": [
+        {
+          "id": "h1000011",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "_title": "ردیف میانی هدر (لوگو، جستجو، ورود و سبد خرید)",
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1440,
+              "sizes": []
+            },
+            "min_height": {
+              "unit": "px",
+              "size": 76,
+              "sizes": []
+            },
+            "min_height_tablet": {
+              "unit": "px",
+              "size": 64,
+              "sizes": []
+            },
+            "min_height_mobile": {
+              "unit": "px",
+              "size": 0,
+              "sizes": []
+            },
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "flex_align_items": "center",
+            "flex_wrap": "nowrap",
+            "flex_wrap_tablet": "nowrap",
+            "flex_wrap_mobile": "wrap",
+            "flex_gap": {
+              "column": "20",
+              "row": "10",
+              "isLinked": false,
+              "unit": "px"
+            },
+            "flex_gap_tablet": {
+              "column": "12",
+              "row": "8",
+              "isLinked": false,
+              "unit": "px"
+            },
+            "flex_gap_mobile": {
+              "column": "8",
+              "row": "10",
+              "isLinked": false,
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "12",
+              "right": "24",
+              "bottom": "12",
+              "left": "24",
+              "isLinked": false
+            },
+            "padding_tablet": {
+              "unit": "px",
+              "top": "10",
+              "right": "16",
+              "bottom": "10",
+              "left": "16",
+              "isLinked": false
+            },
+            "padding_mobile": {
+              "unit": "px",
+              "top": "10",
+              "right": "12",
+              "bottom": "10",
+              "left": "12",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "h1000012",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "_title": "گروه راست میانی (دکمه منوی موبایل/تبلت + لوگوی داروخانه)",
+                "content_width": "full",
+                "_flex_size": "none",
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "flex_wrap": "nowrap",
+                "flex_gap": {
+                  "column": "10",
+                  "row": "0",
+                  "isLinked": false,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "h1000013",
+                  "elType": "widget",
+                  "widgetType": "mega-menu",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "منوی کشویی موبایل و تبلت (آکاردئونی)",
+                    "menu_name": "منوی موبایل داروخانه",
+                    "menu_items": [
+                      {
+                        "_id": "mb101",
+                        "item_title": "دسته‌بندی محصولات",
+                        "item_link": {
+                          "url": "/shop/",
+                          "is_external": false,
+                          "nofollow": false
+                        },
+                        "item_dropdown_content": "yes",
+                        "item_icon": {
+                          "value": "fas fa-th-large",
+                          "library": "fa-solid"
+                        }
+                      },
+                      {
+                        "_id": "mb102",
+                        "item_title": "تخفیف‌ها و پیشنهاد ویژه",
+                        "item_link": {
+                          "url": "/shop/?on_sale=1",
+                          "is_external": false,
+                          "nofollow": false
+                        },
+                        "item_dropdown_content": "no",
+                        "item_icon": {
+                          "value": "fas fa-fire",
+                          "library": "fa-solid"
+                        }
+                      },
+                      {
+                        "_id": "mb103",
+                        "item_title": "پرفروش‌ترین‌ها",
+                        "item_link": {
+                          "url": "/shop/?orderby=popularity",
+                          "is_external": false,
+                          "nofollow": false
+                        },
+                        "item_dropdown_content": "no",
+                        "item_icon": {
+                          "value": "",
+                          "library": ""
+                        }
+                      },
+                      {
+                        "_id": "mb104",
+                        "item_title": "جدیدترین محصولات",
+                        "item_link": {
+                          "url": "/shop/?orderby=date",
+                          "is_external": false,
+                          "nofollow": false
+                        },
+                        "item_dropdown_content": "no",
+                        "item_icon": {
+                          "value": "",
+                          "library": ""
+                        }
+                      },
+                      {
+                        "_id": "mb105",
+                        "item_title": "برندهای داروخانه",
+                        "item_link": {
+                          "url": "/shop/",
+                          "is_external": false,
+                          "nofollow": false
+                        },
+                        "item_dropdown_content": "no",
+                        "item_icon": {
+                          "value": "",
+                          "library": ""
+                        }
+                      },
+                      {
+                        "_id": "mb106",
+                        "item_title": "تجهیزات پزشکی",
+                        "item_link": {
+                          "url": "/product-category/medical-devices/",
+                          "is_external": false,
+                          "nofollow": false
+                        },
+                        "item_dropdown_content": "no",
+                        "item_icon": {
+                          "value": "",
+                          "library": ""
+                        }
+                      },
+                      {
+                        "_id": "mb107",
+                        "item_title": "مجله سلامت",
+                        "item_link": {
+                          "url": "/blog/",
+                          "is_external": false,
+                          "nofollow": false
+                        },
+                        "item_dropdown_content": "no",
+                        "item_icon": {
+                          "value": "",
+                          "library": ""
+                        }
+                      },
+                      {
+                        "_id": "mb108",
+                        "item_title": "تماس با ما و مشاوره داروساز",
+                        "item_link": {
+                          "url": "/contact/",
+                          "is_external": false,
+                          "nofollow": false
+                        },
+                        "item_dropdown_content": "no",
+                        "item_icon": {
+                          "value": "",
+                          "library": ""
+                        }
+                      }
+                    ],
+                    "item_layout": "dropdown",
+                    "toggle_align": "flex-start",
+                    "menu_toggle_icon_normal": {
+                      "value": "fas fa-bars",
+                      "library": "fa-solid"
+                    },
+                    "menu_toggle_icon_active": {
+                      "value": "fas fa-times",
+                      "library": "fa-solid"
+                    },
+                    "style_menu_toggle_icon_size": {
+                      "unit": "px",
+                      "size": 18,
+                      "sizes": []
+                    },
+                    "menu_toggle_icon_color_normal": "#35485C",
+                    "menu_toggle_icon_color_hover": "#068462",
+                    "menu_toggle_icon_color_active": "#068462",
+                    "menu_toggle_icon_background_color_normal_background": "classic",
+                    "menu_toggle_icon_background_color_normal_color": "#FFFFFF",
+                    "menu_toggle_icon_border_normal_border": "solid",
+                    "menu_toggle_icon_border_normal_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "menu_toggle_icon_border_normal_color": "#E6ECF1",
+                    "menu_toggle_icon_border_radius": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12",
+                      "isLinked": true
+                    },
+                    "menu_toggle_icon__padding": {
+                      "unit": "px",
+                      "top": "10",
+                      "right": "10",
+                      "bottom": "10",
+                      "left": "10",
+                      "isLinked": true
+                    },
+                    "menu_toggle_icon_distance_from_dropdown": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "dropdown_menu_item_text_color_normal": "#14212E",
+                    "dropdown_menu_item_text_color_active": "#068462",
+                    "menu_item_title_typography_typography": "custom",
+                    "menu_item_title_typography_font_size": {
+                      "unit": "px",
+                      "size": 13.5,
+                      "sizes": []
+                    },
+                    "menu_item_title_typography_font_weight": "700",
+                    "_element_width": "auto",
+                    "_flex_size": "none",
+                    "hide_desktop": "hidden-desktop"
+                  },
+                  "elements": [
+                    {
+                      "id": "h1200010",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "_title": "زیرشاخه دسته‌بندی‌ها در موبایل و تبلت",
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_gap": {
+                          "column": "6",
+                          "row": "6",
+                          "isLinked": true,
+                          "unit": "px"
+                        },
+                        "background_background": "classic",
+                        "background_color": "#FFFFFF",
+                        "padding": {
+                          "unit": "px",
+                          "top": "10",
+                          "right": "14",
+                          "bottom": "12",
+                          "left": "14",
+                          "isLinked": false
+                        }
+                      },
+                      "elements": [
+                        {
+                          "id": "h1200101",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "_title": "مکمل‌های ورزشی (پروتئین، کراتین، BCAA)",
+                            "title": "مکمل‌های ورزشی (پروتئین، کراتین، BCAA)",
+                            "header_size": "span",
+                            "align": "right",
+                            "link": {
+                              "url": "/product-category/sports-supplements/",
+                              "is_external": false,
+                              "nofollow": false
+                            },
+                            "title_color": "#35485C",
+                            "title_hover_color": "#068462",
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 12.5,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "600",
+                            "_padding": {
+                              "unit": "px",
+                              "top": "8",
+                              "right": "10",
+                              "bottom": "8",
+                              "left": "10",
+                              "isLinked": false
+                            },
+                            "_background_background": "classic",
+                            "_background_color": "#F4F7F9",
+                            "_border_radius": {
+                              "unit": "px",
+                              "top": "10",
+                              "right": "10",
+                              "bottom": "10",
+                              "left": "10",
+                              "isLinked": true
+                            }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "h1200102",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "_title": "ویتامین و مکمل روزانه (مولتی‌ویتامین، امگا ۳)",
+                            "title": "ویتامین و مکمل روزانه (مولتی‌ویتامین، امگا ۳)",
+                            "header_size": "span",
+                            "align": "right",
+                            "link": {
+                              "url": "/product-category/vitamins/",
+                              "is_external": false,
+                              "nofollow": false
+                            },
+                            "title_color": "#35485C",
+                            "title_hover_color": "#068462",
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 12.5,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "600",
+                            "_padding": {
+                              "unit": "px",
+                              "top": "8",
+                              "right": "10",
+                              "bottom": "8",
+                              "left": "10",
+                              "isLinked": false
+                            },
+                            "_background_background": "classic",
+                            "_background_color": "#F4F7F9",
+                            "_border_radius": {
+                              "unit": "px",
+                              "top": "10",
+                              "right": "10",
+                              "bottom": "10",
+                              "left": "10",
+                              "isLinked": true
+                            }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "h1200103",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "_title": "مراقبت پوست (ضدآفتاب، سرم، مرطوب‌کننده)",
+                            "title": "مراقبت پوست (ضدآفتاب، سرم، مرطوب‌کننده)",
+                            "header_size": "span",
+                            "align": "right",
+                            "link": {
+                              "url": "/product-category/skin-care/",
+                              "is_external": false,
+                              "nofollow": false
+                            },
+                            "title_color": "#35485C",
+                            "title_hover_color": "#068462",
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 12.5,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "600",
+                            "_padding": {
+                              "unit": "px",
+                              "top": "8",
+                              "right": "10",
+                              "bottom": "8",
+                              "left": "10",
+                              "isLinked": false
+                            },
+                            "_background_background": "classic",
+                            "_background_color": "#F4F7F9",
+                            "_border_radius": {
+                              "unit": "px",
+                              "top": "10",
+                              "right": "10",
+                              "bottom": "10",
+                              "left": "10",
+                              "isLinked": true
+                            }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "h1200104",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "_title": "مراقبت مو (شامپو، ضدریزش، سرم مو)",
+                            "title": "مراقبت مو (شامپو، ضدریزش، سرم مو)",
+                            "header_size": "span",
+                            "align": "right",
+                            "link": {
+                              "url": "/product-category/hair-care/",
+                              "is_external": false,
+                              "nofollow": false
+                            },
+                            "title_color": "#35485C",
+                            "title_hover_color": "#068462",
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 12.5,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "600",
+                            "_padding": {
+                              "unit": "px",
+                              "top": "8",
+                              "right": "10",
+                              "bottom": "8",
+                              "left": "10",
+                              "isLinked": false
+                            },
+                            "_background_background": "classic",
+                            "_background_color": "#F4F7F9",
+                            "_border_radius": {
+                              "unit": "px",
+                              "top": "10",
+                              "right": "10",
+                              "bottom": "10",
+                              "left": "10",
+                              "isLinked": true
+                            }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "h1200105",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "_title": "بهداشت دهان و دندان",
+                            "title": "بهداشت دهان و دندان",
+                            "header_size": "span",
+                            "align": "right",
+                            "link": {
+                              "url": "/product-category/oral-care/",
+                              "is_external": false,
+                              "nofollow": false
+                            },
+                            "title_color": "#35485C",
+                            "title_hover_color": "#068462",
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 12.5,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "600",
+                            "_padding": {
+                              "unit": "px",
+                              "top": "8",
+                              "right": "10",
+                              "bottom": "8",
+                              "left": "10",
+                              "isLinked": false
+                            },
+                            "_background_background": "classic",
+                            "_background_color": "#F4F7F9",
+                            "_border_radius": {
+                              "unit": "px",
+                              "top": "10",
+                              "right": "10",
+                              "bottom": "10",
+                              "left": "10",
+                              "isLinked": true
+                            }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "h1200106",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "_title": "تجهیزات پزشکی خانگی (فشارسنج، قند خون)",
+                            "title": "تجهیزات پزشکی خانگی (فشارسنج، قند خون)",
+                            "header_size": "span",
+                            "align": "right",
+                            "link": {
+                              "url": "/product-category/medical-devices/",
+                              "is_external": false,
+                              "nofollow": false
+                            },
+                            "title_color": "#35485C",
+                            "title_hover_color": "#068462",
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 12.5,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "600",
+                            "_padding": {
+                              "unit": "px",
+                              "top": "8",
+                              "right": "10",
+                              "bottom": "8",
+                              "left": "10",
+                              "isLinked": false
+                            },
+                            "_background_background": "classic",
+                            "_background_color": "#F4F7F9",
+                            "_border_radius": {
+                              "unit": "px",
+                              "top": "10",
+                              "right": "10",
+                              "bottom": "10",
+                              "left": "10",
+                              "isLinked": true
+                            }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "h1200107",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "_title": "مادر و کودک (کرم، شامپو، شیشه شیر)",
+                            "title": "مادر و کودک (کرم، شامپو، شیشه شیر)",
+                            "header_size": "span",
+                            "align": "right",
+                            "link": {
+                              "url": "/product-category/mom-baby/",
+                              "is_external": false,
+                              "nofollow": false
+                            },
+                            "title_color": "#35485C",
+                            "title_hover_color": "#068462",
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 12.5,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "600",
+                            "_padding": {
+                              "unit": "px",
+                              "top": "8",
+                              "right": "10",
+                              "bottom": "8",
+                              "left": "10",
+                              "isLinked": false
+                            },
+                            "_background_background": "classic",
+                            "_background_color": "#F4F7F9",
+                            "_border_radius": {
+                              "unit": "px",
+                              "top": "10",
+                              "right": "10",
+                              "bottom": "10",
+                              "left": "10",
+                              "isLinked": true
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "h1200202",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "_title": "آیتم موبایل: تخفیف‌ها و پیشنهاد ویژه",
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "h1200203",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "_title": "آیتم موبایل: پرفروش‌ترین‌ها",
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "h1200204",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "_title": "آیتم موبایل: جدیدترین محصولات",
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "h1200205",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "_title": "آیتم موبایل: برندهای داروخانه",
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "h1200206",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "_title": "آیتم موبایل: تجهیزات پزشکی",
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "h1200207",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "_title": "آیتم موبایل: مجله سلامت",
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "h1200208",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "_title": "آیتم موبایل: تماس با ما و مشاوره داروساز",
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "h1000014",
+                  "elType": "widget",
+                  "widgetType": "theme-site-logo",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "لوگوی داروخانه (قابل تنظیم از هویت سایت)",
+                    "image_size": "full",
+                    "link_to": "site_url",
+                    "align": "right",
+                    "width": {
+                      "unit": "px",
+                      "size": 132,
+                      "sizes": []
+                    },
+                    "width_tablet": {
+                      "unit": "px",
+                      "size": 112,
+                      "sizes": []
+                    },
+                    "width_mobile": {
+                      "unit": "px",
+                      "size": 98,
+                      "sizes": []
+                    },
+                    "_element_width": "auto",
+                    "_flex_size": "none"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "h1000015",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "_title": "باکس جستجوی محصولات داروخانه",
+                "content_width": "full",
+                "_flex_size": "grow",
+                "_flex_grow": 1,
+                "_flex_size_tablet": "grow",
+                "_flex_grow_tablet": 1,
+                "_flex_size_mobile": "custom",
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "_flex_order_mobile": "end",
+                "flex_direction": "column",
+                "flex_justify_content": "center",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "h1000016",
+                  "elType": "widget",
+                  "widgetType": "search-form",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "فرم جستجوی محصولات",
+                    "skin": "classic",
+                    "placeholder": "نام محصول، برند یا بیماری موردنظر را جستجو کنید...",
+                    "button_type": "text",
+                    "button_text": "جستجو",
+                    "size": {
+                      "unit": "px",
+                      "size": 44,
+                      "sizes": []
+                    },
+                    "size_mobile": {
+                      "unit": "px",
+                      "size": 40,
+                      "sizes": []
+                    },
+                    "input_typography_typography": "custom",
+                    "input_typography_font_size": {
+                      "unit": "px",
+                      "size": 13,
+                      "sizes": []
+                    },
+                    "input_typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "input_typography_font_weight": "500",
+                    "input_text_color": "#14212E",
+                    "input_background_color": "#F4F7F9",
+                    "input_border_color": "#E6ECF1",
+                    "input_text_color_focus": "#14212E",
+                    "input_background_color_focus": "#FFFFFF",
+                    "input_border_color_focus": "#0FA47A",
+                    "button_border_width": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "button_typography_typography": "custom",
+                    "button_typography_font_size": {
+                      "unit": "px",
+                      "size": 12.5,
+                      "sizes": []
+                    },
+                    "button_typography_font_weight": "800",
+                    "button_text_color": "#FFFFFF",
+                    "button_background_color": "#068462",
+                    "button_text_color_hover": "#FFFFFF",
+                    "button_background_color_hover": "#066A50"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "h1000017",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "_title": "دکمه‌های کاربری چپ (ورود | ثبت‌نام، علاقه‌مندی و سبد خرید)",
+                "content_width": "full",
+                "_flex_size": "none",
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "flex_wrap": "nowrap",
+                "flex_gap": {
+                  "column": "8",
+                  "row": "0",
+                  "isLinked": false,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "h1000018",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "دکمه ورود | ثبت‌نام (دسکتاپ)",
+                    "text": "ورود | ثبت‌نام",
+                    "link": {
+                      "url": "/my-account/",
+                      "is_external": false,
+                      "nofollow": false
+                    },
+                    "selected_icon": {
+                      "value": "far fa-user",
+                      "library": "fa-regular"
+                    },
+                    "icon_align": "right",
+                    "icon_indent": {
+                      "unit": "px",
+                      "size": 8,
+                      "sizes": []
+                    },
+                    "size": "sm",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 13,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "button_text_color": "#14212E",
+                    "background_background": "classic",
+                    "background_color": "#FFFFFF",
+                    "hover_color": "#068462",
+                    "button_background_hover_background": "classic",
+                    "button_background_hover_color": "#EAFAF4",
+                    "button_hover_border_color": "#5FD4B0",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "border_color": "#E6ECF1",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12",
+                      "isLinked": true
+                    },
+                    "text_padding": {
+                      "unit": "px",
+                      "top": "11",
+                      "right": "14",
+                      "bottom": "11",
+                      "left": "14",
+                      "isLinked": false
+                    },
+                    "_element_width": "auto",
+                    "hide_tablet": "hidden-tablet",
+                    "hide_mobile": "hidden-mobile"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "h1000019",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "دکمه حساب کاربری (موبایل و تبلت)",
+                    "text": "",
+                    "link": {
+                      "url": "/my-account/",
+                      "is_external": false,
+                      "nofollow": false
+                    },
+                    "selected_icon": {
+                      "value": "far fa-user",
+                      "library": "fa-regular"
+                    },
+                    "icon_indent": {
+                      "unit": "px",
+                      "size": 0,
+                      "sizes": []
+                    },
+                    "size": "sm",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "button_text_color": "#35485C",
+                    "background_background": "classic",
+                    "background_color": "#FFFFFF",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "border_color": "#E6ECF1",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12",
+                      "isLinked": true
+                    },
+                    "text_padding": {
+                      "unit": "px",
+                      "top": "11",
+                      "right": "12",
+                      "bottom": "11",
+                      "left": "12",
+                      "isLinked": false
+                    },
+                    "_element_width": "auto",
+                    "hide_desktop": "hidden-desktop"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "h1000020",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "دکمه علاقه‌مندی‌ها",
+                    "text": "",
+                    "link": {
+                      "url": "/wishlist/",
+                      "is_external": false,
+                      "nofollow": false
+                    },
+                    "selected_icon": {
+                      "value": "far fa-heart",
+                      "library": "fa-regular"
+                    },
+                    "icon_indent": {
+                      "unit": "px",
+                      "size": 0,
+                      "sizes": []
+                    },
+                    "size": "sm",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "button_text_color": "#35485C",
+                    "background_background": "classic",
+                    "background_color": "#FFFFFF",
+                    "hover_color": "#E5322D",
+                    "button_background_hover_background": "classic",
+                    "button_background_hover_color": "#FEF2F2",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "border_color": "#E6ECF1",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12",
+                      "isLinked": true
+                    },
+                    "text_padding": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "13",
+                      "bottom": "12",
+                      "left": "13",
+                      "isLinked": false
+                    },
+                    "_element_width": "auto",
+                    "hide_mobile": "hidden-mobile"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "h1000021",
+                  "elType": "widget",
+                  "widgetType": "woocommerce-menu-cart",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "سبد خرید کشویی ووکامرس (دکمه مربعی سبز)",
+                    "icon": "cart-medium",
+                    "items_indicator": "bubble",
+                    "hide_empty_indicator": "yes",
+                    "show_subtotal": "",
+                    "cart_type": "side-cart",
+                    "open_cart": "click",
+                    "side_cart_alignment": "start",
+                    "close_cart_button_show": "yes",
+                    "view_cart_button_show": "yes",
+                    "checkout_button_show": "yes",
+                    "automatically_open_cart": "yes",
+                    "automatically_update_cart": "yes",
+                    "toggle_button_text_color": "#FFFFFF",
+                    "toggle_button_icon_color": "#FFFFFF",
+                    "toggle_button_background_color": "#0FA47A",
+                    "toggle_button_hover_text_color": "#FFFFFF",
+                    "toggle_button_hover_icon_color": "#FFFFFF",
+                    "toggle_button_hover_background_color": "#068462",
+                    "toggle_button_border_width": {
+                      "unit": "px",
+                      "size": 0,
+                      "sizes": []
+                    },
+                    "toggle_button_border_radius": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "toggle_button_padding": {
+                      "unit": "px",
+                      "top": "11",
+                      "right": "13",
+                      "bottom": "11",
+                      "left": "13",
+                      "isLinked": false
+                    },
+                    "_element_width": "auto"
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "h1000022",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "_title": "ردیف پایین ناوبری و مگامنو (دسکتاپ)",
+            "html_tag": "nav",
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1440,
+              "sizes": []
+            },
+            "min_height": {
+              "unit": "px",
+              "size": 44,
+              "sizes": []
+            },
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "flex_align_items": "center",
+            "flex_wrap": "nowrap",
+            "flex_gap": {
+              "column": "16",
+              "row": "0",
+              "isLinked": false,
+              "unit": "px"
+            },
+            "background_background": "classic",
+            "background_color": "#FFFFFF",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "border_color": "#EEF2F6",
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "24",
+              "bottom": "0",
+              "left": "24",
+              "isLinked": false
+            },
+            "hide_tablet": "hidden-tablet",
+            "hide_mobile": "hidden-mobile"
+          },
+          "elements": [
+            {
+              "id": "h1000023",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "_title": "گروه لینک‌های راست نوار ناوبری (دقیقاً مطابق هدر دارونیک)",
+                "content_width": "full",
+                "_flex_size": "none",
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "flex_wrap": "nowrap",
+                "flex_gap": {
+                  "column": "24",
+                  "row": "0",
+                  "isLinked": false,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                }
+              },
+              "elements": [
+                {
+                  "id": "h1000024",
+                  "elType": "widget",
+                  "widgetType": "mega-menu",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "مگامنو دسته‌بندی محصولات (بازشونده تمام‌عرض)",
+                    "menu_name": "دسته‌بندی محصولات داروخانه",
+                    "menu_items": [
+                      {
+                        "_id": "dm1001",
+                        "item_title": "دسته‌بندی محصولات",
+                        "item_link": {
+                          "url": "/shop/",
+                          "is_external": false,
+                          "nofollow": false
+                        },
+                        "item_dropdown_content": "yes",
+                        "item_icon": {
+                          "value": "fas fa-bars",
+                          "library": "fa-solid"
+                        }
+                      }
+                    ],
+                    "content_width": "full_width",
+                    "item_layout": "horizontal",
+                    "item_position_horizontal": "start",
+                    "open_on": "hover",
+                    "breakpoint_selector": "none",
+                    "menu_item_icon": {
+                      "value": "",
+                      "library": ""
+                    },
+                    "icon_position": "inline-start",
+                    "icon_size": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "icon_spacing": {
+                      "unit": "px",
+                      "size": 8,
+                      "sizes": []
+                    },
+                    "icon_color": "#14212E",
+                    "icon_color_hover": "#068462",
+                    "icon_color_active": "#068462",
+                    "menu_item_title_typography_typography": "custom",
+                    "menu_item_title_typography_font_size": {
+                      "unit": "px",
+                      "size": 13.5,
+                      "sizes": []
+                    },
+                    "menu_item_title_typography_font_weight": "800",
+                    "menu_item_title_text_color_normal": "#14212E",
+                    "menu_item_title_text_color_hover": "#068462",
+                    "menu_item_title_text_color_active": "#068462",
+                    "menu_item_title_padding": {
+                      "unit": "px",
+                      "top": "11",
+                      "right": "0",
+                      "bottom": "11",
+                      "left": "4",
+                      "isLinked": false
+                    },
+                    "content_padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "_element_width": "auto",
+                    "_flex_size": "none"
+                  },
+                  "elements": [
+                    {
+                      "id": "h1100003",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "_title": "پنل بازشونده مگامنوی دسکتاپ (۴ ستون + برندها + کارت تخفیف)",
+                        "content_width": "boxed",
+                        "boxed_width": {
+                          "unit": "px",
+                          "size": 1440,
+                          "sizes": []
+                        },
+                        "flex_direction": "row",
+                        "flex_wrap": "nowrap",
+                        "flex_align_items": "stretch",
+                        "flex_gap": {
+                          "column": "22",
+                          "row": "16",
+                          "isLinked": false,
+                          "unit": "px"
+                        },
+                        "background_background": "classic",
+                        "background_color": "#FFFFFF",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "1",
+                          "right": "0",
+                          "bottom": "1",
+                          "left": "0",
+                          "isLinked": false
+                        },
+                        "border_color": "#E6ECF1",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "16",
+                          "left": "16",
+                          "isLinked": false
+                        },
+                        "box_shadow_box_shadow_type": "yes",
+                        "box_shadow_box_shadow": {
+                          "horizontal": 0,
+                          "vertical": 16,
+                          "blur": 34,
+                          "spread": 0,
+                          "color": "rgba(20, 33, 46, 0.10)"
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "20",
+                          "right": "24",
+                          "bottom": "20",
+                          "left": "24",
+                          "isLinked": false
+                        }
+                      },
+                      "elements": [
+                        {
+                          "id": "h1100004",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "_title": "بخش راست مگامنو (ستون‌های دسته + برندهای پرطرفدار)",
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_justify_content": "space-between",
+                            "flex_gap": {
+                              "column": "14",
+                              "row": "14",
+                              "isLinked": true,
+                              "unit": "px"
+                            },
+                            "padding": {
+                              "unit": "px",
+                              "top": "0",
+                              "right": "0",
+                              "bottom": "0",
+                              "left": "0",
+                              "isLinked": true
+                            },
+                            "_flex_size": "grow",
+                            "_flex_grow": 1
+                          },
+                          "elements": [
+                            {
+                              "id": "h1100005",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "_title": "ردیف ۴ ستون دسته‌بندی‌های مگامنو",
+                                "content_width": "full",
+                                "flex_direction": "row",
+                                "flex_wrap": "nowrap",
+                                "flex_align_items": "stretch",
+                                "flex_gap": {
+                                  "column": "20",
+                                  "row": "12",
+                                  "isLinked": false,
+                                  "unit": "px"
+                                },
+                                "padding": {
+                                  "unit": "px",
+                                  "top": "0",
+                                  "right": "0",
+                                  "bottom": "0",
+                                  "left": "0",
+                                  "isLinked": true
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "h1100010",
+                                  "elType": "container",
+                                  "isInner": true,
+                                  "settings": {
+                                    "_title": "ستون مگامنو: مکمل‌های ورزشی",
+                                    "content_width": "full",
+                                    "flex_direction": "column",
+                                    "flex_gap": {
+                                      "column": "6",
+                                      "row": "6",
+                                      "isLinked": true,
+                                      "unit": "px"
+                                    },
+                                    "padding": {
+                                      "unit": "px",
+                                      "top": "4",
+                                      "right": "4",
+                                      "bottom": "4",
+                                      "left": "4",
+                                      "isLinked": true
+                                    },
+                                    "_flex_size": "grow",
+                                    "_flex_grow": 1
+                                  },
+                                  "elements": [
+                                    {
+                                      "id": "h1100101",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "مکمل‌های ورزشی",
+                                        "title": "مکمل‌های ورزشی",
+                                        "header_size": "h4",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/sports-supplements/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#066A50",
+                                        "title_hover_color": "#0FA47A",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 13.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "800",
+                                        "_padding": {
+                                          "unit": "px",
+                                          "top": "0",
+                                          "right": "0",
+                                          "bottom": "8",
+                                          "left": "0",
+                                          "isLinked": false
+                                        },
+                                        "_border_border": "solid",
+                                        "_border_width": {
+                                          "unit": "px",
+                                          "top": "0",
+                                          "right": "0",
+                                          "bottom": "1",
+                                          "left": "0",
+                                          "isLinked": false
+                                        },
+                                        "_border_color": "#EEF2F6"
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100102",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "پروتئین و وی",
+                                        "title": "پروتئین و وی",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/sports-supplements/protein/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100103",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "کراتین مونوهیدرات",
+                                        "title": "کراتین مونوهیدرات",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/sports-supplements/creatine/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100104",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "آمینو اسید و BCAA",
+                                        "title": "آمینو اسید و BCAA",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/sports-supplements/amino/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100105",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "گینر و افزایش وزن",
+                                        "title": "گینر و افزایش وزن",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/sports-supplements/mass-gainer/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100106",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "پیش از تمرین",
+                                        "title": "پیش از تمرین",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/sports-supplements/pre-workout/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "h1100020",
+                                  "elType": "container",
+                                  "isInner": true,
+                                  "settings": {
+                                    "_title": "ستون مگامنو: ویتامین و مکمل",
+                                    "content_width": "full",
+                                    "flex_direction": "column",
+                                    "flex_gap": {
+                                      "column": "6",
+                                      "row": "6",
+                                      "isLinked": true,
+                                      "unit": "px"
+                                    },
+                                    "padding": {
+                                      "unit": "px",
+                                      "top": "4",
+                                      "right": "4",
+                                      "bottom": "4",
+                                      "left": "4",
+                                      "isLinked": true
+                                    },
+                                    "_flex_size": "grow",
+                                    "_flex_grow": 1
+                                  },
+                                  "elements": [
+                                    {
+                                      "id": "h1100107",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "ویتامین و مکمل",
+                                        "title": "ویتامین و مکمل",
+                                        "header_size": "h4",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/vitamins/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#066A50",
+                                        "title_hover_color": "#0FA47A",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 13.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "800",
+                                        "_padding": {
+                                          "unit": "px",
+                                          "top": "0",
+                                          "right": "0",
+                                          "bottom": "8",
+                                          "left": "0",
+                                          "isLinked": false
+                                        },
+                                        "_border_border": "solid",
+                                        "_border_width": {
+                                          "unit": "px",
+                                          "top": "0",
+                                          "right": "0",
+                                          "bottom": "1",
+                                          "left": "0",
+                                          "isLinked": false
+                                        },
+                                        "_border_color": "#EEF2F6"
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100108",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "مولتی‌ویتامین روزانه",
+                                        "title": "مولتی‌ویتامین روزانه",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/vitamins/multivitamin/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100109",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "ویتامین D و کلسیم",
+                                        "title": "ویتامین D و کلسیم",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/vitamins/vitamin-d/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100110",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "ویتامین C و ایمنی",
+                                        "title": "ویتامین C و ایمنی",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/vitamins/vitamin-c/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100111",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "امگا ۳ و روغن ماهی",
+                                        "title": "امگا ۳ و روغن ماهی",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/vitamins/omega/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100112",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "کلاژن و مکمل بانوان",
+                                        "title": "کلاژن و مکمل بانوان",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/vitamins/women-supplement/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "h1100030",
+                                  "elType": "container",
+                                  "isInner": true,
+                                  "settings": {
+                                    "_title": "ستون مگامنو: مراقبت پوست و مو",
+                                    "content_width": "full",
+                                    "flex_direction": "column",
+                                    "flex_gap": {
+                                      "column": "6",
+                                      "row": "6",
+                                      "isLinked": true,
+                                      "unit": "px"
+                                    },
+                                    "padding": {
+                                      "unit": "px",
+                                      "top": "4",
+                                      "right": "4",
+                                      "bottom": "4",
+                                      "left": "4",
+                                      "isLinked": true
+                                    },
+                                    "_flex_size": "grow",
+                                    "_flex_grow": 1
+                                  },
+                                  "elements": [
+                                    {
+                                      "id": "h1100113",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "مراقبت پوست و مو",
+                                        "title": "مراقبت پوست و مو",
+                                        "header_size": "h4",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/skin-care/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#066A50",
+                                        "title_hover_color": "#0FA47A",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 13.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "800",
+                                        "_padding": {
+                                          "unit": "px",
+                                          "top": "0",
+                                          "right": "0",
+                                          "bottom": "8",
+                                          "left": "0",
+                                          "isLinked": false
+                                        },
+                                        "_border_border": "solid",
+                                        "_border_width": {
+                                          "unit": "px",
+                                          "top": "0",
+                                          "right": "0",
+                                          "bottom": "1",
+                                          "left": "0",
+                                          "isLinked": false
+                                        },
+                                        "_border_color": "#EEF2F6"
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100114",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "ضدآفتاب تخصصی",
+                                        "title": "ضدآفتاب تخصصی",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/skin-care/sunscreen/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100115",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "سرم ویتامین C و نیاسینامید",
+                                        "title": "سرم ویتامین C و نیاسینامید",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/skin-care/face-serum/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100116",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "مرطوب‌کننده و آبرسان",
+                                        "title": "مرطوب‌کننده و آبرسان",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/skin-care/moisturizer/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100117",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "شامپو و ضدریزش مو",
+                                        "title": "شامپو و ضدریزش مو",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/hair-care/shampoo/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100118",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "بهداشت دهان و دندان",
+                                        "title": "بهداشت دهان و دندان",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/oral-care/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "h1100040",
+                                  "elType": "container",
+                                  "isInner": true,
+                                  "settings": {
+                                    "_title": "ستون مگامنو: تجهیزات پزشکی و کودک",
+                                    "content_width": "full",
+                                    "flex_direction": "column",
+                                    "flex_gap": {
+                                      "column": "6",
+                                      "row": "6",
+                                      "isLinked": true,
+                                      "unit": "px"
+                                    },
+                                    "padding": {
+                                      "unit": "px",
+                                      "top": "4",
+                                      "right": "4",
+                                      "bottom": "4",
+                                      "left": "4",
+                                      "isLinked": true
+                                    },
+                                    "_flex_size": "grow",
+                                    "_flex_grow": 1
+                                  },
+                                  "elements": [
+                                    {
+                                      "id": "h1100119",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "تجهیزات پزشکی و کودک",
+                                        "title": "تجهیزات پزشکی و کودک",
+                                        "header_size": "h4",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/medical-devices/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#066A50",
+                                        "title_hover_color": "#0FA47A",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 13.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "800",
+                                        "_padding": {
+                                          "unit": "px",
+                                          "top": "0",
+                                          "right": "0",
+                                          "bottom": "8",
+                                          "left": "0",
+                                          "isLinked": false
+                                        },
+                                        "_border_border": "solid",
+                                        "_border_width": {
+                                          "unit": "px",
+                                          "top": "0",
+                                          "right": "0",
+                                          "bottom": "1",
+                                          "left": "0",
+                                          "isLinked": false
+                                        },
+                                        "_border_color": "#EEF2F6"
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100120",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "فشارسنج بازویی و مچی",
+                                        "title": "فشارسنج بازویی و مچی",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/medical-devices/blood-pressure/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100121",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "تست قند خون و نوار",
+                                        "title": "تست قند خون و نوار",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/medical-devices/glucose/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100122",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "تب‌سنج و پالس اکسیمتر",
+                                        "title": "تب‌سنج و پالس اکسیمتر",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/medical-devices/thermometer/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100123",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "مراقبت پوست کودک",
+                                        "title": "مراقبت پوست کودک",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/mom-baby/baby-skin/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    },
+                                    {
+                                      "id": "h1100124",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "isInner": false,
+                                      "settings": {
+                                        "_title": "شیشه شیر و تغذیه نوزاد",
+                                        "title": "شیشه شیر و تغذیه نوزاد",
+                                        "header_size": "span",
+                                        "align": "right",
+                                        "link": {
+                                          "url": "/product-category/mom-baby/baby-feeding/",
+                                          "is_external": false,
+                                          "nofollow": false
+                                        },
+                                        "title_color": "#35485C",
+                                        "title_hover_color": "#068462",
+                                        "typography_typography": "custom",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 12.5,
+                                          "sizes": []
+                                        },
+                                        "typography_font_weight": "600",
+                                        "typography_line_height": {
+                                          "unit": "em",
+                                          "size": 1.85,
+                                          "sizes": []
+                                        }
+                                      },
+                                      "elements": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "h1100006",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "_title": "نوار برندهای پرطرفدار پایین مگامنو",
+                                "content_width": "full",
+                                "flex_direction": "row",
+                                "flex_wrap": "wrap",
+                                "flex_align_items": "center",
+                                "flex_gap": {
+                                  "column": "8",
+                                  "row": "8",
+                                  "isLinked": true,
+                                  "unit": "px"
+                                },
+                                "border_border": "solid",
+                                "border_width": {
+                                  "unit": "px",
+                                  "top": "1",
+                                  "right": "0",
+                                  "bottom": "0",
+                                  "left": "0",
+                                  "isLinked": false
+                                },
+                                "border_color": "#EEF2F6",
+                                "padding": {
+                                  "unit": "px",
+                                  "top": "12",
+                                  "right": "0",
+                                  "bottom": "0",
+                                  "left": "0",
+                                  "isLinked": false
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "h1100200",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "_title": "برچسب برندهای پرطرفدار",
+                                    "title": "برندهای پرطرفدار:",
+                                    "header_size": "span",
+                                    "title_color": "#64798E",
+                                    "typography_typography": "custom",
+                                    "typography_font_size": {
+                                      "unit": "px",
+                                      "size": 12,
+                                      "sizes": []
+                                    },
+                                    "typography_font_weight": "700",
+                                    "_element_width": "auto"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "h1100201",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "_title": "برند نوتری‌لایف",
+                                    "title": "نوتری‌لایف",
+                                    "header_size": "span",
+                                    "link": {
+                                      "url": "/shop/?filtering=1&filter_brand=nutrilife",
+                                      "is_external": false,
+                                      "nofollow": false
+                                    },
+                                    "title_color": "#35485C",
+                                    "title_hover_color": "#068462",
+                                    "typography_typography": "custom",
+                                    "typography_font_size": {
+                                      "unit": "px",
+                                      "size": 11.5,
+                                      "sizes": []
+                                    },
+                                    "typography_font_weight": "700",
+                                    "_background_background": "classic",
+                                    "_background_color": "#F4F7F9",
+                                    "_padding": {
+                                      "unit": "px",
+                                      "top": "4",
+                                      "right": "11",
+                                      "bottom": "4",
+                                      "left": "11",
+                                      "isLinked": false
+                                    },
+                                    "_border_radius": {
+                                      "unit": "px",
+                                      "top": "999",
+                                      "right": "999",
+                                      "bottom": "999",
+                                      "left": "999",
+                                      "isLinked": true
+                                    },
+                                    "_element_width": "auto"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "h1100202",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "_title": "برند ویتاپلاس",
+                                    "title": "ویتاپلاس",
+                                    "header_size": "span",
+                                    "link": {
+                                      "url": "/shop/?filtering=1&filter_brand=vitaplus",
+                                      "is_external": false,
+                                      "nofollow": false
+                                    },
+                                    "title_color": "#35485C",
+                                    "title_hover_color": "#068462",
+                                    "typography_typography": "custom",
+                                    "typography_font_size": {
+                                      "unit": "px",
+                                      "size": 11.5,
+                                      "sizes": []
+                                    },
+                                    "typography_font_weight": "700",
+                                    "_background_background": "classic",
+                                    "_background_color": "#F4F7F9",
+                                    "_padding": {
+                                      "unit": "px",
+                                      "top": "4",
+                                      "right": "11",
+                                      "bottom": "4",
+                                      "left": "11",
+                                      "isLinked": false
+                                    },
+                                    "_border_radius": {
+                                      "unit": "px",
+                                      "top": "999",
+                                      "right": "999",
+                                      "bottom": "999",
+                                      "left": "999",
+                                      "isLinked": true
+                                    },
+                                    "_element_width": "auto"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "h1100203",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "_title": "برند درماکر",
+                                    "title": "درماکر",
+                                    "header_size": "span",
+                                    "link": {
+                                      "url": "/shop/?filtering=1&filter_brand=dermacare",
+                                      "is_external": false,
+                                      "nofollow": false
+                                    },
+                                    "title_color": "#35485C",
+                                    "title_hover_color": "#068462",
+                                    "typography_typography": "custom",
+                                    "typography_font_size": {
+                                      "unit": "px",
+                                      "size": 11.5,
+                                      "sizes": []
+                                    },
+                                    "typography_font_weight": "700",
+                                    "_background_background": "classic",
+                                    "_background_color": "#F4F7F9",
+                                    "_padding": {
+                                      "unit": "px",
+                                      "top": "4",
+                                      "right": "11",
+                                      "bottom": "4",
+                                      "left": "11",
+                                      "isLinked": false
+                                    },
+                                    "_border_radius": {
+                                      "unit": "px",
+                                      "top": "999",
+                                      "right": "999",
+                                      "bottom": "999",
+                                      "left": "999",
+                                      "isLinked": true
+                                    },
+                                    "_element_width": "auto"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "h1100204",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "_title": "برند بیوتی‌لب",
+                                    "title": "بیوتی‌لب",
+                                    "header_size": "span",
+                                    "link": {
+                                      "url": "/shop/?filtering=1&filter_brand=beautylab",
+                                      "is_external": false,
+                                      "nofollow": false
+                                    },
+                                    "title_color": "#35485C",
+                                    "title_hover_color": "#068462",
+                                    "typography_typography": "custom",
+                                    "typography_font_size": {
+                                      "unit": "px",
+                                      "size": 11.5,
+                                      "sizes": []
+                                    },
+                                    "typography_font_weight": "700",
+                                    "_background_background": "classic",
+                                    "_background_color": "#F4F7F9",
+                                    "_padding": {
+                                      "unit": "px",
+                                      "top": "4",
+                                      "right": "11",
+                                      "bottom": "4",
+                                      "left": "11",
+                                      "isLinked": false
+                                    },
+                                    "_border_radius": {
+                                      "unit": "px",
+                                      "top": "999",
+                                      "right": "999",
+                                      "bottom": "999",
+                                      "left": "999",
+                                      "isLinked": true
+                                    },
+                                    "_element_width": "auto"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "h1100205",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "_title": "برند مدیکو هلث",
+                                    "title": "مدیکو هلث",
+                                    "header_size": "span",
+                                    "link": {
+                                      "url": "/shop/?filtering=1&filter_brand=medico-health",
+                                      "is_external": false,
+                                      "nofollow": false
+                                    },
+                                    "title_color": "#35485C",
+                                    "title_hover_color": "#068462",
+                                    "typography_typography": "custom",
+                                    "typography_font_size": {
+                                      "unit": "px",
+                                      "size": 11.5,
+                                      "sizes": []
+                                    },
+                                    "typography_font_weight": "700",
+                                    "_background_background": "classic",
+                                    "_background_color": "#F4F7F9",
+                                    "_padding": {
+                                      "unit": "px",
+                                      "top": "4",
+                                      "right": "11",
+                                      "bottom": "4",
+                                      "left": "11",
+                                      "isLinked": false
+                                    },
+                                    "_border_radius": {
+                                      "unit": "px",
+                                      "top": "999",
+                                      "right": "999",
+                                      "bottom": "999",
+                                      "left": "999",
+                                      "isLinked": true
+                                    },
+                                    "_element_width": "auto"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "h1100206",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "_title": "برند کیدزکر",
+                                    "title": "کیدزکر",
+                                    "header_size": "span",
+                                    "link": {
+                                      "url": "/shop/?filtering=1&filter_brand=kidscare",
+                                      "is_external": false,
+                                      "nofollow": false
+                                    },
+                                    "title_color": "#35485C",
+                                    "title_hover_color": "#068462",
+                                    "typography_typography": "custom",
+                                    "typography_font_size": {
+                                      "unit": "px",
+                                      "size": 11.5,
+                                      "sizes": []
+                                    },
+                                    "typography_font_weight": "700",
+                                    "_background_background": "classic",
+                                    "_background_color": "#F4F7F9",
+                                    "_padding": {
+                                      "unit": "px",
+                                      "top": "4",
+                                      "right": "11",
+                                      "bottom": "4",
+                                      "left": "11",
+                                      "isLinked": false
+                                    },
+                                    "_border_radius": {
+                                      "unit": "px",
+                                      "top": "999",
+                                      "right": "999",
+                                      "bottom": "999",
+                                      "left": "999",
+                                      "isLinked": true
+                                    },
+                                    "_element_width": "auto"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "h1100207",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "_title": "برند اوراکلین",
+                                    "title": "اوراکلین",
+                                    "header_size": "span",
+                                    "link": {
+                                      "url": "/shop/?filtering=1&filter_brand=oraclean",
+                                      "is_external": false,
+                                      "nofollow": false
+                                    },
+                                    "title_color": "#35485C",
+                                    "title_hover_color": "#068462",
+                                    "typography_typography": "custom",
+                                    "typography_font_size": {
+                                      "unit": "px",
+                                      "size": 11.5,
+                                      "sizes": []
+                                    },
+                                    "typography_font_weight": "700",
+                                    "_background_background": "classic",
+                                    "_background_color": "#F4F7F9",
+                                    "_padding": {
+                                      "unit": "px",
+                                      "top": "4",
+                                      "right": "11",
+                                      "bottom": "4",
+                                      "left": "11",
+                                      "isLinked": false
+                                    },
+                                    "_border_radius": {
+                                      "unit": "px",
+                                      "top": "999",
+                                      "right": "999",
+                                      "bottom": "999",
+                                      "left": "999",
+                                      "isLinked": true
+                                    },
+                                    "_element_width": "auto"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "h1100050",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "_title": "کارت سبز تخفیف هفته سلامت (ستون چپ مگامنو)",
+                            "html_tag": "a",
+                            "link": {
+                              "url": "/shop/?on_sale=1",
+                              "is_external": false,
+                              "nofollow": false
+                            },
+                            "content_width": "full",
+                            "width": {
+                              "unit": "px",
+                              "size": 250,
+                              "sizes": []
+                            },
+                            "min_height": {
+                              "unit": "px",
+                              "size": 205,
+                              "sizes": []
+                            },
+                            "flex_direction": "column",
+                            "flex_justify_content": "space-between",
+                            "flex_align_items": "flex-start",
+                            "background_background": "gradient",
+                            "background_color": "#068462",
+                            "background_color_b": "#085340",
+                            "background_gradient_angle": {
+                              "unit": "deg",
+                              "size": 145,
+                              "sizes": []
+                            },
+                            "border_radius": {
+                              "unit": "px",
+                              "top": "16",
+                              "right": "16",
+                              "bottom": "16",
+                              "left": "16",
+                              "isLinked": true
+                            },
+                            "padding": {
+                              "unit": "px",
+                              "top": "18",
+                              "right": "18",
+                              "bottom": "18",
+                              "left": "18",
+                              "isLinked": true
+                            },
+                            "_flex_size": "none"
+                          },
+                          "elements": [
+                            {
+                              "id": "h1100051",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "_title": "متن کارت کمپین",
+                                "content_width": "full",
+                                "flex_direction": "column",
+                                "flex_gap": {
+                                  "column": "6",
+                                  "row": "6",
+                                  "isLinked": true,
+                                  "unit": "px"
+                                },
+                                "padding": {
+                                  "unit": "px",
+                                  "top": "0",
+                                  "right": "0",
+                                  "bottom": "0",
+                                  "left": "0",
+                                  "isLinked": true
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "h1100052",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "_title": "تیتر هفته سلامت داروخانه",
+                                    "title": "هفته سلامت داروخانه",
+                                    "header_size": "h4",
+                                    "align": "right",
+                                    "title_color": "#FFFFFF",
+                                    "typography_typography": "custom",
+                                    "typography_font_size": {
+                                      "unit": "px",
+                                      "size": 14,
+                                      "sizes": []
+                                    },
+                                    "typography_font_weight": "800"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "h1100053",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "_title": "توضیح کمپین سلامت",
+                                    "title": "تا ۴۰٪ تخفیف روی مکمل‌ها، مراقبت پوست و تجهیزات پزشکی",
+                                    "header_size": "p",
+                                    "align": "right",
+                                    "title_color": "rgba(255, 255, 255, 0.84)",
+                                    "typography_typography": "custom",
+                                    "typography_font_size": {
+                                      "unit": "px",
+                                      "size": 11.5,
+                                      "sizes": []
+                                    },
+                                    "typography_font_weight": "500",
+                                    "typography_line_height": {
+                                      "unit": "em",
+                                      "size": 1.85,
+                                      "sizes": []
+                                    }
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "h1100054",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "_title": "دکمه مشاهده پیشنهادها",
+                                "title": "مشاهده پیشنهادها",
+                                "header_size": "span",
+                                "title_color": "#066A50",
+                                "typography_typography": "custom",
+                                "typography_font_size": {
+                                  "unit": "px",
+                                  "size": 11.5,
+                                  "sizes": []
+                                },
+                                "typography_font_weight": "800",
+                                "_background_background": "classic",
+                                "_background_color": "#FFFFFF",
+                                "_padding": {
+                                  "unit": "px",
+                                  "top": "6",
+                                  "right": "12",
+                                  "bottom": "6",
+                                  "left": "12",
+                                  "isLinked": false
+                                },
+                                "_border_radius": {
+                                  "unit": "px",
+                                  "top": "8",
+                                  "right": "8",
+                                  "bottom": "8",
+                                  "left": "8",
+                                  "isLinked": true
+                                },
+                                "_element_width": "auto"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "h1000070",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "لینک ناوبری: پرفروش‌ترین‌ها",
+                    "title": "پرفروش‌ترین‌ها",
+                    "header_size": "span",
+                    "align": "right",
+                    "link": {
+                      "url": "/shop/?orderby=popularity",
+                      "is_external": false,
+                      "nofollow": false
+                    },
+                    "title_color": "#14212E",
+                    "title_hover_color": "#068462",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 13,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.5,
+                      "sizes": []
+                    },
+                    "_element_width": "auto",
+                    "_flex_size": "none"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "h1000071",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "لینک ناوبری: تخفیف‌ها و پیشنهاد ویژه",
+                    "title": "تخفیف‌ها و پیشنهاد ویژه",
+                    "header_size": "span",
+                    "align": "right",
+                    "link": {
+                      "url": "/shop/?on_sale=1",
+                      "is_external": false,
+                      "nofollow": false
+                    },
+                    "title_color": "#E5322D",
+                    "title_hover_color": "#B91C1C",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 13,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "800",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.5,
+                      "sizes": []
+                    },
+                    "_element_width": "auto",
+                    "_flex_size": "none"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "h1000072",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "لینک ناوبری: جدیدترین‌ها",
+                    "title": "جدیدترین‌ها",
+                    "header_size": "span",
+                    "align": "right",
+                    "link": {
+                      "url": "/shop/?orderby=date",
+                      "is_external": false,
+                      "nofollow": false
+                    },
+                    "title_color": "#14212E",
+                    "title_hover_color": "#068462",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 13,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.5,
+                      "sizes": []
+                    },
+                    "_element_width": "auto",
+                    "_flex_size": "none"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "h1000073",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "لینک ناوبری: برندها",
+                    "title": "برندها",
+                    "header_size": "span",
+                    "align": "right",
+                    "link": {
+                      "url": "/shop/",
+                      "is_external": false,
+                      "nofollow": false
+                    },
+                    "title_color": "#14212E",
+                    "title_hover_color": "#068462",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 13,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.5,
+                      "sizes": []
+                    },
+                    "_element_width": "auto",
+                    "_flex_size": "none"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "h1000074",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "لینک ناوبری: تجهیزات پزشکی",
+                    "title": "تجهیزات پزشکی",
+                    "header_size": "span",
+                    "align": "right",
+                    "link": {
+                      "url": "/product-category/medical-devices/",
+                      "is_external": false,
+                      "nofollow": false
+                    },
+                    "title_color": "#14212E",
+                    "title_hover_color": "#068462",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 13,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.5,
+                      "sizes": []
+                    },
+                    "_element_width": "auto",
+                    "_flex_size": "none"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "h1000075",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "لینک ناوبری: مجله سلامت",
+                    "title": "مجله سلامت",
+                    "header_size": "span",
+                    "align": "right",
+                    "link": {
+                      "url": "/blog/",
+                      "is_external": false,
+                      "nofollow": false
+                    },
+                    "title_color": "#14212E",
+                    "title_hover_color": "#068462",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 13,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.5,
+                      "sizes": []
+                    },
+                    "_element_width": "auto",
+                    "_flex_size": "none"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "h1000076",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "_title": "لینک ناوبری: تماس با ما",
+                "title": "تماس با ما",
+                "header_size": "span",
+                "align": "right",
+                "link": {
+                  "url": "/contact/",
+                  "is_external": false,
+                  "nofollow": false
+                },
+                "title_color": "#64798E",
+                "title_hover_color": "#068462",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 13,
+                  "sizes": []
+                },
+                "typography_font_weight": "600",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.5,
+                  "sizes": []
+                },
+                "_element_width": "auto",
+                "_flex_size": "none"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

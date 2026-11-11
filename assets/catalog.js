@@ -172,122 +172,207 @@ const SAMPLE_SPORTS_PRODUCTS = [
 
 window.STUDIO_CATALOG = [
   {
-    id: "01-header",
+    id: "01-header-megamenu",
     step: "بخش ۰۱",
     category: "layout",
-    categoryLabel: "سربرگ و پابرگ",
-    title: "هدر اختصاصی داروخانه آنلاین دکتر فرزانه قاسمی",
+    categoryLabel: "سربرگ و مگامنو",
+    title: "هدر چسبان و مگامنوی چندستونه دارونیک (نسخه نهایی ریسپانسیو · بدون کد)",
     description:
-      "هدر سه‌لایه و چسبان (Sticky) طراحی‌شده ۱۰۰٪ با کانتینرها و ویجت‌های بومی المنتور و المنتور پرو — بدون حتی یک خط کد یا Custom CSS. شامل نوار پشتیبانی بالا، لوگوی داینامیک، فرم جستجو، دکمه حساب کاربری و علاقه‌مندی، سبد خرید کشویی ووکامرس و ۴ جایگاه فهرست وردپرس (نوار بالا، دسته‌بندی‌ها، منوی اصلی و منوی همبرگری موبایل).",
-    fileName: "01-header-dr-farzane-ghasemi.json",
-    filePath: "./elementor-templates/01-header-dr-farzane-ghasemi.json",
+      "نسخه یکپارچه، نهایی و ۱۰۰٪ ریسپانسیو هدر و مگامنوی داروخانه دقیقاً منطبق با تصویر مرجع دارونیک — بدون نیاز به هیچ فایل فهرست جداگانه یا یک خط کد! شامل نوار پشتیبانی تیره بالا، لوگوی داینامیک، باکس جستجوی کپسولی با دکمه سبز «جستجو»، دکمه «ورود | ثبت‌نام»، علاقه‌مندی و سبد خرید مربعی سبز، ردیف منوی افقی دقیق همراه با «تخفیف‌ها و پیشنهاد ویژه» قرمز، مگامنوی ۴ ستونه دسته‌بندی محصولات + برندهای پرطرفدار + کارت سبز هفته سلامت در دسکتاپ، و چیدمان اختصاصی تک‌خطی در تبلت و ۲ خطی همراه با منوی آکاردئونی در موبایل.",
+    fileName: "01-header-megamenu-dr-farzane-ghasemi.json",
+    filePath: "./elementor-templates/01-header-megamenu-dr-farzane-ghasemi.json",
     format: "JSON",
-    fileSize: "۴۳ کیلوبایت",
+    fileSize: "۱۵۹ کیلوبایت",
     noCode: true,
     target: "المنتور پرو ← پوسته‌ساز (Theme Builder) ← سربرگ (Header)",
     widgets: [
-      "Site Logo",
-      "۴× فهرست وردپرس (Nav Menu)",
-      "فرم جستجو",
-      "سبد خرید کشویی (Menu Cart)",
-      "Flexbox Container ریسپانسیو",
+      "Elementor Pro Mega Menu (دسکتاپ + موبایل)",
+      "۴ ستون دسته‌بندی + برندهای پرطرفدار",
+      "کارت کمپین هفته سلامت",
+      "Site Logo & Search Form",
+      "سبد خرید مربعی ووکامرس",
+    ],
+    screenshots: [
+      {
+        label: "برد کامل همه ابعاد (PNG)",
+        path: "./demo-media/screenshots/00-header-megamenu-responsive-showcase.png",
+        file: "00-header-megamenu-responsive-showcase.png",
+      },
+      {
+        label: "دسکتاپ عادی ۱۴۴۰px",
+        path: "./demo-media/screenshots/01-header-desktop-1440.png",
+        file: "01-header-desktop-1440.png",
+      },
+      {
+        label: "دسکتاپ مگامنوی باز",
+        path: "./demo-media/screenshots/02-header-megamenu-open-1440.png",
+        file: "02-header-megamenu-open-1440.png",
+      },
+      {
+        label: "تبلت ۷۶۸px",
+        path: "./demo-media/screenshots/03-header-tablet-768.png",
+        file: "03-header-tablet-768.png",
+      },
+      {
+        label: "موبایل ۳۹۰px (بسته + باز)",
+        path: "./demo-media/screenshots/04-header-mobile-390.png",
+        file: "04-header-mobile-390.png",
+      },
     ],
     guideSteps: [
       {
-        title: "فعال بودن کانتینر در المنتور",
-        desc: "از پیشخوان وردپرس به «المنتور ← تنظیمات ← ویژگی‌ها (Features)» بروید و مطمئن شوید گزینه Flexbox Container فعال (Active) باشد.",
+        title: "بررسی فعال بودن Menu و Nested Elements",
+        desc: "در پیشخوان وردپرس به «المنتور ← تنظیمات ← ویژگی‌ها (Features)» بروید و مطمئن شوید گزینه‌های Flexbox Container، Nested Elements و Menu در وضعیت فعال (Active) قرار دارند.",
       },
       {
-        title: "درون‌ریزی فایل JSON در پوسته‌ساز",
-        desc: "وارد «قالب‌ها (Templates) ← پوسته‌ساز (Theme Builder) ← سربرگ (Header)» شوید، روی دکمه «درون‌ریزی قالب‌ها (Import Templates)» در بالای صفحه کلیک کنید و فایل 01-header-dr-farzane-ghasemi.json را آپلود کنید.",
+        title: "درون‌ریزی یک‌کلیکی فایل هدر نهایی",
+        desc: "از مسیر «قالب‌ها ← پوسته‌ساز (Theme Builder) ← سربرگ (Header)» روی درون‌ریزی قالب‌ها بزنید و فایل 01-header-megamenu-dr-farzane-ghasemi.json را آپلود کنید. تمام منوهای دسکتاپ، مگامنو و منوی آکاردئونی موبایل از پیش داخل همین فایل چیده شده‌اند و نیازی به ساخت فهرست جداگانه نیست.",
       },
       {
-        title: "انتخاب فهرست‌های سایت خودتان",
-        desc: "در ویرایشگر المنتور، پنل «ساختار (Structure)» را باز کنید. تمام لایه‌ها نام فارسی دارند؛ روی ۴ ویجت فهرست (نوار بالا، دسته‌بندی محصولات، منوی اصلی و منوی موبایل) کلیک کنید و فهرست دلخواهتان را از لیست کشویی انتخاب کنید.",
+        title: "ویرایش چشمی لینک‌ها، لوگو و شماره تماس",
+        desc: "لوگوی سایت از «سفارشی‌سازی ← هویت سایت» به شکل خودکار خوانده می‌شود. برای تغییر هر لینک یا زیرشاخه مگامنو، کافی است روی ویجت «دسته‌بندی محصولات» کلیک کنید تا پنل ۴ ستونه باز شود و هر عنوان یا آدرس را مستقیم تغییر دهید.",
       },
       {
-        title: "انتشار روی کل سایت (سازگاری با وودمارت)",
-        desc: "روی دکمه «انتشار (Publish)» کلیک کنید، شرط نمایش (Add Condition) را روی «کل سایت (Entire Site)» بگذارید و ذخیره کنید تا جایگزین هدر پیش‌فرض وودمارت شود.",
+        title: "انتشار روی کل سایت (Entire Site)",
+        desc: "روی دکمه «انتشار (Publish)» کلیک کرده و شرط نمایش (Add Condition) را روی «کل سایت (Entire Site)» قرار دهید تا هدر چسبان در دسکتاپ، تبلت و موبایل جایگزین هدر پیش‌فرض وودمارت شود.",
       },
     ],
     guideTip:
-      "نکته مخصوص قالب وودمارت: برای فعال‌سازی نوار پایین موبایل (خانه، فروشگاه، تخفیف‌ها، علاقه‌مندی، حساب من) بدون هیچ کدی به «تنظیمات قالب وودمارت ← عمومی ← نوار پایین موبایل (Mobile bottom navbar)» بروید و آن را روشن کنید.",
+      "تمام ۵ اسکرین‌شات ریسپانسیو رندرشده (دسکتاپ عادی، مگامنوی باز، تبلت ۷۶۸px و موبایل ۳۹۰px) هم روی همین کارت برای بررسی و دانلود مستقیم قرار داده شده‌اند.",
     renderPreview: function () {
       return `
-        <div class="prv-header-wrap">
-          <div class="prv-topstrip">
-            <div class="prv-topstrip__group">
-              <span class="prv-topstrip__item">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5FD4B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span class="num">پشتیبانی و مشاوره دارویی: ۰۲۱-۰۰۰۰۰۰۰۰</span>
+        <div class="prv-hdr2">
+          <!-- Row 1: Dark Navy Top Strip (Desktop) -->
+          <div class="prv-hdr2__top">
+            <div class="prv-hdr2__top-grp">
+              <span style="color:#fff;font-weight:800;display:inline-flex;align-items:center;gap:5px">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.2 15.2 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+                <span class="num">پشتیبانی: ۰۲۱-۰۰۰۰۰۰۰۰</span>
               </span>
-              <span class="prv-topstrip__item" style="color:#94a3b8">شرایط ارسال سریع کشوری</span>
-              <span class="prv-topstrip__item" style="color:#94a3b8">سؤالات متداول</span>
+              <span>شرایط ارسال</span>
+              <span>سؤالات متداول</span>
             </div>
-            <div class="prv-topstrip__group" style="color:#cbd5e1">
+            <div class="prv-hdr2__top-grp">
               <span>پیگیری سفارش</span>
               <span>مجله سلامت</span>
               <span>درباره داروخانه</span>
             </div>
           </div>
 
-          <div class="prv-mainbar">
-            <span class="prv-burger" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-            </span>
-
-            <div class="prv-logo">
-              <span class="prv-logo__fa">داروخانه <em>دکتر قاسمی</em><span class="prv-logo__dot"></span></span>
-              <span class="prv-logo__en">DR. FARZANE GHASEMI</span>
+          <!-- Row 2: Sticky Middle Row -->
+          <div class="prv-hdr2__mid">
+            <div class="prv-hdr2__brand">
+              <span class="prv-hdr2__burger" title="منوی موبایل و تبلت">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="8" y1="17" x2="20" y2="17"/></svg>
+              </span>
+              <div class="prv-hdr2__logo">
+                <span class="prv-hdr2__logo-fa"><span class="prv-hdr2__logo-dot"></span>دارونیک</span>
+                <span class="prv-hdr2__logo-en">DARUNIK</span>
+              </div>
             </div>
 
-            <div class="prv-search">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9AABBB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-inline-start:8px;flex-shrink:0"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              <span class="prv-search__text">نام محصول، برند، مکمل یا کاربرد موردنظر را جستجو کنید...</span>
-              <span class="prv-search__btn">جستجو</span>
+            <div class="prv-hdr2__search">
+              <span class="prv-hdr2__search-ph">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9AABBB" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7.5"/><line x1="20" y1="20" x2="16.4" y2="16.4"/></svg>
+                <span>نام محصول، برند یا بیماری موردنظر را جستجو کنید...</span>
+              </span>
+              <span class="prv-hdr2__search-btn">جستجو</span>
             </div>
 
-            <div class="prv-actions">
-              <span class="prv-btn-outline">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                ورود | ثبت‌نام
+            <div class="prv-hdr2__acts">
+              <span class="prv-hdr2__login">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>ورود | ثبت‌نام</span>
               </span>
-              <span class="prv-btn-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              <span class="prv-hdr2__user-mob" title="حساب کاربری">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               </span>
-              <span class="prv-btn-cart">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-                <span class="prv-cart-price num">۱,۴۸۰,۰۰۰ تومان</span>
-                <span class="prv-cart-badge">۲</span>
+              <span class="prv-hdr2__wish" title="علاقه‌مندی‌ها">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </span>
+              <span class="prv-hdr2__cart" title="سبد خرید">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/><path d="M2 3h3l2.4 11.5a1.8 1.8 0 0 0 1.8 1.5h8.6a1.8 1.8 0 0 0 1.8-1.4L21 7H6"/></svg>
               </span>
             </div>
           </div>
 
-          <div class="prv-navbar">
-            <span class="prv-cat-pill">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
-              دسته‌بندی محصولات
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-            </span>
-            <div class="prv-navlinks">
+          <!-- Row 3: Exact Darunik Desktop Nav Bar -->
+          <div class="prv-hdr2__nav">
+            <div class="prv-hdr2__nav-r">
+              <span class="prv-hdr2__cat-trig">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="7" y1="18" x2="21" y2="18"/></svg>
+                <span>دسته‌بندی محصولات</span>
+              </span>
               <span>پرفروش‌ترین‌ها</span>
+              <span style="color:#e5322d;font-weight:800">تخفیف‌ها و پیشنهاد ویژه</span>
               <span>جدیدترین‌ها</span>
               <span>برندها</span>
               <span>تجهیزات پزشکی</span>
               <span>مجله سلامت</span>
             </div>
-            <div style="display:flex;align-items:center;gap:10px">
-              <span class="prv-sale-pill">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
-                تخفیف‌ها و پیشنهاد ویژه
-              </span>
-              <span style="color:#64798e;font-size:12px">تماس با ما</span>
+            <span style="color:#64798e;font-weight:600">تماس با ما</span>
+          </div>
+
+          <!-- Desktop Mega-Menu Open Panel -->
+          <div class="prv-hdr2__mega">
+            <div style="display:flex;flex-direction:column;justify-content:space-between;gap:12px">
+              <div class="prv-hdr2__mega-cols">
+                <div>
+                  <div style="font-size:12px;font-weight:800;color:#066a50;border-bottom:1px solid #eef2f6;padding-bottom:6px;margin-bottom:7px">مکمل‌های ورزشی</div>
+                  <div style="font-size:11px;color:#35485c;line-height:2">پروتئین و وی<br>کراتین مونوهیدرات<br>آمینو اسید و BCAA<br>گینر و افزایش وزن<br>پیش از تمرین</div>
+                </div>
+                <div>
+                  <div style="font-size:12px;font-weight:800;color:#066a50;border-bottom:1px solid #eef2f6;padding-bottom:6px;margin-bottom:7px">ویتامین و مکمل</div>
+                  <div style="font-size:11px;color:#35485c;line-height:2">مولتی‌ویتامین روزانه<br>ویتامین D و کلسیم<br>ویتامین C و ایمنی<br>امگا ۳ و روغن ماهی<br>کلاژن و مکمل بانوان</div>
+                </div>
+                <div>
+                  <div style="font-size:12px;font-weight:800;color:#066a50;border-bottom:1px solid #eef2f6;padding-bottom:6px;margin-bottom:7px">مراقبت پوست و مو</div>
+                  <div style="font-size:11px;color:#35485c;line-height:2">ضدآفتاب تخصصی<br>سرم ویتامین C و نیاسینامید<br>مرطوب‌کننده و آبرسان<br>شامپو و ضدریزش مو<br>بهداشت دهان و دندان</div>
+                </div>
+                <div>
+                  <div style="font-size:12px;font-weight:800;color:#066a50;border-bottom:1px solid #eef2f6;padding-bottom:6px;margin-bottom:7px">تجهیزات پزشکی و کودک</div>
+                  <div style="font-size:11px;color:#35485c;line-height:2">فشارسنج بازویی و مچی<br>تست قند خون و نوار<br>تب‌سنج و پالس اکسیمتر<br>مراقبت پوست کودک<br>شیشه شیر و تغذیه نوزاد</div>
+                </div>
+              </div>
+
+              <div style="border-top:1px solid #eef2f6;padding-top:10px;display:flex;align-items:center;flex-wrap:wrap;gap:6px">
+                <span style="font-size:11px;font-weight:700;color:#64798e">برندهای پرطرفدار:</span>
+                <span class="prv-dk-chip">نوتری‌لایف</span>
+                <span class="prv-dk-chip">ویتاپلاس</span>
+                <span class="prv-dk-chip">درماکر</span>
+                <span class="prv-dk-chip">بیوتی‌لب</span>
+                <span class="prv-dk-chip">مدیکو هلث</span>
+                <span class="prv-dk-chip">کیدزکر</span>
+                <span class="prv-dk-chip">اوراکلین</span>
+              </div>
+            </div>
+
+            <div style="background:linear-gradient(145deg,#068462,#085340);color:#fff;border-radius:14px;padding:16px;display:flex;flex-direction:column;justify-content:space-between">
+              <div>
+                <div style="font-size:13px;font-weight:800">هفته سلامت داروخانه</div>
+                <div style="font-size:10.5px;opacity:0.86;line-height:1.85;margin-top:5px">تا ۴۰٪ تخفیف روی مکمل‌ها، مراقبت پوست و تجهیزات پزشکی</div>
+              </div>
+              <span style="background:#fff;color:#066a50;font-size:10.5px;font-weight:800;padding:5px 11px;border-radius:8px;align-self:flex-start;margin-top:12px">مشاهده پیشنهادها</span>
             </div>
           </div>
 
-          <div class="prv-page-hint">
-            <div class="prv-skeleton-hero">محل قرارگیری سکشن‌های بدنه صفحه (زیر هدر چسبان)</div>
-            <div class="prv-skeleton-side"></div>
+          <!-- Mobile Accordion Dropdown Preview (shown automatically when Mobile tab is clicked!) -->
+          <div class="prv-hdr2__mob-acc">
+            <div style="background:#eafaf4;border:1px solid #99e6cd;color:#066a50;border-radius:10px;padding:9px 12px;font-size:12px;font-weight:800;display:flex;justify-content:space-between">
+              <span>دسته‌بندی محصولات</span><span>▴</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:5px;padding:7px 6px">
+              <span style="background:#f4f7f9;border-radius:8px;padding:7px 10px;font-size:11px;color:#35485c">مکمل‌های ورزشی (پروتئین، کراتین، BCAA)</span>
+              <span style="background:#f4f7f9;border-radius:8px;padding:7px 10px;font-size:11px;color:#35485c">ویتامین و مکمل روزانه (مولتی‌ویتامین، امگا ۳)</span>
+              <span style="background:#f4f7f9;border-radius:8px;padding:7px 10px;font-size:11px;color:#35485c">مراقبت پوست و مو</span>
+              <span style="background:#f4f7f9;border-radius:8px;padding:7px 10px;font-size:11px;color:#35485c">تجهیزات پزشکی و مادر و کودک</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:5px;margin-top:4px">
+              <span style="border:1px solid #eef2f6;border-radius:10px;padding:8px 12px;font-size:12px;font-weight:800;color:#e5322d">تخفیف‌ها و پیشنهاد ویژه</span>
+              <span style="border:1px solid #eef2f6;border-radius:10px;padding:8px 12px;font-size:12px;font-weight:700;color:#14212e">پرفروش‌ترین‌ها</span>
+              <span style="border:1px solid #eef2f6;border-radius:10px;padding:8px 12px;font-size:12px;font-weight:700;color:#14212e">جدیدترین محصولات</span>
+              <span style="border:1px solid #eef2f6;border-radius:10px;padding:8px 12px;font-size:12px;font-weight:700;color:#14212e">مجله سلامت · تماس با ما</span>
+            </div>
           </div>
         </div>
       `;
@@ -633,18 +718,18 @@ window.STUDIO_CATALOG = [
   },
   {
     id: "06-home-hero-trust",
-    number: "۰۶",
-    title: "مین هیرو صفحه اصلی + ۲ بنر کناری + ۴ کارت اعتماد",
+    step: "بخش ۰۶",
     category: "home",
     categoryLabel: "صفحه اصلی (Section)",
-    templateType: "section",
-    version: "۱.۰.۰",
-    filePath: "elementor-templates/06-home-hero-trust-dr-farzane-ghasemi.json",
-    fileName: "06-home-hero-trust-dr-farzane-ghasemi.json",
-    fileSize: "۸۹ کیلوبایت",
-    zeroCode: true,
+    title: "مین هیرو صفحه اصلی + ۲ بنر کناری + ۴ کارت اعتماد",
     description:
-      "طراحی ۱۰۰٪ خالص المنتوری دقیقاً مطابق تصویر صفحه اول دارونیک: اسلایدر ۳ اسلایده اصلی در سمت راست (مراقبت پوست، مکمل ورزشی، ویتامین خانواده با ویجت Nested Carousel المنتور پرو)، ۲ بنر промо در ستون چپ (تجهیزات پزشکی خانگی و دنیای مادر و کودک) و ردیف ۴تایی کارت‌های تضمین و خدمات در پایین — بدون حتی یک خط کد یا CSS دستی.",
+      "طراحی ۱۰۰٪ خالص المنتوری دقیقاً مطابق تصویر صفحه اول دارونیک: اسلایدر ۳ اسلایده اصلی در سمت راست (مراقبت پوست، مکمل ورزشی، ویتامین خانواده با ویجت Nested Carousel المنتور پرو)، ۲ بنر کناری در ستون چپ (تجهیزات پزشکی خانگی و دنیای مادر و کودک) و ردیف ۴تایی کارت‌های تضمین و خدمات در پایین — بدون حتی یک خط کد یا CSS دستی.",
+    fileName: "06-home-hero-trust-dr-farzane-ghasemi.json",
+    filePath: "./elementor-templates/06-home-hero-trust-dr-farzane-ghasemi.json",
+    format: "JSON",
+    fileSize: "۸۹ کیلوبایت",
+    noCode: true,
+    target: "قالب‌ها ← قالب‌های ذخیره‌شده ← درج در بالای صفحه اصلی (Home)",
     widgets: [
       "Nested Carousel (اسلایدر ۳تایی)",
       "Flexbox Containers",
@@ -655,17 +740,19 @@ window.STUDIO_CATALOG = [
     guideSteps: [
       {
         title: "درون‌ریزی قالب مین هیرو در المنتور",
-        text: "فایل <code>06-home-hero-trust-dr-farzane-ghasemi.json</code> را از طریق <strong>قالب‌ها ← قالب‌های ذخیره‌شده ← درون‌ریزی قالب‌ها</strong> وارد وردپرس کنید.",
+        desc: "فایل 06-home-hero-trust-dr-farzane-ghasemi.json را از طریق «قالب‌ها ← قالب‌های ذخیره‌شده ← درون‌ریزی قالب‌ها» وارد وردپرس کنید.",
       },
       {
         title: "افزودن به بالای برگه صفحه اصلی (Home)",
-        text: "برگه صفحه اصلی سایت را با المنتور باز کنید، روی آیکون <strong>پوشه خاکستری (افزودن قالب) ← قالب‌های من</strong> کلیک کرده و <strong>«۰۶ — مین هیرو صفحه اصلی + ۲ بنر کناری + ۴ کارت اعتماد»</strong> را درج کنید.",
+        desc: "برگه صفحه اصلی سایت را با المنتور باز کنید، روی آیکون پوشه خاکستری (افزودن قالب) ← قالب‌های من کلیک کرده و «۰۶ — مین هیرو صفحه اصلی + ۲ بنر کناری + ۴ کارت اعتماد» را درج کنید.",
       },
       {
         title: "ویرایش متن، لینک یا عکس هر اسلاید (اختیاری)",
-        text: "روی اسلایدر کلیک کنید تا ۳ تب <strong>اسلاید ۱، ۲ و ۳</strong> باز شود؛ تمام تیترها، نشان‌های تخفیف، دکمه‌ها و تصویر پس‌زمینه هر اسلاید مستقیماً از پنل المنتور قابل تغییر یا حذف هستند.",
+        desc: "روی اسلایدر کلیک کنید تا ۳ تب اسلاید ۱، ۲ و ۳ باز شود؛ تمام تیترها، نشان‌های تخفیف، دکمه‌ها و تصویر پس‌زمینه هر اسلاید مستقیماً از پنل المنتور قابل تغییر یا حذف هستند.",
       },
     ],
+    guideTip:
+      "در زیر همین سکشن می‌توانید قالب ۰۳ (ویترین افقی دسته‌بندی‌ها) را به هر تعداد دسته که بخواهید اضافه کنید تا صفحه اول کامل شود.",
     renderPreview: function () {
       return `
         <div class="prv-dk-stage">
@@ -741,18 +828,18 @@ window.STUDIO_CATALOG = [
   },
   {
     id: "07-woocommerce-demo-products",
-    number: "۰۷",
-    title: "پکیج ۲۰ محصول متنوع داروخانه همراه با عکس و ویژگی‌ها (CSV ووکامرس)",
+    step: "بخش ۰۷",
     category: "data",
     categoryLabel: "درون‌ریزی محصولات (CSV)",
-    templateType: "woocommerce-csv",
-    version: "۱.۰.۰",
-    filePath: "downloads/07-woocommerce-demo-products-20.csv",
-    fileName: "07-woocommerce-demo-products-20.csv",
-    fileSize: "۳۷ کیلوبایت",
-    zeroCode: true,
+    title: "پکیج ۲۰ محصول متنوع داروخانه همراه با عکس و ویژگی‌ها (CSV ووکامرس)",
     description:
-      "فایل استاندارد درون‌ریز بومی ووکامرس (UTF-8 BOM) شامل ۲۰ محصول متنوع در هر ۷ دسته اصلی و ۱۹ زیردسته (۱۷ محصول ساده + ۳ محصول متغیر با ۸ متغیر طعم/رنگ/سایز = ۲۸ ردیف)، تصاویر واقعی JPG میزبانی‌شده روی GitHub Pages، قیمت عادی و حراج، برچسب «پرفروش» و «جدید»، موجودی انبار و ۳ ویژگی سراسری برای هر کالا.",
+      "فایل استاندارد درون‌ریز بومی ووکامرس (UTF-8 BOM) شامل ۲۰ محصول متنوع در هر ۷ دسته اصلی و ۱۹ زیردسته (۱۷ محصول ساده + ۳ محصول متغیر با ۸ متغیر طعم/رنگ/سایز = ۲۸ ردیف)، تصاویر واقعی JPG، قیمت عادی و حراج، برچسب «پرفروش» و «جدید»، موجودی انبار و ۳ ویژگی سراسری برای هر کالا.",
+    fileName: "07-woocommerce-demo-products-20.csv",
+    filePath: "./downloads/07-woocommerce-demo-products-20.csv",
+    format: "CSV",
+    fileSize: "۳۸ کیلوبایت",
+    noCode: true,
+    target: "محصولات ← همه محصولات ← درون‌ریزی (Import) در ووکامرس",
     widgets: [
       "۲۰ محصول در ۷ دپارتمان",
       "ساده + متغیر (طعم/رنگ/سایز)",
@@ -763,17 +850,19 @@ window.STUDIO_CATALOG = [
     guideSteps: [
       {
         title: "ورود به درون‌ریز رسمی محصولات ووکامرس",
-        text: "در پیشخوان وردپرس به <strong>محصولات ← همه محصولات</strong> بروید و در بالای صفحه روی دکمه <strong>«درون‌ریزی» (Import)</strong> کلیک کنید.",
+        desc: "در پیشخوان وردپرس به «محصولات ← همه محصولات» بروید و در بالای صفحه روی دکمه «درون‌ریزی (Import)» کلیک کنید.",
       },
       {
         title: "انتخاب فایل CSV و تطبیق خودکار ستون‌ها",
-        text: "فایل <code>07-woocommerce-demo-products-20.csv</code> را انتخاب کرده و روی <strong>ادامه</strong> کلیک کنید؛ تمام ستون‌ها (نام، قیمت فروش ویژه، دسته‌ها، ویژگی‌ها و تصاویر) به‌صورت ۱۰۰٪ خودکار توسط ووکامرس شناسایی می‌شوند.",
+        desc: "فایل 07-woocommerce-demo-products-20.csv را انتخاب کرده و روی ادامه کلیک کنید؛ تمام ستون‌ها (نام، قیمت فروش ویژه، دسته‌ها، ویژگی‌ها و تصاویر) به‌صورت ۱۰۰٪ خودکار توسط ووکامرس شناسایی می‌شوند.",
       },
       {
         title: "اجرای درون‌ریزی و دانلود خودکار عکس‌ها",
-        text: "روی <strong>«اجرای درون‌ریز»</strong> کلیک کنید؛ طی حدود ۳۰ تا ۶۰ ثانیه هر ۲۰ محصول، متغیرها، دسته‌بندی‌های مادر/فرزند و تصاویر محصول در کتابخانه رسانه وردپرس شما ساخته می‌شوند.",
+        desc: "روی «اجرای درون‌ریز» کلیک کنید؛ طی حدود ۳۰ تا ۶۰ ثانیه هر ۲۰ محصول، متغیرها، دسته‌بندی‌های مادر/فرزند و تصاویر محصول در کتابخانه رسانه وردپرس شما ساخته می‌شوند.",
       },
     ],
+    guideTip:
+      "پس از درون‌ریزی این فایل، اسلاگ تمام دسته‌بندی‌ها و زیردسته‌ها دقیقاً با لینک‌های مگامنوی هدر ۰۱ منطبق خواهد بود.",
     renderPreview: function () {
       const sampleItems = [
         { img: "demo-media/products/whey-protein.jpg", cat: "مکمل ورزشی · متغیر (۳ طعم)", name: "پروتئین وی نوتری‌لایف ۲ کیلوگرم", price: "۳,۴۸۰,۰۰۰", old: "۴,۲۹۰,۰۰۰" },
@@ -808,144 +897,6 @@ window.STUDIO_CATALOG = [
               </div>`
               )
               .join("")}
-          </div>
-        </div>
-      `;
-    },
-  },
-  {
-    id: "08-wordpress-header-menus",
-    number: "۰۸",
-    title: "بسته فهرست‌های استاندارد وردپرس برای هدر سایت (XML درون‌ریز فهرست‌ها)",
-    category: "layout",
-    categoryLabel: "فهرست‌های وردپرس (XML)",
-    templateType: "wordpress-wxr",
-    version: "۱.۰.۰",
-    filePath: "downloads/08-wordpress-menus-dr-farzane-ghasemi.xml",
-    fileName: "08-wordpress-menus-dr-farzane-ghasemi.xml",
-    fileSize: "۱۰۲ کیلوبایت",
-    zeroCode: true,
-    description:
-      "فایل رسمی درون‌ریز وردپرس (WXR 1.2) که هر ۴ فهرست استاندارد هدر دارونیک را به‌صورت سلسله‌مراتبی (۶۳ آیتم مادر و فرزند) در بخش «نمایش ← فهرست‌ها» می‌سازد تا هم در هدر ۰۱ و هم در ابزارک فهرست‌های وودمارت/المنتور آماده انتخاب باشند.",
-    widgets: [
-      "۰۱ نوار بالای هدر (۵ لینک)",
-      "۰۲ دسته‌بندی محصولات (۴۰ آیتم ۳ سطحی)",
-      "۰۳ منوی افقی اصلی (۶ لینک)",
-      "۰۴ منوی کشویی موبایل (۱۲ لینک)",
-    ],
-    guideSteps: [
-      {
-        title: "درون‌ریزی سریع ۴ فهرست در وردپرس",
-        text: "از منوی <strong>ابزارها ← درون‌ریزی ← وردپرس (اجرای درون‌ریز)</strong> فایل <code>08-wordpress-menus-dr-farzane-ghasemi.xml</code> را آپلود و تایید کنید.",
-      },
-      {
-        title: "بررسی فهرست‌ها در نمایش ← فهرست‌ها",
-        text: "وارد <strong>نمایش ← فهرست‌ها</strong> شوید؛ هر ۴ فهرست (نوار بالا، دسته‌بندی جامع چندسطحی، منوی افقی اصلی و منوی موبایل) آماده و چیدمان‌شده هستند.",
-      },
-      {
-        title: "اتصال به ویجت‌های Nav Menu در هدر ۰۱",
-        text: "هدر <code>01-header</code> را در المنتور باز کرده و روی هر ویجت Nav Menu کلیک کنید و از کشوی <strong>Menu</strong> فهرست متناظرش را انتخاب و ذخیره کنید.",
-      },
-    ],
-    renderPreview: function () {
-      return `
-        <div class="prv-dk-stage">
-          <div class="prv-dk-menus-grid">
-            <div class="prv-dk-menu-box">
-              <div style="font-size:11.5px;font-weight:800;color:#066a50;margin-bottom:6px">۱. نوار بالای هدر</div>
-              <div style="font-size:10.5px;color:#35485c;line-height:1.95">• شرایط و زمان ارسال<br>• سؤالات متداول<br>• پیگیری سفارش<br>• مجله سلامت<br>• درباره داروخانه</div>
-            </div>
-            <div class="prv-dk-menu-box">
-              <div style="font-size:11.5px;font-weight:800;color:#066a50;margin-bottom:6px">۲. دسته‌بندی محصولات (۳ سطحی)</div>
-              <div style="font-size:10.5px;color:#35485c;line-height:1.95">▾ دسته‌بندی محصولات<br>&nbsp;&nbsp;▸ مکمل‌های ورزشی (۵ زیردسته)<br>&nbsp;&nbsp;▸ ویتامین و مکمل (۷ زیردسته)<br>&nbsp;&nbsp;▸ مراقبت پوست و مو (۹ زیردسته)<br>&nbsp;&nbsp;▸ تجهیزات پزشکی و کودک...</div>
-            </div>
-            <div class="prv-dk-menu-box">
-              <div style="font-size:11.5px;font-weight:800;color:#066a50;margin-bottom:6px">۳. منوی اصلی افقی</div>
-              <div style="font-size:10.5px;color:#35485c;line-height:1.95">• فروشگاه<br>• پرفروش‌ترین‌ها<br>• جدیدترین‌ها<br>• تجهیزات پزشکی<br>• مراقبت پوست · مجله سلامت</div>
-            </div>
-            <div class="prv-dk-menu-box">
-              <div style="font-size:11.5px;font-weight:800;color:#066a50;margin-bottom:6px">۴. منوی کشویی موبایل</div>
-              <div style="font-size:10.5px;color:#35485c;line-height:1.95">• صفحه اصلی و فروشگاه<br>• تخفیف‌ها و پیشنهاد ویژه<br>• هر ۷ دسته اصلی داروخانه<br>• مجله سلامت<br>• پیگیری سفارش و حساب من</div>
-            </div>
-          </div>
-        </div>
-      `;
-    },
-  },
-  {
-    id: "09-header-megamenu",
-    number: "۰۹",
-    title: "هدر چسبان ارتقایافته همراه با مگامنو چندستونه دارونیک (بدون کد)",
-    category: "layout",
-    categoryLabel: "سربرگ + مگامنو (Header)",
-    templateType: "header",
-    version: "۱.۰.۰",
-    filePath: "elementor-templates/09-header-megamenu-dr-farzane-ghasemi.json",
-    fileName: "09-header-megamenu-dr-farzane-ghasemi.json",
-    fileSize: "۹۴ کیلوبایت",
-    zeroCode: true,
-    description:
-      "نسخه ارتقایافته هدر داروخانه که با ویجت بومی Menu (Mega Menu) المنتور پرو ساخته شده است: با نگه داشتن موس روی «دسته‌بندی محصولات»، پنل مگامنوی ۴ ستونه زیرشاخه‌ها به همراه کارت سبز «هفته سلامت داروخانه — تا ۴۰٪ تخفیف» دقیقاً مشابه سایت مرجع دارونیک باز می‌شود.",
-    widgets: [
-      "Elementor Pro Mega Menu",
-      "۴ ستون دسته‌بندی + کارت کمپین",
-      "Site Logo & Search Form",
-      "WooCommerce Menu Cart",
-      "Sticky Header",
-    ],
-    guideSteps: [
-      {
-        title: "فعال بودن ویژگی Menu در المنتور",
-        text: "در <strong>المنتور ← تنظیمات ← ویژگی‌ها (Features)</strong> مطمئن شوید گزینه <strong>Menu (مگامنو)</strong> و <strong>Nested Elements</strong> در وضعیت فعال (Active) هستند.",
-      },
-      {
-        title: "درون‌ریزی در قالب‌پذیر (Theme Builder)",
-        text: "فایل <code>09-header-megamenu-dr-farzane-ghasemi.json</code> را در <strong>قالب‌ها ← قالب‌پذیر ← Header</strong> درون‌ریزی کنید.",
-      },
-      {
-        title: "انتشار با شرط کل سایت (Entire Site)",
-        text: "روی <strong>انتشار ← Add Condition ← Entire Site</strong> کلیک کنید تا هدر همراه با مگامنوی چندستونه در تمام صفحات سایت فعال شود (در صورت تمایل جایگزین هدر ۰۱ کنید).",
-      },
-    ],
-    renderPreview: function () {
-      return `
-        <div class="prv-dk-stage">
-          <div style="background:#fff;border:1px solid #e6ecf1;border-radius:14px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center">
-            <div style="display:flex;align-items:center;gap:14px;font-size:11.5px;font-weight:700;color:#35485c">
-              <span style="background:#eafaf4;color:#066a50;padding:5px 10px;border-radius:8px;font-weight:800">▦ دسته‌بندی محصولات ▾</span>
-              <span>پرفروش‌ترین‌ها</span>
-              <span>جدیدترین‌ها</span>
-              <span>تجهیزات پزشکی</span>
-              <span>مراقبت پوست</span>
-              <span>مجله سلامت</span>
-            </div>
-            <span style="color:#e5322d;font-size:11.5px;font-weight:800">🔥 تخفیف‌ها و پیشنهاد ویژه</span>
-          </div>
-
-          <div class="prv-dk-megamenu-panel">
-            <div>
-              <div style="font-size:11.5px;font-weight:800;color:#066a50;border-bottom:1px solid #e6ecf1;padding-bottom:5px;margin-bottom:6px">مکمل‌های ورزشی</div>
-              <div style="font-size:10.5px;color:#35485c;line-height:1.9">پروتئین و وی<br>کراتین مونوهیدرات<br>آمینو اسید و BCAA<br>گینر و پیش‌تمرین</div>
-            </div>
-            <div>
-              <div style="font-size:11.5px;font-weight:800;color:#066a50;border-bottom:1px solid #e6ecf1;padding-bottom:5px;margin-bottom:6px">ویتامین و مکمل</div>
-              <div style="font-size:10.5px;color:#35485c;line-height:1.9">مولتی‌ویتامین بزرگسالان<br>ویتامین D و کلسیم<br>امگا ۳ و روغن ماهی<br>کلاژن و مکمل بانوان</div>
-            </div>
-            <div>
-              <div style="font-size:11.5px;font-weight:800;color:#066a50;border-bottom:1px solid #e6ecf1;padding-bottom:5px;margin-bottom:6px">مراقبت پوست و مو</div>
-              <div style="font-size:10.5px;color:#35485c;line-height:1.9">ضدآفتاب تخصصی<br>سرم ویتامین C<br>مرطوب‌کننده سرامیده<br>شامپو و ضدریزش</div>
-            </div>
-            <div>
-              <div style="font-size:11.5px;font-weight:800;color:#066a50;border-bottom:1px solid #e6ecf1;padding-bottom:5px;margin-bottom:6px">تجهیزات پزشکی و کودک</div>
-              <div style="font-size:10.5px;color:#35485c;line-height:1.9">فشارسنج دیجیتال<br>تست قند خون<br>تب‌سنج و پالس اکسیمتر<br>مراقبت مادر و کودک</div>
-            </div>
-            <div style="background:linear-gradient(145deg,#068462,#085340);color:#fff;border-radius:13px;padding:13px;display:flex;flex-direction:column;justify-content:space-between">
-              <div>
-                <div style="font-size:12px;font-weight:800">هفته سلامت داروخانه</div>
-                <div style="font-size:10px;opacity:0.86;line-height:1.7;margin-top:4px">تا ۴۰٪ تخفیف روی مکمل‌ها، مراقبت پوست و تجهیزات پزشکی</div>
-              </div>
-              <span style="background:#fff;color:#066a50;font-size:10px;font-weight:800;padding:4px 9px;border-radius:7px;align-self:flex-start;margin-top:8px">مشاهده پیشنهادها ‹</span>
-            </div>
           </div>
         </div>
       `;

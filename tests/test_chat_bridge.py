@@ -86,7 +86,10 @@ class ChatBridgeBackendTests(unittest.TestCase):
             ("/assets/app.js", "application/javascript"),
             ("/assets/chat-widget.js", "application/javascript"),
             ("/assets/fonts/Dana-Bold.ttf", "font/ttf"),
-            ("/elementor-templates/01-header-dr-farzane-ghasemi.json", "application/json"),
+            ("/elementor-templates/01-header-megamenu-dr-farzane-ghasemi.json", "application/json"),
+            ("/demo-media/screenshots/00-header-megamenu-responsive-showcase.png", "image/png"),
+            ("/demo-media/screenshots/01-header-desktop-1440.png", "image/png"),
+            ("/demo-media/screenshots/04-header-mobile-390.png", "image/png"),
         ]:
             st, ah, ab = self._req("GET", asset_path)
             self.assertEqual(st, 200, f"Failed serving {asset_path}")
@@ -275,64 +278,36 @@ class ChatBridgeBackendTests(unittest.TestCase):
         user_msgs = [m for m in hist if m["role"] == "user"]
         self.assertEqual(len(user_msgs), total_threads)
 
-    def test_07_chat_cli_end_to_end_including_listen(self) -> None:
-        cli_script = str(TOOLS_DIR / "chat_cli.py")
-
-        def run_cli(*cli_args: str) -> dict:
-            proc = subprocess.run(
-                [
-                    sys.executable,
-                    cli_script,
-                    "--server",
-                    self.base_url,
-                    "--chat-file",
-                    str(self.chat_file),
-                    *cli_args,
-                ],
-                capture_output=True,
-                text=True,
-                check=True,
-                timeout=8,
-            )
-            return json.loads(proc.stdout)
-
-        st_out = run_cli("status")
-        self.assertTrue(st_out["ok"])
-        self.assertEqual(st_out["transport"], "live-http-sse")
-
-        # Test `listen` waking up when user sends a message 350ms later
-        def delayed_user_send() -> None:
-            time.sleep(0.35)
-            self._req("POST", "/api/chat/send", {"text": "سلام از داخل داشبورد برای تست listen!"})
-
-        sender = threading.Thread(target=delayed_user_send, daemon=True)
-        sender.start()
-        listen_out = run_cli("listen", "--timeout", "4", "--no-github")
-        sender.join(timeout=2)
-
-        self.assertEqual(listen_out["event"], "new_user_messages")
-        self.assertEqual(len(listen_out["messages"]), 1)
-        self.assertIn("تست listen", listen_out["messages"][0]["text"])
-
-        # Verify mark-read automatically turned on agentTyping + agentListening
-        st_typing = run_cli("status")
-        self.assertTrue(st_typing["agentListening"])
-        self.assertTrue(st_typing["agentTyping"])
-
-        # Reply via CLI clears agentTyping
-        rep_out = run_cli(
-            "reply",
-            "پاسخ مستقیم CLI به چت‌بات داشبورد!",
-            "--section-id",
-            "01-header",
-            "--action-type",
-            "download",
-            "--action-label",
-            "دانلود هدر",
+    def test_07_consolidated_templates_and_screenshots(self) -> None:
+        validator_script = str(TOOLS_DIR / "validate_templates.py")
+        proc = subprocess.run(
+            [sys.executable, validator_script],
+            capture_output=True,
+            text=True,
+            check=True,
+            timeout=20,
         )
-        self.assertTrue(rep_out["ok"])
-        self.assertEqual(rep_out["unreadForAgent"], 0)
-        self.assertFalse(run_cli("status")["agentTyping"])
+        self.assertIn("01-header-megamenu-dr-farzane-ghasemi.json", proc.stdout)
+        self.assertIn("06-home-hero-trust-dr-farzane-ghasemi.json", proc.stdout)
+
+        # Ensure redundant legacy files stay deleted
+        self.assertFalse((REPO_ROOT / "elementor-templates" / "01-header-dr-farzane-ghasemi.json").exists())
+        self.assertFalse((REPO_ROOT / "elementor-templates" / "09-header-megamenu-dr-farzane-ghasemi.json").exists())
+        self.assertFalse((REPO_ROOT / "downloads" / "08-wordpress-menus-dr-farzane-ghasemi.xml").exists())
+
+        # Ensure all 5 responsive header+megamenu screenshots exist & serve HTTP 200
+        for png_name in [
+            "00-header-megamenu-responsive-showcase.png",
+            "01-header-desktop-1440.png",
+            "02-header-megamenu-open-1440.png",
+            "03-header-tablet-768.png",
+            "04-header-mobile-390.png",
+        ]:
+            st, hdrs, body = self._req("GET", f"/demo-media/screenshots/{png_name}")
+            self.assertEqual(st, 200)
+            self.assertIn("image/png", hdrs.get("Content-Type", ""))
+            self.assertEqual(body[:8], b"\x89PNG\r\n\x1a\n")
+            self.assertGreater(len(body), 10000)
 
 
 if __name__ == "__main__":

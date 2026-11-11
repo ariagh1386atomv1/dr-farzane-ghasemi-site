@@ -196,6 +196,10 @@
                     ${ICONS.desktop}
                     <span>دسکتاپ</span>
                   </button>
+                  <button type="button" class="seg-btn ${dev === "tablet" ? "is-active" : ""}" data-action="card-device" data-device="tablet" data-id="${item.id}">
+                    ${ICONS.tablet}
+                    <span>تبلت</span>
+                  </button>
                   <button type="button" class="seg-btn ${dev === "mobile" ? "is-active" : ""}" data-action="card-device" data-device="mobile" data-id="${item.id}">
                     ${ICONS.mobile}
                     <span>موبایل</span>
@@ -208,7 +212,7 @@
               </div>
             </div>
 
-            <div class="preview-viewport ${dev === "mobile" ? "is-mobile" : ""}" id="viewport-${item.id}">
+            <div class="preview-viewport ${dev === "tablet" ? "is-tablet" : ""} ${dev === "mobile" ? "is-mobile" : ""}" id="viewport-${item.id}">
               ${item.renderPreview()}
             </div>
           </div>
@@ -233,6 +237,19 @@
                 ${(item.widgets || []).map((w) => `<span class="tpl-chip">${w}</span>`).join("")}
                 <span class="tpl-file-pill">${ICONS.file} ${item.fileName}</span>
               </div>
+              ${
+                item.screenshots && item.screenshots.length
+                  ? `<div class="tpl-shots">
+                      <span class="tpl-shots__label">اسکرین‌شات‌های تست‌شده ریسپانسیو همراه قالب:</span>
+                      ${item.screenshots
+                        .map(
+                          (sh) =>
+                            `<a class="tpl-shot-link" href="${sh.path}" target="_blank" rel="noopener" download="${sh.file}">${ICONS.download}<span>${sh.label}</span></a>`,
+                        )
+                        .join("")}
+                    </div>`
+                  : ""
+              }
             </div>
 
             <div class="tpl-actions">
@@ -283,6 +300,16 @@
           )
           .join("")}
       </div>
+      ${
+        item.screenshots && item.screenshots.length
+          ? `<div style="margin:14px 0;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--bg-canvas)">
+              <div style="font-size:12px;font-weight:800;margin-bottom:8px;color:var(--ink-900)">پیش‌نمایش اسکرین‌شات‌های ریسپانسیو رندرشده:</div>
+              <a href="${item.screenshots[0].path}" target="_blank" rel="noopener">
+                <img src="${item.screenshots[0].path}" alt="اسکرین‌شات ریسپانسیو ${item.title}" style="width:100%;border-radius:8px;border:1px solid var(--line)" loading="lazy" />
+              </a>
+            </div>`
+          : ""
+      }
       ${item.guideTip ? `<div class="guide-tip">${item.guideTip}</div>` : ""}
     `;
     els.backdrop.classList.add("is-open");
@@ -366,7 +393,10 @@
       const dev = btn.getAttribute("data-device");
       state.cardDevice[id] = dev;
       const vp = document.getElementById(`viewport-${id}`);
-      if (vp) vp.classList.toggle("is-mobile", dev === "mobile");
+      if (vp) {
+        vp.classList.toggle("is-tablet", dev === "tablet");
+        vp.classList.toggle("is-mobile", dev === "mobile");
+      }
       btn
         .closest(".seg-group")
         .querySelectorAll(".seg-btn")
