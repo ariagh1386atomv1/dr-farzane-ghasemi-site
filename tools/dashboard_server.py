@@ -3,8 +3,8 @@
 Dr. Farzane Ghasemi — Template Studio & Live Arena Chat Bridge Server.
 
 Serves the static RTL Light-Blue Template Hub AND provides a thread-safe,
-CORS-enabled REST + Server-Sent Events (SSE) two-way bridge between the
-browser Dashboard Chatbot and the Arena.ai workspace session.
+CORS-enabled REST + Server-Sent Events (SSE) two-way bridge (with live Agent
+Presence & Typing indicators) between the browser Dashboard Chatbot and Arena.
 """
 
 from __future__ import annotations
@@ -30,7 +30,7 @@ DEFAULT_CHAT_FILE = REPO_ROOT / ".chat" / "conversation.json"
 MAX_BODY_BYTES = 64 * 1024
 MAX_MESSAGE_CHARS = 4000
 MAX_STORED_MESSAGES = 500
-SSE_HEARTBEAT_SECONDS = 15.0
+SSE_HEARTBEAT_SECONDS = 12.0
 
 BLOCKED_TOP_DIRS = {
     ".git",
@@ -126,6 +126,9 @@ class ChatStore:
         self._lock = threading.RLock()
         self._mtime_ns: int = -1
         self._data: dict = {}
+        self._agent_listening_until: float = 0.0
+        self._agent_typing_until: float = 0.0
+        self._last_presence: tuple[bool, bool] = (False, False)
         self._ensure_initialized()
 
     def _default_state(self) -> dict:
@@ -137,13 +140,13 @@ class ChatStore:
             "author": "ایجنت اصلی چت آرنا",
             "text": (
                 "سلام! 👋 این چت‌بات مستقیماً به فضای کاری من در آرنا متصل است.\n"
-                "• هر درخواست یا تغییری را همین‌جا بنویسید تا مستقیم در صندوق پیام من ثبت شود.\n"
-                "• پاسخ‌های من به‌صورت زنده (SSE) بدون نیاز به رفرش در همین پنجره ظاهر می‌شوند.\n"
-                "• نکته فنی: اگر نوبت من در آرنا متوقف بود، بعد از ارسال پیامتان در اینجا فقط یک نقطه «.» یا «بخوان» در چت آرنا بفرستید تا بلافاصله بیدار شوم و همین‌جا پاسخ بدهم."
+                "• وقتی وضعیت بالا «آنلاین و گوش‌به‌زنگ» است، هر پیامی اینجا بفرستید بدون نیاز به نوشتن چیزی در چت آرنا بلافاصله می‌بینم و همین‌جا پاسخ می‌دهم!\n"
+                "• پاسخ‌ها و فایل‌های JSON جدید به‌صورت زنده (SSE) در همین پنجره ظاهر می‌شوند."
             ),
             "sectionId": None,
             "sectionTitle": None,
             "source": "arena-agent",
+            "externalId": None,
             "status": "delivered",
             "action": None,
             "createdAt": now,
@@ -211,12 +214,66 @@ class ChatStore:
         msgs = self._data.get("messages") or []
         return int(msgs[-1]["seq"]) if msgs else 0
 
+    def is_agent_listening(self) -> bool:
+        return time.monotonic() < self._agent_listening_until
+
+    def is_agent_typing(self) -> bool:
+        return time.monotonic() < self._agent_typing_until
+
+    def set_agent_heartbeat(self, ttl: float = 12.0, typing: bool | None = None) -> dict:
+        now_m = time.monotonic()
+        with self._lock:
+            self._reload_if_changed_locked()
+            if ttl > 0:
+                self._agent_listening_until = max(self._agent_listening_until, now_m + min(ttl, 120.0))
+            else:
+                self._agent_listening_until = 0.0
+
+            if typing is True:
+                self._agent_typing_until = now_m + 90.0
+            elif typing is False:
+                self._agent_typing_until = 0.0
+
+            cur = (self.is_agent_listening(), self.is_agent_typing())
+            changed = cur != self._last_presence
+            self._last_presence = cur
+            unread = self._unread_for_agent_locked()
+
+        snap = {
+            "ok": True,
+            "agentListening": cur[0],
+            "agentTyping": cur[1],
+            "unreadForAgent": unread,
+        }
+        if changed:
+            self.broker.publish("presence", snap)
+        return snap
+
+    def check_presence_expiry_and_notify(self) -> None:
+        with self._lock:
+            cur = (self.is_agent_listening(), self.is_agent_typing())
+            if cur == self._last_presence:
+                return
+            self._last_presence = cur
+            unread = self._unread_for_agent_locked()
+        self.broker.publish(
+            "presence",
+            {
+                "ok": True,
+                "agentListening": cur[0],
+                "agentTyping": cur[1],
+                "unreadForAgent": unread,
+            },
+        )
+
     def get_status(self) -> dict:
         with self._lock:
             self._reload_if_changed_locked()
             return {
                 "ok": True,
                 "mode": "live-bridge",
+                "agentListening": self.is_agent_listening(),
+                "agentTyping": self.is_agent_typing(),
                 "totalMessages": len(self._data["messages"]),
                 "unreadForAgent": self._unread_for_agent_locked(),
                 "latestSeq": self._latest_seq_locked(),
@@ -232,6 +289,8 @@ class ChatStore:
             return {
                 "ok": True,
                 "messages": filtered,
+                "agentListening": self.is_agent_listening(),
+                "agentTyping": self.is_agent_typing(),
                 "unreadForAgent": self._unread_for_agent_locked(),
                 "latestSeq": self._latest_seq_locked(),
             }
@@ -249,7 +308,7 @@ class ChatStore:
         target_id = section_id or "01-header"
         if any(k in low for k in ["دانلود هدر", "فایل هدر", "download header", "json هدر"]):
             return {
-                "text": "فایل استاندارد «۰۱ — هدر اصلی داروخانه آنلاین» آماده دانلود است (پیام شما هم برای ایجنت آرنا ثبت شد):",
+                "text": "فایل استاندارد «۰۱ — هدر اختصاصی داروخانه آنلاین دکتر فرزانه قاسمی» آماده دانلود است:",
                 "action": {
                     "type": "download",
                     "sectionId": target_id,
@@ -282,9 +341,21 @@ class ChatStore:
         section_id: str | None = None,
         section_title: str | None = None,
         source: str = "dashboard",
+        external_id: str | None = None,
     ) -> dict:
         with self._lock:
             self._reload_if_changed_locked()
+            if external_id:
+                for existing in self._data["messages"]:
+                    if existing.get("externalId") == external_id:
+                        return {
+                            "ok": True,
+                            "duplicate": True,
+                            "message": existing,
+                            "created": [],
+                            "unreadForAgent": self._unread_for_agent_locked(),
+                        }
+
             seq = int(self._data.get("nextSeq", 1))
             now = utc_now_iso()
             user_msg = {
@@ -295,7 +366,8 @@ class ChatStore:
                 "text": text,
                 "sectionId": clean_text(section_id, 80) or None,
                 "sectionTitle": clean_text(section_title, 160) or None,
-                "source": clean_text(source, 40) or "dashboard",
+                "source": clean_text(source, 60) or "dashboard",
+                "externalId": clean_text(external_id, 80) or None,
                 "status": "queued_for_arena",
                 "action": None,
                 "createdAt": now,
@@ -315,6 +387,7 @@ class ChatStore:
                     "sectionId": user_msg["sectionId"],
                     "sectionTitle": user_msg["sectionTitle"],
                     "source": "instant-helper",
+                    "externalId": None,
                     "status": "delivered",
                     "action": helper_spec["action"],
                     "createdAt": now,
@@ -337,7 +410,7 @@ class ChatStore:
             "unreadForAgent": unread,
         }
 
-    def mark_read_by_arena(self) -> dict:
+    def mark_read_by_arena(self, set_typing: bool = False) -> dict:
         with self._lock:
             self._reload_if_changed_locked()
             updated_ids: list[str] = []
@@ -347,12 +420,31 @@ class ChatStore:
                     updated_ids.append(m["id"])
             if updated_ids:
                 self._write_locked()
+
+            if set_typing:
+                now_m = time.monotonic()
+                self._agent_listening_until = max(self._agent_listening_until, now_m + 90.0)
+                self._agent_typing_until = now_m + 90.0
+                self._last_presence = (True, True)
+
             unread = self._unread_for_agent_locked()
+            listening = self.is_agent_listening()
+            typing = self.is_agent_typing()
 
         if updated_ids:
             self.broker.publish(
                 "status_update",
                 {"messageIds": updated_ids, "status": "read_by_arena", "unreadForAgent": unread},
+            )
+        if set_typing:
+            self.broker.publish(
+                "presence",
+                {
+                    "ok": True,
+                    "agentListening": listening,
+                    "agentTyping": typing,
+                    "unreadForAgent": unread,
+                },
             )
         return {"ok": True, "updatedIds": updated_ids, "unreadForAgent": unread}
 
@@ -366,10 +458,13 @@ class ChatStore:
         with self._lock:
             self._reload_if_changed_locked()
             updated_ids: list[str] = []
+            replied_sources: list[str] = []
             for m in self._data["messages"]:
                 if m.get("role") == "user" and m.get("status") in {"queued_for_arena", "read_by_arena"}:
                     m["status"] = "replied"
                     updated_ids.append(m["id"])
+                    if m.get("externalId"):
+                        replied_sources.append(str(m["externalId"]))
 
             seq = int(self._data.get("nextSeq", 1))
             reply_msg = {
@@ -381,6 +476,7 @@ class ChatStore:
                 "sectionId": clean_text(section_id, 80) or None,
                 "sectionTitle": clean_text(section_title, 160) or None,
                 "source": "arena-agent",
+                "externalId": None,
                 "status": "delivered",
                 "action": action if isinstance(action, dict) else None,
                 "createdAt": utc_now_iso(),
@@ -388,15 +484,34 @@ class ChatStore:
             self._data["messages"].append(reply_msg)
             self._data["nextSeq"] = seq + 1
             self._write_locked()
+
+            self._agent_typing_until = 0.0
+            cur = (self.is_agent_listening(), False)
+            self._last_presence = cur
             unread = self._unread_for_agent_locked()
 
+        self.broker.publish(
+            "presence",
+            {
+                "ok": True,
+                "agentListening": cur[0],
+                "agentTyping": False,
+                "unreadForAgent": unread,
+            },
+        )
         if updated_ids:
             self.broker.publish(
                 "status_update",
                 {"messageIds": updated_ids, "status": "replied", "unreadForAgent": unread},
             )
         self.broker.publish("message", {"message": reply_msg, "unreadForAgent": unread})
-        return {"ok": True, "message": reply_msg, "repliedToIds": updated_ids, "unreadForAgent": unread}
+        return {
+            "ok": True,
+            "message": reply_msg,
+            "repliedToIds": updated_ids,
+            "repliedExternalIds": replied_sources,
+            "unreadForAgent": unread,
+        }
 
     def clear_messages(self) -> dict:
         with self._lock:
@@ -560,8 +675,20 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
                 section_id=body.get("sectionId"),
                 section_title=body.get("sectionTitle"),
                 source=body.get("source") or "dashboard",
+                external_id=body.get("externalId"),
             )
             self._send_json(HTTPStatus.CREATED, res)
+            return
+
+        if route == "/api/chat/agent-heartbeat":
+            try:
+                ttl = float(body.get("ttl", 12.0))
+            except (TypeError, ValueError):
+                ttl = 12.0
+            typing_val = body.get("typing")
+            typing_bool = bool(typing_val) if isinstance(typing_val, bool) else None
+            res = self.app_server.store.set_agent_heartbeat(ttl=ttl, typing=typing_bool)
+            self._send_json(HTTPStatus.OK, res)
             return
 
         if route == "/api/chat/agent-reply":
@@ -579,7 +706,7 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
             return
 
         if route == "/api/chat/mark-read":
-            res = self.app_server.store.mark_read_by_arena()
+            res = self.app_server.store.mark_read_by_arena(set_typing=bool(body.get("typing")))
             self._send_json(HTTPStatus.OK, res)
             return
 
@@ -620,6 +747,7 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
                     self.wfile.write(f"event: {event_name}\ndata: {encoded}\n\n".encode("utf-8"))
                     self.wfile.flush()
                 except queue.Empty:
+                    self.app_server.store.check_presence_expiry_and_notify()
                     self.wfile.write(b": heartbeat\n\n")
                     self.wfile.flush()
         except (BrokenPipeError, ConnectionResetError, OSError):
@@ -673,7 +801,7 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
 def main() -> None:
     parser = argparse.ArgumentParser(description="Dashboard & Arena Chat Bridge HTTP Server")
     parser.add_argument("--host", default="0.0.0.0", help="Bind host (default: 0.0.0.0)")
-    parser.add_argument("--port", type=int, default=8080, help="Bind port (default: 8080)")
+    parser.add_argument("--port", type=int, default=8080, help="Bind port (default: 0.0.0.0)")
     parser.add_argument(
         "--chat-file",
         default=str(DEFAULT_CHAT_FILE),

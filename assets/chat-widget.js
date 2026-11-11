@@ -130,6 +130,8 @@
     messages: [],
     latestSeq: 0,
     unreadForAgent: 0,
+    agentListening: false,
+    agentTyping: false,
     unreadAgentReplies: 0,
     attachedSection: null, // { id, title }
     sending: false,
@@ -202,14 +204,19 @@
   function updateConnectionUI() {
     const isLive = state.mode === "live";
     els.statusPill.classList.toggle("is-static", !isLive);
+    els.statusPill.classList.toggle("is-listening", isLive && state.agentListening);
     if (els.topbarDot) els.topbarDot.classList.toggle("is-static", !isLive);
 
-    els.statusText.textContent = isLive
-      ? "متصل زنده به چت آرنا · SSE"
-      : "حالت GitHub Pages · پل همگام‌ساز";
+    if (!isLive) {
+      els.statusText.textContent = "حالت GitHub Pages · پل همگام‌ساز";
+    } else if (state.agentListening) {
+      els.statusText.textContent = "آنلاین و گوش‌به‌زنگ · پاسخ مستقیم خودکار";
+    } else {
+      els.statusText.textContent = "متصل زنده به چت آرنا · SSE";
+    }
 
     if (els.wakeupBar) {
-      if (isLive && state.unreadForAgent > 0) {
+      if (isLive && state.unreadForAgent > 0 && !state.agentListening && !state.agentTyping) {
         els.wakeupBar.hidden = false;
         els.wakeupText.textContent = `${toFa(state.unreadForAgent)} پیام در صندوق آرنا منتظر بررسی است`;
       } else {
@@ -313,6 +320,16 @@
       })
       .join("");
 
+    if (state.mode === "live" && state.agentTyping) {
+      const typingEl = document.createElement("div");
+      typingEl.className = "chat-typing";
+      typingEl.id = "chat-typing-indicator";
+      typingEl.innerHTML =
+        '<span>ایجنت آرنا پیام شما را دید و در حال پاسخ‌گویی است</span>' +
+        '<span class="chat-typing__dots" aria-hidden="true"><span></span><span></span><span></span></span>';
+      els.stream.appendChild(typingEl);
+    }
+
     if (scrollToEnd) {
       els.stream.scrollTop = els.stream.scrollHeight;
     }
@@ -401,10 +418,12 @@
       if (!res.ok) return;
       const data = await res.json();
       if (!data || !data.ok) return;
-      if (typeof data.unreadForAgent === "number") {
-        state.unreadForAgent = data.unreadForAgent;
-        updateConnectionUI();
-      }
+      const prevTyping = state.agentTyping;
+      if (typeof data.unreadForAgent === "number") state.unreadForAgent = data.unreadForAgent;
+      if (typeof data.agentListening === "boolean") state.agentListening = data.agentListening;
+      if (typeof data.agentTyping === "boolean") state.agentTyping = data.agentTyping;
+      updateConnectionUI();
+      if (prevTyping !== state.agentTyping) renderMessages(true);
       (data.messages || []).forEach((m) => upsertMessage(m, true));
     } catch {
       /* transient network error */
@@ -421,7 +440,35 @@
             const payload = JSON.parse(ev.data);
             if (typeof payload.unreadForAgent === "number") {
               state.unreadForAgent = payload.unreadForAgent;
-              updateConnectionUI();
+            }
+            if (typeof payload.agentListening === "boolean") {
+              state.agentListening = payload.agentListening;
+            }
+            if (typeof payload.agentTyping === "boolean") {
+              state.agentTyping = payload.agentTyping;
+            }
+            updateConnectionUI();
+            renderMessages(false);
+          } catch {
+            /* ignore */
+          }
+        });
+        es.addEventListener("presence", (ev) => {
+          try {
+            const payload = JSON.parse(ev.data);
+            const prevTyping = state.agentTyping;
+            if (typeof payload.agentListening === "boolean") {
+              state.agentListening = payload.agentListening;
+            }
+            if (typeof payload.agentTyping === "boolean") {
+              state.agentTyping = payload.agentTyping;
+            }
+            if (typeof payload.unreadForAgent === "number") {
+              state.unreadForAgent = payload.unreadForAgent;
+            }
+            updateConnectionUI();
+            if (prevTyping !== state.agentTyping) {
+              renderMessages(true);
             }
           } catch {
             /* ignore */
@@ -529,6 +576,8 @@
       state.messages = Array.isArray(histJson.messages) ? histJson.messages : [];
       state.latestSeq = histJson.latestSeq || 0;
       state.unreadForAgent = histJson.unreadForAgent || 0;
+      state.agentListening = Boolean(histJson.agentListening ?? statusJson.agentListening);
+      state.agentTyping = Boolean(histJson.agentTyping ?? statusJson.agentTyping);
 
       updateConnectionUI();
       renderMessages(true);
@@ -538,6 +587,8 @@
       closeLiveStreams();
       state.mode = "static";
       state.unreadForAgent = 0;
+      state.agentListening = false;
+      state.agentTyping = false;
       loadStaticMessages();
       updateConnectionUI();
       renderMessages(true);
@@ -833,6 +884,8 @@
         bridgeUrl: state.bridgeUrl,
         messagesCount: state.messages.length,
         unreadForAgent: state.unreadForAgent,
+        agentListening: state.agentListening,
+        agentTyping: state.agentTyping,
         unreadAgentReplies: state.unreadAgentReplies,
         attachedSection: state.attachedSection ? { ...state.attachedSection } : null,
       };

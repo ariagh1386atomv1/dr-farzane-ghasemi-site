@@ -305,14 +305,19 @@ class ChatBridgeBackendTests(unittest.TestCase):
 
         sender = threading.Thread(target=delayed_user_send, daemon=True)
         sender.start()
-        listen_out = run_cli("listen", "--timeout", "4")
+        listen_out = run_cli("listen", "--timeout", "4", "--no-github")
         sender.join(timeout=2)
 
         self.assertEqual(listen_out["event"], "new_user_messages")
         self.assertEqual(len(listen_out["messages"]), 1)
         self.assertIn("تست listen", listen_out["messages"][0]["text"])
 
-        # Reply via CLI
+        # Verify mark-read automatically turned on agentTyping + agentListening
+        st_typing = run_cli("status")
+        self.assertTrue(st_typing["agentListening"])
+        self.assertTrue(st_typing["agentTyping"])
+
+        # Reply via CLI clears agentTyping
         rep_out = run_cli(
             "reply",
             "پاسخ مستقیم CLI به چت‌بات داشبورد!",
@@ -325,6 +330,7 @@ class ChatBridgeBackendTests(unittest.TestCase):
         )
         self.assertTrue(rep_out["ok"])
         self.assertEqual(rep_out["unreadForAgent"], 0)
+        self.assertFalse(run_cli("status")["agentTyping"])
 
 
 if __name__ == "__main__":
