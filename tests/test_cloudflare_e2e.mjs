@@ -297,11 +297,8 @@ async function runBrowserPcOffE2E() {
     window.fetch = async (input, init) => {
       const raw = typeof input === "string" ? input : input.url;
       if (raw.startsWith("http://127.0.0.1")) return fetch(raw, init);
-      if (raw.startsWith("https://raspy-butterfly-bd83.warm-orchard-3899.workers.dev")) {
-        const mapped = raw.replace(
-          "https://raspy-butterfly-bd83.warm-orchard-3899.workers.dev",
-          workerBaseUrl,
-        );
+      if (raw.startsWith("https://dr-farzane-ghasemi-site.pages.dev")) {
+        const mapped = raw.replace("https://dr-farzane-ghasemi-site.pages.dev", workerBaseUrl);
         return fetch(mapped, init);
       }
       if (raw.includes("downloads/cloudflare-worker.js")) {
@@ -314,10 +311,14 @@ async function runBrowserPcOffE2E() {
       return new Response("Not Found", { status: 404 });
     };
 
-    // Pre-seed stale legacy .e2b.app key to verify automatic cleanup!
+    // Pre-seed stale legacy .e2b.app & raspy-butterfly keys to verify automatic cleanup!
     window.localStorage.setItem(
       "studio_chat_bridge_url_v1",
       "https://8080-ix43nn68ww0g2p07qf3qp.e2b.app",
+    );
+    window.localStorage.setItem(
+      "studio_chat_worker_url_v2",
+      "https://raspy-butterfly-bd83.warm-orchard-3899.workers.dev",
     );
 
     window.eval(fs.readFileSync(path.join(REPO_ROOT, "assets/catalog.js"), "utf8"));
@@ -325,14 +326,12 @@ async function runBrowserPcOffE2E() {
     window.eval(chatJs);
     await sleep(250);
 
-    // 4. Verify ZERO-CONFIG auto-connect to raspy-butterfly-bd83...workers.dev + legacy cleanup!
+    // 4. Verify ZERO-CONFIG auto-connect to dr-farzane-ghasemi-site.pages.dev + legacy cleanup!
     assert.equal(window.localStorage.getItem("studio_chat_bridge_url_v1"), null);
+    assert.equal(window.localStorage.getItem("studio_chat_worker_url_v2"), null);
     const st = window.StudioChat.getState();
     assert.equal(st.mode, "cloudflare");
-    assert.equal(
-      st.bridgeUrl,
-      "https://raspy-butterfly-bd83.warm-orchard-3899.workers.dev",
-    );
+    assert.equal(st.bridgeUrl, "https://dr-farzane-ghasemi-site.pages.dev");
     assert.equal(st.provider, "cloudflare-workers-ai");
     assert.match(document.getElementById("chat-status-text").textContent, /ابری ۲۴\/۷ کلادفلر فعال/);
 
@@ -341,9 +340,9 @@ async function runBrowserPcOffE2E() {
     await sleep(80);
     assert.match(copiedClipboard, /export default/);
     console.log(
-      "✔ [4/6] Zero-config auto-connect to raspy-butterfly-bd83.warm-orchard-3899.workers.dev verified!",
+      "✔ [4/6] Zero-config auto-connect to dr-farzane-ghasemi-site.pages.dev verified!",
     );
-    console.log("✔ [5/6] Stale .e2b.app cache cleared & 1-click Copy Worker button verified");
+    console.log("✔ [5/6] Stale legacy caches cleared & 1-click Copy Worker button verified");
 
     // 6. Ask Cloudflare AI to build an Elementor banner -> verify JSON card + 1-click JSON download!
     await window.StudioChat.sendMessage("یک بنر ارسال رایگان بالای سایت با المنتور بساز");

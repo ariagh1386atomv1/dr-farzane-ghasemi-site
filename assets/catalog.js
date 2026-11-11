@@ -5,7 +5,7 @@
 
 window.STUDIO_DEFAULT_WORKER_URL =
   window.STUDIO_DEFAULT_WORKER_URL ||
-  "https://raspy-butterfly-bd83.warm-orchard-3899.workers.dev";
+  "https://dr-farzane-ghasemi-site.pages.dev";
 
 window.STUDIO_CATEGORIES = [
   { id: "all", label: "همه بخش‌ها" },

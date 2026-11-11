@@ -7,8 +7,8 @@
 (function () {
   "use strict";
 
-  const STORAGE_BRIDGE_KEY = "studio_chat_worker_url_v2";
-  const LEGACY_BRIDGE_KEY = "studio_chat_bridge_url_v1";
+  const STORAGE_BRIDGE_KEY = "studio_chat_worker_url_v3";
+  const LEGACY_BRIDGE_KEYS = ["studio_chat_bridge_url_v1", "studio_chat_worker_url_v2"];
   const STORAGE_CLOUD_MSGS_KEY = "studio_chat_cloud_msgs_v1";
   const STORAGE_STATIC_MSGS_KEY = "studio_chat_static_msgs_v1";
 
@@ -196,7 +196,9 @@
     return null;
   }
 
-  safeSetStorage(LEGACY_BRIDGE_KEY, "");
+  for (const k of LEGACY_BRIDGE_KEYS) {
+    safeSetStorage(k, "");
+  }
   const initialUrlBridge = extractWorkerParamFromUrl();
   if (initialUrlBridge) {
     safeSetStorage(STORAGE_BRIDGE_KEY, initialUrlBridge);

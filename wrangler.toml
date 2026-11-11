@@ -1,18 +1,8 @@
-# Cloudflare Worker + Static Assets + Built-in Workers AI (Zero-Config Git Deploy!)
-# In Cloudflare Dashboard -> Workers & Pages -> Create -> Import a repository:
-#   Repository: ariagh1386atomv1/dr-farzane-ghasemi-site
-#   Production branch: arena/3c1e42b5-dr-farzane-ghasemi-site
-#   Build command: (leave empty)
-#   Deploy command: npx wrangler deploy
-
-name = "dr-farzane-ghasemi-studio"
-main = "cloudflare-worker/worker.js"
+# Cloudflare Pages Configuration — dr-farzane-ghasemi-site.pages.dev
+# Automatically deploys static dashboard + `functions/api/chat/[[route]].js` + Workers AI (`env.AI`)
+name = "dr-farzane-ghasemi-site"
 compatibility_date = "2025-02-01"
-
-[assets]
-directory = "."
-binding = "ASSETS"
-run_worker_first = ["/api/*"]
+pages_build_output_dir = "."
 
 [ai]
 binding = "AI"
