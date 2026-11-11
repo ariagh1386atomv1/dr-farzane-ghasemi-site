@@ -1,19 +1,20 @@
 /* ==========================================================================
-   Arena Direct Chatbot Widget — Two-Way Live SSE Bridge + GitHub Sync
+   24/7 Serverless Cloudflare AI + Local Studio Chatbot Controller
+   Works 24/7 even when your computer is completely OFF (via Cloudflare Pages
+   Functions or Cloudflare Worker), plus supports Arena's local preview server.
    ========================================================================== */
 
 (function () {
   "use strict";
 
   const STORAGE_BRIDGE_KEY = "studio_chat_bridge_url_v1";
+  const STORAGE_CLOUD_MSGS_KEY = "studio_chat_cloud_msgs_v1";
   const STORAGE_STATIC_MSGS_KEY = "studio_chat_static_msgs_v1";
-  const GITHUB_REPO_ISSUES_NEW =
-    "https://github.com/ariagh1386atomv1/dr-farzane-ghasemi-site/issues/new";
-  const GITHUB_REPO_COMMENTS_API =
-    "https://api.github.com/repos/ariagh1386atomv1/dr-farzane-ghasemi-site/issues/comments?sort=created&direction=desc&per_page=10";
 
   const FA_DIGITS = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
   const toFa = (val) => String(val).replace(/\d/g, (d) => FA_DIGITS[Number(d)]);
+
+  const generatedJsonBlobs = new Map();
 
   function escapeHtml(raw) {
     return String(raw ?? "")
@@ -24,11 +25,64 @@
       .replace(/'/g, "&#39;");
   }
 
-  function formatMessageHtml(raw) {
-    const escaped = escapeHtml(raw);
+  function formatInlineMarkdown(escaped) {
     return escaped
+      .replace(/\*\*([^*\n]+)\*\*/g, "<strong>$1</strong>")
       .replace(/`([^`\n]+)`/g, '<code class="chat-msg__code">$1</code>')
       .replace(/\n/g, "<br/>");
+  }
+
+  function renderRichMessageBody(msg) {
+    const raw = String(msg.text ?? "");
+    const fenceRe = /```(?:json)?\s*\n([\s\S]*?)```/gi;
+    let lastIndex = 0;
+    let htmlParts = [];
+    let match;
+    let jsonBlockIndex = 0;
+
+    while ((match = fenceRe.exec(raw)) !== null) {
+      const before = raw.slice(lastIndex, match.index);
+      if (before.trim()) {
+        htmlParts.push(`<div>${formatInlineMarkdown(escapeHtml(before.trim()))}</div>`);
+      }
+      const codeBody = match[1].trim();
+      let isJson = false;
+      try {
+        JSON.parse(codeBody);
+        isJson = true;
+      } catch {
+        isJson = false;
+      }
+
+      const codeKey = `${msg.id}_code_${jsonBlockIndex++}`;
+      if (isJson) {
+        generatedJsonBlobs.set(codeKey, codeBody);
+      }
+
+      htmlParts.push(`
+        <div class="chat-code-card">
+          <div class="chat-code-card__head">
+            <span>${isJson ? "Elementor JSON" : "Code"}</span>
+            <span>${toFa(codeBody.length)} chars</span>
+          </div>
+          <pre class="chat-code-card__pre">${escapeHtml(codeBody)}</pre>
+        </div>
+        ${
+          isJson
+            ? `<button type="button" class="chat-msg__action-btn" data-download-json-key="${escapeHtml(codeKey)}">
+                 <span>⬇ دانلود مستقیم فایل JSON ساخته‌شده</span>
+               </button>`
+            : ""
+        }
+      `);
+      lastIndex = fenceRe.lastIndex;
+    }
+
+    const tail = raw.slice(lastIndex);
+    if (tail.trim() || htmlParts.length === 0) {
+      htmlParts.push(`<div>${formatInlineMarkdown(escapeHtml(tail))}</div>`);
+    }
+    return htmlParts.join("");
   }
 
   function formatTimeFa(iso) {
@@ -59,13 +113,10 @@
 
   function safeSetStorage(key, val) {
     try {
-      if (val === null || val === undefined || val === "") {
-        window.localStorage.removeItem(key);
-      } else {
-        window.localStorage.setItem(key, String(val));
-      }
+      if (!val) window.localStorage.removeItem(key);
+      else window.localStorage.setItem(key, String(val));
     } catch {
-      /* ignore private-mode storage restrictions */
+      /* ignore storage restrictions */
     }
   }
 
@@ -75,17 +126,37 @@
     }
   }
 
+  function extractWorkerParamFromUrl() {
+    try {
+      const hash = String(window.location.hash || "");
+      const hashMatch = hash.match(/(?:^|[#&])(?:worker|bridge)=([^&]+)/i);
+      if (hashMatch && hashMatch[1]) {
+        const decoded = normalizeBaseUrl(decodeURIComponent(hashMatch[1]));
+        if (decoded && window.history && typeof window.history.replaceState === "function") {
+          window.history.replaceState(null, "", window.location.pathname + window.location.search);
+        }
+        return decoded;
+      }
+      const sp = new URLSearchParams(window.location.search || "");
+      const qVal = sp.get("worker") || sp.get("bridge");
+      if (qVal) return normalizeBaseUrl(qVal);
+    } catch {
+      /* ignore */
+    }
+    return "";
+  }
+
   function defaultStaticMessages() {
     return [
       {
         id: "static_welcome_1",
         seq: 1,
         role: "agent",
-        author: "ایجنت اصلی چت آرنا",
+        author: "دستیار هوشمند ابری (۲۴/۷)",
         text:
-          "سلام! 👋 شما روی نسخه استاتیک داشبورد (GitHub Pages) هستید.\n" +
-          "• برای اتصال زنده دوطرفه (SSE)، آیکون تنظیمات بالا را بزنید و لینک پیش‌نمایش زنده آرنا را وارد کنید.\n" +
-          "• یا همین‌جا پیامتان را بفرستید تا با یک کلیک بسته آماده چت آرنا یا GitHub Issue برایتان ساخته شود.",
+          "سلام! 👋 برای اینکه این چت‌بات **۲۴ ساعته حتی با خاموش بودن کامپیوتر شما** کار کند:\n" +
+          "• اگر سایت را روی **Cloudflare Pages** منتشر کنید، به صورت کاملاً خودکار و بدون هیچ تنظیماتی متصل می‌شود!\n" +
+          "• یا اگر روی `.github.io` هستید، آیکون تنظیمات (🔗) بالا را بزنید، کد آماده Worker کلادفلر را کپی و Deploy کنید و لینک `workers.dev` خود را وارد نمایید.",
         sectionId: null,
         sectionTitle: null,
         source: "static-init",
@@ -101,7 +172,7 @@
     const targetId = sectionId || "01-header";
     if (["دانلود هدر", "فایل هدر", "download header", "json هدر"].some((k) => low.includes(k))) {
       return {
-        text: "فایل استاندارد «۰۱ — هدر اصلی داروخانه آنلاین» آماده دانلود مستقیم است:",
+        text: "فایل استاندارد «۰۱ — هدر اختصاصی داروخانه آنلاین دکتر فرزانه قاسمی» آماده دانلود مستقیم است:",
         action: { type: "download", sectionId: targetId, label: "دانلود مستقیم هدر (.json)" },
       };
     }
@@ -124,30 +195,7 @@
     return null;
   }
 
-  function extractBridgeParamFromUrl() {
-    try {
-      const hash = String(window.location.hash || "");
-      const hashMatch = hash.match(/(?:^|[#&])bridge=([^&]+)/i);
-      if (hashMatch && hashMatch[1]) {
-        const decoded = normalizeBaseUrl(decodeURIComponent(hashMatch[1]));
-        if (decoded && window.history && typeof window.history.replaceState === "function") {
-          const cleanUrl = window.location.pathname + window.location.search;
-          window.history.replaceState(null, "", cleanUrl);
-        }
-        return decoded;
-      }
-      const sp = new URLSearchParams(window.location.search || "");
-      const qBridge = sp.get("bridge");
-      if (qBridge) {
-        return normalizeBaseUrl(qBridge);
-      }
-    } catch {
-      /* ignore malformed URL params */
-    }
-    return "";
-  }
-
-  const initialUrlBridge = extractBridgeParamFromUrl();
+  const initialUrlBridge = extractWorkerParamFromUrl();
   if (initialUrlBridge) {
     safeSetStorage(STORAGE_BRIDGE_KEY, initialUrlBridge);
   }
@@ -155,16 +203,22 @@
   const state = {
     isOpen: false,
     settingsOpen: false,
-    mode: "connecting", // "live" | "static"
-    bridgeUrl: normalizeBaseUrl(initialUrlBridge || safeGetStorage(STORAGE_BRIDGE_KEY) || ""),
+    mode: "connecting", // "cloudflare" | "live" | "static"
+    provider: "",
+    kvEnabled: false,
+    bridgeUrl: normalizeBaseUrl(
+      initialUrlBridge ||
+        safeGetStorage(STORAGE_BRIDGE_KEY) ||
+        window.STUDIO_DEFAULT_WORKER_URL ||
+        "",
+    ),
     messages: [],
     latestSeq: 0,
     unreadForAgent: 0,
     agentListening: false,
     agentTyping: false,
-    arenaTabConnected: false,
     unreadAgentReplies: 0,
-    attachedSection: null, // { id, title }
+    attachedSection: null,
     sending: false,
     eventSource: null,
     pollTimer: null,
@@ -184,8 +238,7 @@
     settingsBox: document.getElementById("chat-settings-box"),
     bridgeInput: document.getElementById("chat-bridge-input"),
     bridgeSaveBtn: document.getElementById("chat-bridge-save"),
-    copyConsoleBtn: document.getElementById("chat-copy-console-script"),
-    openPairedIoLink: document.getElementById("chat-open-paired-io"),
+    copyWorkerBtn: document.getElementById("chat-copy-worker-code"),
     stream: document.getElementById("chat-stream"),
     wakeupBar: document.getElementById("chat-wakeup-bar"),
     wakeupText: document.getElementById("chat-wakeup-text"),
@@ -207,77 +260,43 @@
 
   function statusLabelForMsg(msg) {
     if (msg.role !== "user") return null;
+    if (msg.status === "sending") {
+      return { text: "در حال پردازش ابری...", cls: "chat-msg__ticks" };
+    }
     if (msg.status === "replied") {
       return { text: "پاسخ داده شد ✓✓", cls: "chat-msg__ticks is-replied" };
     }
     if (msg.status === "read_by_arena") {
-      return { text: "دیده شد توسط ایجنت ✓✓", cls: "chat-msg__ticks" };
+      return { text: "دیده شد ✓✓", cls: "chat-msg__ticks" };
     }
     if (msg.status === "local_only") {
-      return { text: "ذخیره محلی · آماده انتقال", cls: "chat-msg__ticks" };
+      return { text: "حالت آفلاین", cls: "chat-msg__ticks" };
     }
-    return { text: "ثبت در صندوق چت آرنا ✓", cls: "chat-msg__ticks" };
-  }
-
-  function formatArenaClipboardPacket(msg) {
-    const secLine = msg.sectionTitle ? `[بخش: ${msg.sectionTitle}]\n` : "";
-    return `پیام ارسالی از داشبورد:\n${secLine}${msg.text}`;
-  }
-
-  function buildGithubIssueUrl(msg) {
-    const title = `[پیام داشبورد] ${msg.sectionTitle ? `${msg.sectionTitle} — ` : ""}${msg.text.slice(0, 48)}`;
-    const body =
-      `### پیام ارسال‌شده از چت‌بات داشبورد\n\n` +
-      (msg.sectionTitle ? `**بخش مرتبط:** ${msg.sectionTitle} (\`${msg.sectionId || ""}\`)\n\n` : "") +
-      `${msg.text}\n`;
-    const params = new URLSearchParams({ title, body });
-    return `${GITHUB_REPO_ISSUES_NEW}?${params.toString()}`;
-  }
-
-  function effectiveLiveOrigin() {
-    if (state.bridgeUrl) return state.bridgeUrl;
-    if (state.mode === "live") return window.location.origin;
-    return "";
+    return { text: "ارسال شد ✓", cls: "chat-msg__ticks" };
   }
 
   function updateConnectionUI() {
+    const isCloudflare = state.mode === "cloudflare";
     const isLive = state.mode === "live";
-    const autoReady = isLive && (state.arenaTabConnected || state.agentListening);
-    els.statusPill.classList.toggle("is-static", !isLive);
-    els.statusPill.classList.toggle("is-listening", autoReady);
-    if (els.topbarDot) els.topbarDot.classList.toggle("is-static", !isLive);
+    const active = isCloudflare || isLive;
 
-    if (!isLive) {
-      els.statusText.textContent = "حالت GitHub Pages · از تنظیمات متصل کنید";
-    } else if (state.arenaTabConnected) {
-      els.statusText.textContent = "متصل به تب چت آرنا · شروع خودکار چت";
+    els.statusPill.classList.toggle("is-static", !active);
+    els.statusPill.classList.toggle("is-listening", isCloudflare || state.agentListening);
+    if (els.topbarDot) els.topbarDot.classList.toggle("is-static", !active);
+
+    if (isCloudflare) {
+      els.statusText.textContent =
+        state.provider === "setup-needed"
+          ? "متصل به کلادفلر · آماده فعال‌سازی AI"
+          : "ابری ۲۴/۷ کلادفلر فعال · بدون نیاز به سیستم";
+    } else if (isLive) {
+      els.statusText.textContent = "متصل به پیش‌نمایش محلی استودیو";
     } else {
-      els.statusText.textContent = "متصل به سرور زنده · آماده اتصال تب آرنا";
-    }
-
-    if (els.openPairedIoLink) {
-      const liveOrig = effectiveLiveOrigin();
-      const onGithubIo = /github\.io$/i.test(window.location.hostname || "");
-      if (liveOrig && !onGithubIo) {
-        els.openPairedIoLink.hidden = false;
-        els.openPairedIoLink.href =
-          "https://ariagh1386atomv1.github.io/dr-farzane-ghasemi-site/#bridge=" +
-          encodeURIComponent(liveOrig);
-      } else {
-        els.openPairedIoLink.hidden = true;
-      }
+      els.statusText.textContent = "آماده اتصال به کلادفلر ۲۴/۷";
     }
 
     if (els.wakeupBar) {
-      if (isLive && !state.arenaTabConnected && !state.agentListening && !state.agentTyping) {
-        els.wakeupBar.hidden = false;
-        els.wakeupText.textContent =
-          state.unreadForAgent > 0
-            ? `${toFa(state.unreadForAgent)} پیام آماده ارسال خودکار به تب آرنا`
-            : "برای شروع خودکار چت با هر پیام، پل تب آرنا را فعال کنید";
-      } else {
-        els.wakeupBar.hidden = true;
-      }
+      els.wakeupBar.hidden = active;
     }
   }
 
@@ -314,9 +333,7 @@
               : "chat-msg--agent";
 
         const verifiedBadge =
-          msg.role === "agent"
-            ? '<span class="chat-msg__verified">تأییدشده</span>'
-            : "";
+          msg.role === "agent" ? '<span class="chat-msg__verified">ابری ۲۴/۷</span>' : "";
 
         const sectionPill = msg.sectionTitle
           ? `<div class="chat-msg__section-tag">📌 ${escapeHtml(msg.sectionTitle)}</div>`
@@ -336,20 +353,6 @@
           `;
         }
 
-        let staticToolsHtml = "";
-        if (msg.role === "user" && msg.status === "local_only") {
-          staticToolsHtml = `
-            <div class="chat-msg__bridge-tools">
-              <button type="button" class="chat-mini-link" data-bridge-tool="copy-packet" data-msg-id="${escapeHtml(msg.id)}">
-                کپی برای چت آرنا
-              </button>
-              <a class="chat-mini-link" href="${escapeHtml(buildGithubIssueUrl(msg))}" target="_blank" rel="noopener noreferrer">
-                ارسال به GitHub Issue
-              </a>
-            </div>
-          `;
-        }
-
         const ticks = statusLabelForMsg(msg);
         const ticksHtml = ticks
           ? `<span class="${ticks.cls}" data-msg-ticks="${escapeHtml(msg.id)}">${ticks.text}</span>`
@@ -358,14 +361,13 @@
         return `
           <div class="chat-msg ${roleClass}" data-msg-id="${escapeHtml(msg.id)}">
             <div class="chat-msg__sender">
-              <span>${escapeHtml(msg.author || (msg.role === "user" ? "شما" : "ایجنت چت آرنا"))}</span>
+              <span>${escapeHtml(msg.author || (msg.role === "user" ? "شما" : "دستیار ابری"))}</span>
               ${verifiedBadge}
             </div>
             <div class="chat-msg__bubble">
               ${sectionPill}
-              <div>${formatMessageHtml(msg.text)}</div>
+              ${renderRichMessageBody(msg)}
               ${actionHtml}
-              ${staticToolsHtml}
             </div>
             <div class="chat-msg__meta">
               <span class="num">${formatTimeFa(msg.createdAt)}</span>
@@ -376,12 +378,12 @@
       })
       .join("");
 
-    if (state.mode === "live" && state.agentTyping) {
+    if (state.agentTyping) {
       const typingEl = document.createElement("div");
       typingEl.className = "chat-typing";
       typingEl.id = "chat-typing-indicator";
       typingEl.innerHTML =
-        '<span>ایجنت آرنا پیام شما را دید و در حال پاسخ‌گویی است</span>' +
+        '<span>دستیار هوشمند ابری در حال آماده‌سازی پاسخ است</span>' +
         '<span class="chat-typing__dots" aria-hidden="true"><span></span><span></span><span></span></span>';
       els.stream.appendChild(typingEl);
     }
@@ -396,125 +398,47 @@
     const idx = state.messages.findIndex((m) => m.id === msg.id);
     if (idx >= 0) {
       state.messages[idx] = { ...state.messages[idx], ...msg };
-      if (typeof msg.seq === "number" && msg.seq > state.latestSeq) {
-        state.latestSeq = msg.seq;
-      }
+      if (typeof msg.seq === "number" && msg.seq > state.latestSeq) state.latestSeq = msg.seq;
       renderMessages(false);
       return false;
     }
     state.messages.push(msg);
-    if (typeof msg.seq === "number" && msg.seq > state.latestSeq) {
-      state.latestSeq = msg.seq;
-    }
+    if (typeof msg.seq === "number" && msg.seq > state.latestSeq) state.latestSeq = msg.seq;
     renderMessages(true);
 
     if (notifyIfClosed && msg.role === "agent" && !state.isOpen) {
       state.unreadAgentReplies += 1;
       updateUnreadBadge();
-      notify("پاسخ جدید از ایجنت چت آرنا دریافت شد");
+      notify("پاسخ جدید از دستیار ابری دریافت شد");
     }
     return true;
   }
 
-  function applyStatusUpdate(ids, newStatus, unreadForAgent) {
-    if (Array.isArray(ids)) {
-      const idSet = new Set(ids);
-      state.messages.forEach((m) => {
-        if (idSet.has(m.id)) m.status = newStatus;
-      });
-    }
-    if (typeof unreadForAgent === "number") {
-      state.unreadForAgent = unreadForAgent;
-    }
-    updateConnectionUI();
-    renderMessages(false);
+  function saveLocalHistory(storageKey) {
+    safeSetStorage(storageKey, JSON.stringify(state.messages.slice(-80)));
   }
 
-  function saveStaticMessages() {
-    safeSetStorage(STORAGE_STATIC_MSGS_KEY, JSON.stringify(state.messages.slice(-100)));
-  }
-
-  function loadStaticMessages() {
-    const raw = safeGetStorage(STORAGE_STATIC_MSGS_KEY);
+  function loadLocalHistory(storageKey, fallbackFactory) {
+    const raw = safeGetStorage(storageKey);
     if (raw) {
       try {
         const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          state.messages = parsed;
-          return;
-        }
-      } catch {
-        /* ignore invalid cache */
-      }
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      } catch {}
     }
-    state.messages = defaultStaticMessages();
+    return fallbackFactory();
   }
 
   function closeLiveStreams() {
     if (state.eventSource) {
       try {
         state.eventSource.close();
-      } catch {
-        /* ignore */
-      }
+      } catch {}
       state.eventSource = null;
     }
     if (state.pollTimer) {
       clearInterval(state.pollTimer);
       state.pollTimer = null;
-    }
-  }
-
-  async function pollGithubRepliesInStaticMode() {
-    if (state.mode !== "static") return;
-    try {
-      const res = await fetch(GITHUB_REPO_COMMENTS_API, {
-        headers: { Accept: "application/vnd.github+json" },
-      });
-      if (!res.ok) return;
-      const comments = await res.json();
-      if (!Array.isArray(comments)) return;
-
-      const marker = "### پاسخ زنده ایجنت چت آرنا:";
-      const ordered = [...comments].reverse();
-      let changed = false;
-      for (const c of ordered) {
-        const body = String(c?.body || "");
-        if (!body.startsWith(marker)) continue;
-        const cleanReply = body.slice(marker.length).trim();
-        if (!cleanReply) continue;
-        const msgId = `gh_reply_${c.id}`;
-        const added = upsertMessage(
-          {
-            id: msgId,
-            seq: state.messages.length + 1,
-            role: "agent",
-            author: "ایجنت اصلی چت آرنا (از گیت‌هاب)",
-            text: cleanReply,
-            sectionId: null,
-            sectionTitle: null,
-            source: "github-issue-reply",
-            status: "delivered",
-            action: null,
-            createdAt: c.created_at || new Date().toISOString(),
-          },
-          true,
-        );
-        if (added) {
-          changed = true;
-          state.messages.forEach((m) => {
-            if (m.role === "user" && m.status === "local_only") {
-              m.status = "replied";
-            }
-          });
-        }
-      }
-      if (changed) {
-        renderMessages(true);
-        saveStaticMessages();
-      }
-    } catch {
-      /* ignore network/rate-limit errors in static mode */
     }
   }
 
@@ -527,134 +451,67 @@
       if (!res.ok) return;
       const data = await res.json();
       if (!data || !data.ok) return;
-      const prevTyping = state.agentTyping;
-      if (typeof data.unreadForAgent === "number") state.unreadForAgent = data.unreadForAgent;
-      if (typeof data.agentListening === "boolean") state.agentListening = data.agentListening;
-      if (typeof data.agentTyping === "boolean") state.agentTyping = data.agentTyping;
-      if (typeof data.arenaTabConnected === "boolean") {
-        state.arenaTabConnected = data.arenaTabConnected;
-      }
-      updateConnectionUI();
-      if (prevTyping !== state.agentTyping) renderMessages(true);
       (data.messages || []).forEach((m) => upsertMessage(m, true));
-    } catch {
-      /* transient network error */
-    }
+    } catch {}
   }
 
-  function openSseStream() {
+  function openLocalSseStream() {
     closeLiveStreams();
     if (typeof window.EventSource === "function") {
       try {
         const es = new window.EventSource(apiEndpoint("/api/chat/stream"));
-        es.addEventListener("connected", (ev) => {
-          try {
-            const payload = JSON.parse(ev.data);
-            if (typeof payload.unreadForAgent === "number") {
-              state.unreadForAgent = payload.unreadForAgent;
-            }
-            if (typeof payload.agentListening === "boolean") {
-              state.agentListening = payload.agentListening;
-            }
-            if (typeof payload.agentTyping === "boolean") {
-              state.agentTyping = payload.agentTyping;
-            }
-            if (typeof payload.arenaTabConnected === "boolean") {
-              state.arenaTabConnected = payload.arenaTabConnected;
-            }
-            updateConnectionUI();
-            renderMessages(false);
-          } catch {
-            /* ignore */
-          }
-        });
-        es.addEventListener("presence", (ev) => {
-          try {
-            const payload = JSON.parse(ev.data);
-            const prevTyping = state.agentTyping;
-            if (typeof payload.agentListening === "boolean") {
-              state.agentListening = payload.agentListening;
-            }
-            if (typeof payload.agentTyping === "boolean") {
-              state.agentTyping = payload.agentTyping;
-            }
-            if (typeof payload.arenaTabConnected === "boolean") {
-              state.arenaTabConnected = payload.arenaTabConnected;
-            }
-            if (typeof payload.unreadForAgent === "number") {
-              state.unreadForAgent = payload.unreadForAgent;
-            }
-            updateConnectionUI();
-            if (prevTyping !== state.agentTyping) {
-              renderMessages(true);
-            }
-          } catch {
-            /* ignore */
-          }
-        });
         es.addEventListener("message", (ev) => {
           try {
             const payload = JSON.parse(ev.data);
-            if (typeof payload.unreadForAgent === "number") {
-              state.unreadForAgent = payload.unreadForAgent;
-              updateConnectionUI();
-            }
-            if (payload.message) {
-              upsertMessage(payload.message, true);
-            }
-          } catch {
-            /* ignore */
-          }
+            if (payload.message) upsertMessage(payload.message, true);
+          } catch {}
         });
         es.addEventListener("status_update", (ev) => {
           try {
             const payload = JSON.parse(ev.data);
-            applyStatusUpdate(payload.messageIds, payload.status, payload.unreadForAgent);
-          } catch {
-            /* ignore */
-          }
+            if (Array.isArray(payload.messageIds)) {
+              const idSet = new Set(payload.messageIds);
+              state.messages.forEach((m) => {
+                if (idSet.has(m.id)) m.status = payload.status;
+              });
+              renderMessages(false);
+            }
+          } catch {}
         });
         es.addEventListener("reset", (ev) => {
           try {
             const payload = JSON.parse(ev.data);
             state.messages = Array.isArray(payload.messages) ? payload.messages : [];
-            state.latestSeq = state.messages.reduce((mx, m) => Math.max(mx, m.seq || 0), 0);
-            state.unreadForAgent = payload.unreadForAgent || 0;
-            updateConnectionUI();
             renderMessages(true);
-          } catch {
-            /* ignore */
-          }
+          } catch {}
         });
         state.eventSource = es;
-      } catch {
-        /* fallback to polling below */
-      }
+      } catch {}
     }
     state.pollTimer = setInterval(pollIncremental, 4000);
   }
 
-  async function flushUnsyncedStaticMessages(unsyncedList) {
-    for (const m of unsyncedList) {
+  async function probeStatusJson() {
+    const paths = ["/api/chat/status", "/status"];
+    for (const p of paths) {
       try {
-        await fetch(apiEndpoint("/api/chat/send"), {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            text: m.text,
-            sectionId: m.sectionId || null,
-            sectionTitle: m.sectionTitle || null,
-            source: "github-pages-synced",
-          }),
+        const controller = typeof AbortController !== "undefined" ? new AbortController() : null;
+        const timer = controller ? setTimeout(() => controller.abort(), 4000) : null;
+        const res = await fetch(apiEndpoint(p), {
+          cache: "no-store",
+          signal: controller ? controller.signal : undefined,
         });
-      } catch {
-        /* ignore individual flush error */
-      }
+        if (timer) clearTimeout(timer);
+        if (!res.ok) continue;
+        const data = await res.json();
+        if (data && data.ok) return data;
+      } catch {}
     }
-    safeSetStorage(STORAGE_STATIC_MSGS_KEY, "");
+    return null;
   }
 
   async function connectBridge(customBaseUrl) {
+    closeLiveStreams();
     if (customBaseUrl !== undefined) {
       state.bridgeUrl = normalizeBaseUrl(customBaseUrl);
       safeSetStorage(STORAGE_BRIDGE_KEY, state.bridgeUrl);
@@ -663,63 +520,76 @@
       els.bridgeInput.value = state.bridgeUrl;
     }
 
-    const pendingLocal = state.messages.filter(
-      (m) => m.role === "user" && m.status === "local_only",
-    );
+    const statusJson = await probeStatusJson();
 
-    try {
-      const controller = typeof AbortController !== "undefined" ? new AbortController() : null;
-      const timer = controller ? setTimeout(() => controller.abort(), 3500) : null;
-      const statusRes = await fetch(apiEndpoint("/api/chat/status"), {
-        cache: "no-store",
-        signal: controller ? controller.signal : undefined,
-      });
-      if (timer) clearTimeout(timer);
-      if (!statusRes.ok) throw new Error("bridge_unavailable");
-      const statusJson = await statusRes.json();
-      if (!statusJson || statusJson.mode !== "live-bridge") {
-        throw new Error("invalid_bridge");
+    /* 1. Serverless 24/7 Cloudflare Edge Mode */
+    if (statusJson && statusJson.mode === "cloudflare-edge") {
+      state.mode = "cloudflare";
+      state.provider = statusJson.provider || "cloudflare-workers-ai";
+      state.kvEnabled = Boolean(statusJson.kvEnabled);
+      state.agentListening = true;
+      state.agentTyping = false;
+
+      if (state.kvEnabled) {
+        try {
+          const histRes = await fetch(apiEndpoint("/api/chat/messages?after_seq=0"), {
+            cache: "no-store",
+          });
+          const histJson = await histRes.json();
+          if (Array.isArray(histJson?.messages) && histJson.messages.length > 0) {
+            state.messages = histJson.messages;
+          }
+        } catch {}
       }
 
-      if (pendingLocal.length > 0) {
-        await flushUnsyncedStaticMessages(pendingLocal);
+      if (!state.messages || state.messages.length === 0) {
+        const cached = loadLocalHistory(STORAGE_CLOUD_MSGS_KEY, () => []);
+        if (cached.length > 0) {
+          state.messages = cached;
+        } else {
+          try {
+            const histRes = await fetch(apiEndpoint("/api/chat/messages?after_seq=0"), {
+              cache: "no-store",
+            });
+            const histJson = await histRes.json();
+            state.messages = Array.isArray(histJson?.messages)
+              ? histJson.messages
+              : defaultStaticMessages();
+          } catch {
+            state.messages = defaultStaticMessages();
+          }
+        }
       }
 
+      updateConnectionUI();
+      renderMessages(true);
+      return true;
+    }
+
+    /* 2. Local Arena Preview Server Mode */
+    if (statusJson && statusJson.mode === "live-bridge") {
+      state.mode = "live";
       const histRes = await fetch(apiEndpoint("/api/chat/messages?after_seq=0"), {
         cache: "no-store",
       });
       const histJson = await histRes.json();
-
-      state.mode = "live";
       state.messages = Array.isArray(histJson.messages) ? histJson.messages : [];
       state.latestSeq = histJson.latestSeq || 0;
-      state.unreadForAgent = histJson.unreadForAgent || 0;
-      state.agentListening = Boolean(histJson.agentListening ?? statusJson.agentListening);
-      state.agentTyping = Boolean(histJson.agentTyping ?? statusJson.agentTyping);
-      state.arenaTabConnected = Boolean(
-        histJson.arenaTabConnected ?? statusJson.arenaTabConnected,
-      );
-
+      state.agentListening = Boolean(statusJson.agentListening);
       updateConnectionUI();
       renderMessages(true);
-      openSseStream();
+      openLocalSseStream();
       return true;
-    } catch {
-      closeLiveStreams();
-      state.mode = "static";
-      state.unreadForAgent = 0;
-      state.agentListening = false;
-      state.agentTyping = false;
-      state.arenaTabConnected = false;
-      loadStaticMessages();
-      updateConnectionUI();
-      renderMessages(true);
-      pollGithubRepliesInStaticMode();
-      state.pollTimer = setInterval(() => {
-        if (state.isOpen) pollGithubRepliesInStaticMode();
-      }, 15000);
-      return false;
     }
+
+    /* 3. Unconfigured Static Host Fallback */
+    state.mode = "static";
+    state.agentListening = false;
+    state.agentTyping = false;
+    state.messages = loadLocalHistory(STORAGE_STATIC_MSGS_KEY, defaultStaticMessages);
+    updateConnectionUI();
+    renderMessages(true);
+    return false;
   }
 
   async function sendMessage(rawText) {
@@ -731,6 +601,65 @@
     els.sendBtn.disabled = true;
 
     try {
+      /* === Mode 1: 24/7 Serverless Cloudflare Edge === */
+      if (state.mode === "cloudflare") {
+        const tempId = `temp_usr_${Date.now()}`;
+        const historyContext = state.messages.slice(-14);
+
+        els.input.value = "";
+        autoResizeInput();
+        state.attachedSection = null;
+        updateContextUI();
+
+        upsertMessage(
+          {
+            id: tempId,
+            seq: state.messages.length + 1,
+            role: "user",
+            author: "شما",
+            text,
+            sectionId: section ? section.id : null,
+            sectionTitle: section ? section.title : null,
+            status: "sending",
+            createdAt: new Date().toISOString(),
+          },
+          false,
+        );
+        state.agentTyping = true;
+        renderMessages(true);
+
+        const res = await fetch(apiEndpoint("/api/chat/send"), {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            text,
+            sectionId: section ? section.id : null,
+            sectionTitle: section ? section.title : null,
+            history: historyContext,
+            source: "web-dashboard",
+          }),
+        });
+        const data = await res.json();
+        state.agentTyping = false;
+
+        if (!res.ok || !data.ok) {
+          state.messages = state.messages.filter((m) => m.id !== tempId);
+          renderMessages(true);
+          notify(data?.error || "ارسال پیام به کلادفلر با خطا مواجه شد");
+          return null;
+        }
+
+        // Replace optimistic user message with server record + append AI reply
+        state.messages = state.messages.filter((m) => m.id !== tempId);
+        (data.created || [data.message, data.reply].filter(Boolean)).forEach((m) =>
+          upsertMessage(m, true),
+        );
+        saveLocalHistory(STORAGE_CLOUD_MSGS_KEY);
+        renderMessages(true);
+        return data.reply || data.message;
+      }
+
+      /* === Mode 2: Local Arena Preview Server === */
       if (state.mode === "live") {
         const res = await fetch(apiEndpoint("/api/chat/send"), {
           method: "POST",
@@ -739,7 +668,7 @@
             text,
             sectionId: section ? section.id : null,
             sectionTitle: section ? section.title : null,
-            source: state.bridgeUrl ? "github-pages-live" : "arena-preview",
+            source: "arena-preview",
           }),
         });
         const data = await res.json();
@@ -751,25 +680,20 @@
         autoResizeInput();
         state.attachedSection = null;
         updateContextUI();
-
-        state.unreadForAgent =
-          typeof data.unreadForAgent === "number" ? data.unreadForAgent : state.unreadForAgent + 1;
         (data.created || [data.message]).forEach((m) => upsertMessage(m, false));
-        updateConnectionUI();
         return data.message;
       }
 
-      /* Static GitHub Pages Fallback Mode */
+      /* === Mode 3: Offline Static Helper === */
       const nowIso = new Date().toISOString();
       const userMsg = {
-        id: `local_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+        id: `local_${Date.now()}`,
         seq: state.messages.length + 1,
         role: "user",
-        author: "شما (از داشبورد)",
+        author: "شما",
         text,
         sectionId: section ? section.id : null,
         sectionTitle: section ? section.title : null,
-        source: "github-pages-static",
         status: "local_only",
         action: null,
         createdAt: nowIso,
@@ -778,34 +702,32 @@
       autoResizeInput();
       state.attachedSection = null;
       updateContextUI();
-
       upsertMessage(userMsg, false);
 
       const helper = buildLocalHelper(text, section ? section.id : null);
-      if (helper) {
-        upsertMessage(
-          {
-            id: `local_helper_${Date.now()}`,
-            seq: state.messages.length + 1,
-            role: "assistant",
-            author: "دستیار فوری استودیو",
-            text: helper.text,
-            sectionId: section ? section.id : null,
-            sectionTitle: section ? section.title : null,
-            source: "instant-helper",
-            status: "delivered",
-            action: helper.action,
-            createdAt: nowIso,
-          },
-          false,
-        );
-      }
-      saveStaticMessages();
+      upsertMessage(
+        {
+          id: `local_helper_${Date.now()}`,
+          seq: state.messages.length + 1,
+          role: "assistant",
+          author: "راهنمای اتصال کلادفلر",
+          text: helper
+            ? helper.text
+            : "برای دریافت پاسخ هوشمند ۲۴/۷ (حتی زمانی که کامپیوترتان خاموش است)، از آیکون تنظیمات بالا (🔗) لینک Cloudflare Worker خود را متصل کنید یا سایت را روی Cloudflare Pages بالا بیاورید.",
+          sectionId: section ? section.id : null,
+          sectionTitle: section ? section.title : null,
+          status: "delivered",
+          action: helper ? helper.action : null,
+          createdAt: nowIso,
+        },
+        false,
+      );
+      saveLocalHistory(STORAGE_STATIC_MSGS_KEY);
       return userMsg;
     } catch {
-      notify("ارتباط با سرور برقرار نشد — در حال سوییچ به حالت محلی");
-      state.mode = "static";
-      updateConnectionUI();
+      state.agentTyping = false;
+      renderMessages(false);
+      notify("ارتباط با سرور ابری برقرار نشد — آدرس Worker را بررسی کنید");
       return null;
     } finally {
       state.sending = false;
@@ -814,7 +736,7 @@
   }
 
   async function clearConversation() {
-    if (state.mode === "live") {
+    if (state.mode === "cloudflare" || state.mode === "live") {
       try {
         const res = await fetch(apiEndpoint("/api/chat/clear"), {
           method: "POST",
@@ -824,22 +746,33 @@
         const data = await res.json();
         if (data && data.ok) {
           state.messages = data.messages || [];
-          state.latestSeq = state.messages.reduce((mx, m) => Math.max(mx, m.seq || 0), 0);
-          state.unreadForAgent = 0;
-          updateConnectionUI();
+          safeSetStorage(STORAGE_CLOUD_MSGS_KEY, "");
           renderMessages(true);
           notify("تاریخچه گفتگو پاک‌سازی شد");
+          return;
         }
-      } catch {
-        notify("امکان پاک‌سازی در حال حاضر وجود ندارد");
-      }
-      return;
+      } catch {}
     }
-
     state.messages = defaultStaticMessages();
-    saveStaticMessages();
+    safeSetStorage(STORAGE_CLOUD_MSGS_KEY, "");
+    safeSetStorage(STORAGE_STATIC_MSGS_KEY, "");
     renderMessages(true);
-    notify("تاریخچه محلی پاک‌سازی شد");
+    notify("تاریخچه گفتگو پاک‌سازی شد");
+  }
+
+  function downloadGeneratedJson(codeKey) {
+    const jsonStr = generatedJsonBlobs.get(codeKey);
+    if (!jsonStr) return;
+    const blob = new Blob([jsonStr], { type: "application/json;charset=utf-8" });
+    const blobUrl = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = blobUrl;
+    a.download = `elementor-section-${Date.now()}.json`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(blobUrl), 3000);
+    notify("فایل JSON ساخته‌شده با موفقیت دانلود شد");
   }
 
   function autoResizeInput() {
@@ -884,9 +817,7 @@
 
   /* ==================== EVENT LISTENERS ==================== */
   els.fab.addEventListener("click", () => openChat());
-  if (els.topbarBtn) {
-    els.topbarBtn.addEventListener("click", () => toggleChat());
-  }
+  if (els.topbarBtn) els.topbarBtn.addEventListener("click", () => toggleChat());
   els.closeBtn.addEventListener("click", closeChat);
   els.clearBtn.addEventListener("click", clearConversation);
 
@@ -903,31 +834,28 @@
   els.bridgeSaveBtn.addEventListener("click", async () => {
     const val = els.bridgeInput.value.trim();
     els.bridgeSaveBtn.disabled = true;
+    state.messages = [];
     const ok = await connectBridge(val);
     els.bridgeSaveBtn.disabled = false;
     if (ok) {
       state.settingsOpen = false;
       els.settingsBox.hidden = true;
       els.settingsToggle.classList.remove("is-active");
-      notify("اتصال زنده دوطرفه با سرور چت آرنا برقرار شد");
+      notify("اتصال ابری ۲۴/۷ کلادفلر با موفقیت برقرار شد!");
     } else {
-      notify(val ? "سرور پاسخ نداد — آدرس پیش‌نمایش زنده آرنا را بررسی کنید" : "در حالت استاتیک قرار گرفت");
+      notify(val ? "آدرس Worker پاسخ نداد — لینک را بررسی کنید" : "در حالت استاتیک قرار گرفت");
     }
   });
 
-  if (els.copyConsoleBtn) {
-    els.copyConsoleBtn.addEventListener("click", async () => {
+  if (els.copyWorkerBtn) {
+    els.copyWorkerBtn.addEventListener("click", async () => {
       try {
-        const res = await fetch("./downloads/arena-bridge-console.js", { cache: "no-store" });
-        const scriptBody = await res.text();
-        const orig = effectiveLiveOrigin();
-        const headerLine = orig
-          ? `window.__ARENA_BRIDGE_OVERRIDE_URL__ = ${JSON.stringify(orig)};\n`
-          : "";
-        await navigator.clipboard.writeText(headerLine + scriptBody);
-        notify("اسکریپت کپی شد — در تب چت آرنا (F12 → Console) Paste و Enter کنید");
+        const res = await fetch("./downloads/cloudflare-worker.js", { cache: "no-store" });
+        const code = await res.text();
+        await navigator.clipboard.writeText(code);
+        notify("کد کامل Worker کلادفلر در کلیپ‌بورد کپی شد!");
       } catch {
-        notify("خطا در کپی اسکریپت — از دکمه دانلود افزونه استفاده کنید");
+        notify("از دکمه «دانلود فایل worker.js» استفاده کنید");
       }
     });
   }
@@ -937,14 +865,14 @@
       state.settingsOpen = true;
       els.settingsBox.hidden = false;
       els.settingsToggle.classList.add("is-active");
+      els.bridgeInput.focus();
     });
   }
 
   els.quickRow.addEventListener("click", (e) => {
     const chip = e.target.closest("[data-quick-prompt]");
     if (!chip) return;
-    const prompt = chip.getAttribute("data-quick-prompt") || "";
-    els.input.value = prompt;
+    els.input.value = chip.getAttribute("data-quick-prompt") || "";
     autoResizeInput();
     els.input.focus();
   });
@@ -955,7 +883,13 @@
     els.input.focus();
   });
 
-  els.stream.addEventListener("click", async (e) => {
+  els.stream.addEventListener("click", (e) => {
+    const genBtn = e.target.closest("[data-download-json-key]");
+    if (genBtn) {
+      downloadGeneratedJson(genBtn.getAttribute("data-download-json-key"));
+      return;
+    }
+
     const actionBtn = e.target.closest("[data-chat-action]");
     if (actionBtn && window.StudioHub) {
       const act = actionBtn.getAttribute("data-chat-action");
@@ -963,34 +897,16 @@
       if (act === "download") window.StudioHub.downloadById(secId, actionBtn);
       else if (act === "open-guide") window.StudioHub.openGuideById(secId);
       else if (act === "open-modal") window.StudioHub.openModalById(secId);
-      return;
-    }
-
-    const copyBtn = e.target.closest('[data-bridge-tool="copy-packet"]');
-    if (copyBtn) {
-      const msgId = copyBtn.getAttribute("data-msg-id");
-      const msg = state.messages.find((m) => m.id === msgId);
-      if (msg) {
-        try {
-          await navigator.clipboard.writeText(formatArenaClipboardPacket(msg));
-          notify("بسته پیام کپی شد — مستقیم در چت آرنا Paste کنید");
-        } catch {
-          notify("امکان کپی خودکار نبود");
-        }
-      }
     }
   });
 
   els.input.addEventListener("input", autoResizeInput);
 
-  /* IME-safe Enter handling per UX guidelines */
   els.input.addEventListener("keydown", (e) => {
     if (e.key !== "Enter" || e.shiftKey || e.ctrlKey || e.metaKey || e.altKey) return;
     e.preventDefault();
     if (e.isComposing || e.keyCode === 229) return;
-    if (!e.repeat) {
-      sendMessage();
-    }
+    if (!e.repeat) sendMessage();
   });
 
   els.form.addEventListener("submit", (e) => {
@@ -1002,13 +918,10 @@
     if (e.key === "Escape" && state.isOpen) {
       const modalOpen = document.getElementById("preview-modal")?.classList.contains("is-open");
       const drawerOpen = document.getElementById("guide-drawer")?.classList.contains("is-open");
-      if (!modalOpen && !drawerOpen) {
-        closeChat();
-      }
+      if (!modalOpen && !drawerOpen) closeChat();
     }
   });
 
-  /* Public Controller API */
   window.StudioChat = {
     open: openChat,
     close: closeChat,
@@ -1021,12 +934,11 @@
       return {
         isOpen: state.isOpen,
         mode: state.mode,
+        provider: state.provider,
+        kvEnabled: state.kvEnabled,
         bridgeUrl: state.bridgeUrl,
         messagesCount: state.messages.length,
-        unreadForAgent: state.unreadForAgent,
-        agentListening: state.agentListening,
         agentTyping: state.agentTyping,
-        arenaTabConnected: state.arenaTabConnected,
         unreadAgentReplies: state.unreadAgentReplies,
         attachedSection: state.attachedSection ? { ...state.attachedSection } : null,
       };

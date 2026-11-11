@@ -1,0 +1,7 @@
+# Standalone Cloudflare Worker Configuration (if deploying Worker separately for .github.io)
+name = "dr-farzane-chat-worker"
+main = "worker.js"
+compatibility_date = "2025-02-01"
+
+[ai]
+binding = "AI"

@@ -281,7 +281,7 @@
             </svg>
           </span>
           <div class="chat-head__titles">
-            <span class="chat-head__title">پل مستقیم چت آرنا</span>
+            <span class="chat-head__title">دستیار هوشمند ابری (۲۴/۷)</span>
             <span id="chat-status-pill" class="chat-status-pill">
               <span class="chat-status-pill__dot" aria-hidden="true"></span>
               <span id="chat-status-text">در حال بررسی اتصال...</span>
@@ -356,64 +356,54 @@
         </div>
       </header>
 
-      <!-- Collapsible Live Bridge & Auto-Turn Setup -->
+      <!-- Collapsible Cloudflare 24/7 Serverless Setup -->
       <div id="chat-settings-box" class="chat-settings" hidden>
         <label for="chat-bridge-input" class="chat-settings__label">
-          ۱. آدرس سرور زنده آرنا (در لینک متصل خودکار پر می‌شود):
+          آدرس Cloudflare Worker ۲۴/۷ (در Cloudflare Pages خودکار متصل است):
         </label>
         <div class="chat-settings__row">
           <input
             id="chat-bridge-input"
             type="url"
             class="chat-settings__input"
-            placeholder="https://8080-....e2b.app"
+            placeholder="https://dr-farzane-chat.YOUR-NAME.workers.dev"
           />
           <button id="chat-bridge-save" type="button" class="chat-settings__btn">
-            اتصال زنده
+            اتصال ابری
           </button>
         </div>
 
         <div class="chat-settings__divider"></div>
 
         <span class="chat-settings__label">
-          ۲. فعال‌سازی ارسال خودکار پیام به تب چت آرنا (بدون تایم‌اوت):
+          فایل آماده نصب روی پنل کلادفلر (کارکرد ۲۴/۷ حتی با سیستم خاموش):
         </span>
         <div class="chat-settings__tools">
-          <a
-            id="chat-ext-download"
-            href="./downloads/arena-chat-bridge-extension.zip"
-            download="arena-chat-bridge-extension.zip"
-            class="chat-tool-btn is-primary"
-          >
-            دانلود افزونه کروم (.zip)
-          </a>
-          <button id="chat-copy-console-script" type="button" class="chat-tool-btn">
-            کپی اسکریپت کنسول تب آرنا
+          <button id="chat-copy-worker-code" type="button" class="chat-tool-btn is-primary">
+            کپی کد کامل Worker کلادفلر
           </button>
           <a
-            id="chat-open-paired-io"
-            href="https://ariagh1386atomv1.github.io/dr-farzane-ghasemi-site/"
-            target="_blank"
-            rel="noopener noreferrer"
+            id="chat-worker-download"
+            href="./downloads/cloudflare-worker.js"
+            download="cloudflare-worker.js"
             class="chat-tool-btn"
-            hidden
           >
-            باز کردن سایت .io متصل ↗
+            دانلود فایل worker.js
           </a>
         </div>
         <p class="chat-settings__hint">
-          با نصب افزونه (یا Paste اسکریپت در Console تب آرنا)، هر پیامی در <code>.io</code> بفرستید خودکار یک پیام جدید در چت آرنا ثبت می‌کند، جواب داخل همین <code>.io</code> برمی‌گردد و چت آرنا هم بدون تایم‌اوت بسته می‌شود.
+          اگر سایت را روی <strong>Cloudflare Pages</strong> ببرید بدون هیچ لینکی خودکار متصل است. برای استفاده روی <code>.github.io</code> کافی است لینک Worker خود را بالا وارد کنید.
         </p>
       </div>
 
       <!-- Messages Stream -->
       <div id="chat-stream" class="chat-stream" aria-live="polite"></div>
 
-      <!-- Arena Tab Auto-Trigger Setup Helper (shown only if Arena Tab Bridge isn't connected yet) -->
+      <!-- Setup Notice Bar (shown only on unconfigured static host) -->
       <div id="chat-wakeup-bar" class="chat-wakeup" hidden>
-        <span id="chat-wakeup-text">پل تب آرنا هنوز متصل نیست</span>
+        <span id="chat-wakeup-text">برای چت ۲۴/۷ با سیستم خاموش، کلادفلر را متصل کنید</span>
         <button id="chat-wakeup-copy" type="button" class="chat-wakeup__btn">
-          اتصال خودکار تب آرنا
+          تنظیم کلادفلر
         </button>
       </div>
 

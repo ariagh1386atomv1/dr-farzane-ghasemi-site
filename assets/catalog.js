@@ -3,6 +3,8 @@
    Each new section built in this project is registered here for 1-click download.
    ========================================================================== */
 
+window.STUDIO_DEFAULT_WORKER_URL = window.STUDIO_DEFAULT_WORKER_URL || "";
+
 window.STUDIO_CATEGORIES = [
   { id: "all", label: "همه بخش‌ها" },
   { id: "layout", label: "سربرگ و پابرگ" },

@@ -1871,6 +1871,41 @@ a {
   display: inline-block;
 }
 
+.chat-code-card {
+  margin-top: 9px;
+  border-radius: 10px;
+  border: 1px solid var(--line-strong);
+  background: #f8fafd;
+  overflow: hidden;
+  direction: ltr;
+  text-align: left;
+}
+
+.chat-code-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background: var(--bg-muted);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--ink-600);
+}
+
+.chat-code-card__pre {
+  margin: 0;
+  padding: 8px 10px;
+  max-height: 120px;
+  overflow: auto;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--ink-950);
+  white-space: pre;
+}
+
 .chat-msg--user .chat-msg__code {
   background: rgba(255, 255, 255, 0.2);
 }

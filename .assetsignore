@@ -1,0 +1,14 @@
+.git
+.github
+.agents
+.claude
+.chat
+agent
+darunik
+darunik-complete-project.zip
+tools
+tests
+cloudflare-worker
+wrangler.toml
+skills-lock.json
+node_modules

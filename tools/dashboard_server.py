@@ -41,12 +41,16 @@ BLOCKED_TOP_DIRS = {
     "darunik",
     "tools",
     "tests",
+    "cloudflare-worker",
+    "functions",
     "__pycache__",
     "node_modules",
 }
 
 BLOCKED_ROOT_FILES = {
     ".gitignore",
+    ".assetsignore",
+    "wrangler.toml",
     "skills-lock.json",
     "darunik-complete-project.zip",
 }

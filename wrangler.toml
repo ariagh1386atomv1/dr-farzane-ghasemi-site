@@ -1,0 +1,7 @@
+# Cloudflare Pages Configuration (for Git-connected 24/7 Cloud Hosting + Functions)
+name = "dr-farzane-ghasemi-studio"
+compatibility_date = "2025-02-01"
+pages_build_output_dir = "."
+
+[ai]
+binding = "AI"
