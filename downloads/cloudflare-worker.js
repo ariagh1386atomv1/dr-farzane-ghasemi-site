@@ -33,6 +33,10 @@ const SYSTEM_PROMPT = `تو دستیار هوشمند ابری ۲۴/۷ «است�
   3) «۰۳ — سکشن ویترین ریلی دسته‌بندی محصولات (مشابه مکمل‌های ورزشی)» (03-category-showcase-rail-dr-farzane-ghasemi.json)
   4) «۰۴ — قالب کامل آرشیو دسته‌بندی محصولات» (04-category-archive-dr-farzane-ghasemi.json)
   5) «۰۵ — قالب اختصاصی صفحه اصلی فروشگاه (/shop)» (05-shop-page-dr-farzane-ghasemi.json)
+  6) «۰۶ — مین هیرو صفحه اصلی + ۲ بنر کناری + ۴ کارت اعتماد» (06-home-hero-trust-dr-farzane-ghasemi.json)
+  7) «۰۷ — پکیج ۲۰ محصول دمو ووکامرس همراه با عکس و ویژگی‌ها» (07-woocommerce-demo-products-20.csv)
+  8) «۰۸ — بسته فهرست‌های استاندارد وردپرس برای هدر سایت» (08-wordpress-menus-dr-farzane-ghasemi.xml)
+  9) «۰۹ — هدر چسبان ارتقایافته همراه با مگامنو چندستونه دارونیک» (09-header-megamenu-dr-farzane-ghasemi.json)
 
 وظایف تو:
 1. همیشه به زبان فارسی روان، دقیق، محترمانه و حرفه‌ای پاسخ بده.

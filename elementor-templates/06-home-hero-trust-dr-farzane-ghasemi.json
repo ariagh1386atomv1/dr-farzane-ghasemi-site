@@ -1,0 +1,2213 @@
+{
+  "version": "0.4",
+  "title": "۰۶ — مین هیرو صفحه اصلی + ۲ بنر کناری + ۴ کارت اعتماد",
+  "type": "section",
+  "content": [
+    {
+      "id": "f6000001",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_title": "سکشن کامل مین هیرو + بنرهای کناری + ردیف اعتماد (صفحه اصلی)",
+        "html_tag": "section",
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1440,
+          "sizes": []
+        },
+        "flex_direction": "column",
+        "flex_gap": {
+          "column": "16",
+          "row": "16",
+          "isLinked": true,
+          "unit": "px"
+        },
+        "background_background": "classic",
+        "background_color": "#F4F7F9",
+        "padding": {
+          "unit": "px",
+          "top": "20",
+          "right": "20",
+          "bottom": "20",
+          "left": "20",
+          "isLinked": true
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "12",
+          "right": "12",
+          "bottom": "12",
+          "left": "12",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "f6000002",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "_title": "شبکه بالای هیرو (اسلایدر راست + ۲ بنر چپ)",
+            "content_width": "full",
+            "flex_direction": "row",
+            "flex_direction_tablet": "column",
+            "flex_direction_mobile": "column",
+            "flex_align_items": "stretch",
+            "flex_gap": {
+              "column": "12",
+              "row": "12",
+              "isLinked": true,
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "f6000003",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "_title": "ستون راست — اسلایدر اصلی هیرو",
+                "content_width": "full",
+                "flex_direction": "column",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "_flex_size": "grow"
+              },
+              "elements": [
+                {
+                  "id": "f6000004",
+                  "elType": "widget",
+                  "widgetType": "nested-carousel",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "اسلایدر اصلی ۳ اسلایده صفحه اول (Nested Carousel)",
+                    "carousel_name": "پیشنهادهای ویژه داروخانه",
+                    "carousel_items": [
+                      {
+                        "_id": "hs60001",
+                        "slide_title": "اسلاید 1 — روتین پوستی"
+                      },
+                      {
+                        "_id": "hs60002",
+                        "slide_title": "اسلاید 2 — مکمل‌های ورزشی"
+                      },
+                      {
+                        "_id": "hs60003",
+                        "slide_title": "اسلاید 3 — ویتامین‌های خانواده"
+                      }
+                    ],
+                    "slides_to_show": "1",
+                    "slides_to_show_tablet": "1",
+                    "slides_to_show_mobile": "1",
+                    "slides_to_scroll": "1",
+                    "equal_height": "yes",
+                    "autoplay": "yes",
+                    "autoplay_speed": 6500,
+                    "pause_on_hover": "yes",
+                    "pause_on_interaction": "yes",
+                    "infinite": "yes",
+                    "speed": 600,
+                    "direction": "rtl",
+                    "arrows": "yes",
+                    "navigation_previous_icon": {
+                      "value": "fas fa-chevron-left",
+                      "library": "fa-solid"
+                    },
+                    "navigation_next_icon": {
+                      "value": "fas fa-chevron-right",
+                      "library": "fa-solid"
+                    },
+                    "navigation_previous_icon_horizontal_position": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "navigation_next_icon_horizontal_position": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "pagination": "bullets",
+                    "dots_position": "inside",
+                    "dots_size": {
+                      "unit": "px",
+                      "size": 8,
+                      "sizes": []
+                    },
+                    "dots_gap": {
+                      "unit": "px",
+                      "size": 6,
+                      "sizes": []
+                    },
+                    "dots_normal_color": "rgba(20, 33, 46, 0.25)",
+                    "dots_hover_color": "#0FA47A",
+                    "image_spacing_custom": {
+                      "unit": "px",
+                      "size": 0,
+                      "sizes": []
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "f6000005",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "_title": "اسلاید 1 — روتین پوستی",
+                        "content_width": "full",
+                        "min_height": {
+                          "unit": "px",
+                          "size": 412,
+                          "sizes": []
+                        },
+                        "min_height_tablet": {
+                          "unit": "px",
+                          "size": 340,
+                          "sizes": []
+                        },
+                        "min_height_mobile": {
+                          "unit": "px",
+                          "size": 280,
+                          "sizes": []
+                        },
+                        "flex_direction": "row",
+                        "flex_justify_content": "flex-start",
+                        "flex_align_items": "center",
+                        "background_background": "classic",
+                        "background_color": "#EFF7F2",
+                        "background_image": {
+                          "url": "https://ariagh1386atomv1.github.io/dr-farzane-ghasemi-site/demo-media/banners/hero-skincare.jpg",
+                          "id": ""
+                        },
+                        "background_position": "center left",
+                        "background_repeat": "no-repeat",
+                        "background_size": "cover",
+                        "background_overlay_background": "gradient",
+                        "background_overlay_color": "rgba(255, 255, 255, 0.94)",
+                        "background_overlay_color_b": "rgba(255, 255, 255, 0.12)",
+                        "background_overlay_gradient_angle": {
+                          "unit": "deg",
+                          "size": 270,
+                          "sizes": []
+                        },
+                        "background_overlay_opacity": {
+                          "unit": "px",
+                          "size": 0.92,
+                          "sizes": []
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "16",
+                          "right": "16",
+                          "bottom": "16",
+                          "left": "16",
+                          "isLinked": true
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "36",
+                          "right": "44",
+                          "bottom": "44",
+                          "left": "44",
+                          "isLinked": false
+                        },
+                        "padding_tablet": {
+                          "unit": "px",
+                          "top": "28",
+                          "right": "28",
+                          "bottom": "36",
+                          "left": "28",
+                          "isLinked": false
+                        },
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "22",
+                          "right": "18",
+                          "bottom": "34",
+                          "left": "18",
+                          "isLinked": false
+                        },
+                        "overflow": "hidden"
+                      },
+                      "elements": [
+                        {
+                          "id": "f6000006",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "_title": "محتوای متنی اسلاید 1",
+                            "content_width": "full",
+                            "width": {
+                              "unit": "px",
+                              "size": 500,
+                              "sizes": []
+                            },
+                            "width_tablet": {
+                              "unit": "%",
+                              "size": 75,
+                              "sizes": []
+                            },
+                            "width_mobile": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "flex_direction": "column",
+                            "flex_justify_content": "center",
+                            "flex_align_items": "flex-start",
+                            "flex_gap": {
+                              "column": "12",
+                              "row": "12",
+                              "isLinked": true,
+                              "unit": "px"
+                            },
+                            "padding": {
+                              "unit": "px",
+                              "top": "0",
+                              "right": "0",
+                              "bottom": "0",
+                              "left": "0",
+                              "isLinked": true
+                            }
+                          },
+                          "elements": [
+                            {
+                              "id": "f6000007",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "_title": "نشان اسلاید 1",
+                                "title": "روتین پوستی · تا ۲۵٪ تخفیف",
+                                "header_size": "span",
+                                "align": "right",
+                                "title_color": "#FFFFFF",
+                                "typography_typography": "custom",
+                                "typography_font_size": {
+                                  "unit": "px",
+                                  "size": 11,
+                                  "sizes": []
+                                },
+                                "typography_font_weight": "800",
+                                "typography_line_height": {
+                                  "unit": "em",
+                                  "size": 1.6,
+                                  "sizes": []
+                                },
+                                "_background_background": "classic",
+                                "_background_color": "#0FA47A",
+                                "_padding": {
+                                  "unit": "px",
+                                  "top": "5",
+                                  "right": "12",
+                                  "bottom": "5",
+                                  "left": "12",
+                                  "isLinked": false
+                                },
+                                "_border_radius": {
+                                  "unit": "px",
+                                  "top": "8",
+                                  "right": "8",
+                                  "bottom": "8",
+                                  "left": "8",
+                                  "isLinked": true
+                                },
+                                "_element_width": "auto"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "f6000008",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "_title": "تیتر اسلاید 1",
+                                "title": "پوست شما لایق مراقبت روزانه است",
+                                "header_size": "h2",
+                                "align": "right",
+                                "title_color": "#14212E",
+                                "typography_typography": "custom",
+                                "typography_font_size": {
+                                  "unit": "px",
+                                  "size": 34,
+                                  "sizes": []
+                                },
+                                "typography_font_size_tablet": {
+                                  "unit": "px",
+                                  "size": 26,
+                                  "sizes": []
+                                },
+                                "typography_font_size_mobile": {
+                                  "unit": "px",
+                                  "size": 21,
+                                  "sizes": []
+                                },
+                                "typography_font_weight": "800",
+                                "typography_line_height": {
+                                  "unit": "em",
+                                  "size": 1.6,
+                                  "sizes": []
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "f6000009",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "_title": "توضیح اسلاید 1",
+                                "title": "ضدآفتاب، سرم ویتامین C و مرطوب‌کننده‌های تخصصی برای همه انواع پوست، با تضمین اصالت کالا.",
+                                "header_size": "p",
+                                "align": "right",
+                                "title_color": "#35485C",
+                                "typography_typography": "custom",
+                                "typography_font_size": {
+                                  "unit": "px",
+                                  "size": 13.5,
+                                  "sizes": []
+                                },
+                                "typography_font_size_mobile": {
+                                  "unit": "px",
+                                  "size": 12,
+                                  "sizes": []
+                                },
+                                "typography_font_weight": "500",
+                                "typography_line_height": {
+                                  "unit": "em",
+                                  "size": 1.95,
+                                  "sizes": []
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "f6000010",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "_title": "دکمه اقدام اسلاید 1",
+                                "text": "مشاهده مراقبت پوست",
+                                "link": {
+                                  "url": "/product-category/skin-care/",
+                                  "is_external": false,
+                                  "nofollow": false
+                                },
+                                "typography_typography": "custom",
+                                "typography_font_size": {
+                                  "unit": "px",
+                                  "size": 14,
+                                  "sizes": []
+                                },
+                                "typography_font_weight": "700",
+                                "button_text_color": "#FFFFFF",
+                                "hover_color": "#FFFFFF",
+                                "background_background": "gradient",
+                                "background_color": "#0FA47A",
+                                "background_color_b": "#068462",
+                                "background_gradient_angle": {
+                                  "unit": "deg",
+                                  "size": 180,
+                                  "sizes": []
+                                },
+                                "button_background_hover_background": "classic",
+                                "button_background_hover_color": "#066A50",
+                                "border_radius": {
+                                  "unit": "px",
+                                  "top": "12",
+                                  "right": "12",
+                                  "bottom": "12",
+                                  "left": "12",
+                                  "isLinked": true
+                                },
+                                "text_padding": {
+                                  "unit": "px",
+                                  "top": "11",
+                                  "right": "24",
+                                  "bottom": "11",
+                                  "left": "24",
+                                  "isLinked": false
+                                },
+                                "button_box_shadow_box_shadow_type": "yes",
+                                "button_box_shadow_box_shadow": {
+                                  "horizontal": 0,
+                                  "vertical": 6,
+                                  "blur": 16,
+                                  "spread": 0,
+                                  "color": "rgba(6, 132, 98, 0.26)"
+                                },
+                                "_element_width": "auto"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "f6000011",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "_title": "اسلاید 2 — مکمل‌های ورزشی",
+                        "content_width": "full",
+                        "min_height": {
+                          "unit": "px",
+                          "size": 412,
+                          "sizes": []
+                        },
+                        "min_height_tablet": {
+                          "unit": "px",
+                          "size": 340,
+                          "sizes": []
+                        },
+                        "min_height_mobile": {
+                          "unit": "px",
+                          "size": 280,
+                          "sizes": []
+                        },
+                        "flex_direction": "row",
+                        "flex_justify_content": "flex-start",
+                        "flex_align_items": "center",
+                        "background_background": "classic",
+                        "background_color": "#14212E",
+                        "background_image": {
+                          "url": "https://ariagh1386atomv1.github.io/dr-farzane-ghasemi-site/demo-media/banners/hero-sports.jpg",
+                          "id": ""
+                        },
+                        "background_position": "center left",
+                        "background_repeat": "no-repeat",
+                        "background_size": "cover",
+                        "background_overlay_background": "gradient",
+                        "background_overlay_color": "rgba(20, 33, 46, 0.90)",
+                        "background_overlay_color_b": "rgba(20, 33, 46, 0.25)",
+                        "background_overlay_gradient_angle": {
+                          "unit": "deg",
+                          "size": 270,
+                          "sizes": []
+                        },
+                        "background_overlay_opacity": {
+                          "unit": "px",
+                          "size": 0.92,
+                          "sizes": []
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "16",
+                          "right": "16",
+                          "bottom": "16",
+                          "left": "16",
+                          "isLinked": true
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "36",
+                          "right": "44",
+                          "bottom": "44",
+                          "left": "44",
+                          "isLinked": false
+                        },
+                        "padding_tablet": {
+                          "unit": "px",
+                          "top": "28",
+                          "right": "28",
+                          "bottom": "36",
+                          "left": "28",
+                          "isLinked": false
+                        },
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "22",
+                          "right": "18",
+                          "bottom": "34",
+                          "left": "18",
+                          "isLinked": false
+                        },
+                        "overflow": "hidden"
+                      },
+                      "elements": [
+                        {
+                          "id": "f6000012",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "_title": "محتوای متنی اسلاید 2",
+                            "content_width": "full",
+                            "width": {
+                              "unit": "px",
+                              "size": 500,
+                              "sizes": []
+                            },
+                            "width_tablet": {
+                              "unit": "%",
+                              "size": 75,
+                              "sizes": []
+                            },
+                            "width_mobile": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "flex_direction": "column",
+                            "flex_justify_content": "center",
+                            "flex_align_items": "flex-start",
+                            "flex_gap": {
+                              "column": "12",
+                              "row": "12",
+                              "isLinked": true,
+                              "unit": "px"
+                            },
+                            "padding": {
+                              "unit": "px",
+                              "top": "0",
+                              "right": "0",
+                              "bottom": "0",
+                              "left": "0",
+                              "isLinked": true
+                            }
+                          },
+                          "elements": [
+                            {
+                              "id": "f6000013",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "_title": "نشان اسلاید 2",
+                                "title": "کمپین تناسب اندام · تا ۴۰٪ تخفیف",
+                                "header_size": "span",
+                                "align": "right",
+                                "title_color": "#FFFFFF",
+                                "typography_typography": "custom",
+                                "typography_font_size": {
+                                  "unit": "px",
+                                  "size": 11,
+                                  "sizes": []
+                                },
+                                "typography_font_weight": "800",
+                                "typography_line_height": {
+                                  "unit": "em",
+                                  "size": 1.6,
+                                  "sizes": []
+                                },
+                                "_background_background": "classic",
+                                "_background_color": "rgba(255, 255, 255, 0.18)",
+                                "_padding": {
+                                  "unit": "px",
+                                  "top": "5",
+                                  "right": "12",
+                                  "bottom": "5",
+                                  "left": "12",
+                                  "isLinked": false
+                                },
+                                "_border_radius": {
+                                  "unit": "px",
+                                  "top": "8",
+                                  "right": "8",
+                                  "bottom": "8",
+                                  "left": "8",
+                                  "isLinked": true
+                                },
+                                "_element_width": "auto"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "f6000014",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "_title": "تیتر اسلاید 2",
+                                "title": "مکمل‌های ورزشی اصل، با مشاوره تخصصی",
+                                "header_size": "h2",
+                                "align": "right",
+                                "title_color": "#FFFFFF",
+                                "typography_typography": "custom",
+                                "typography_font_size": {
+                                  "unit": "px",
+                                  "size": 34,
+                                  "sizes": []
+                                },
+                                "typography_font_size_tablet": {
+                                  "unit": "px",
+                                  "size": 26,
+                                  "sizes": []
+                                },
+                                "typography_font_size_mobile": {
+                                  "unit": "px",
+                                  "size": 21,
+                                  "sizes": []
+                                },
+                                "typography_font_weight": "800",
+                                "typography_line_height": {
+                                  "unit": "em",
+                                  "size": 1.6,
+                                  "sizes": []
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "f6000015",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "_title": "توضیح اسلاید 2",
+                                "title": "پروتئین وی، کراتین و آمینواسید از برندهای منتخب؛ همراه با راهنمای مصرف و پشتیبانی داروساز.",
+                                "header_size": "p",
+                                "align": "right",
+                                "title_color": "rgba(255, 255, 255, 0.82)",
+                                "typography_typography": "custom",
+                                "typography_font_size": {
+                                  "unit": "px",
+                                  "size": 13.5,
+                                  "sizes": []
+                                },
+                                "typography_font_size_mobile": {
+                                  "unit": "px",
+                                  "size": 12,
+                                  "sizes": []
+                                },
+                                "typography_font_weight": "500",
+                                "typography_line_height": {
+                                  "unit": "em",
+                                  "size": 1.95,
+                                  "sizes": []
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "f6000016",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "_title": "دکمه اقدام اسلاید 2",
+                                "text": "خرید مکمل ورزشی",
+                                "link": {
+                                  "url": "/product-category/sports-supplements/",
+                                  "is_external": false,
+                                  "nofollow": false
+                                },
+                                "typography_typography": "custom",
+                                "typography_font_size": {
+                                  "unit": "px",
+                                  "size": 14,
+                                  "sizes": []
+                                },
+                                "typography_font_weight": "700",
+                                "button_text_color": "#FFFFFF",
+                                "hover_color": "#FFFFFF",
+                                "background_background": "gradient",
+                                "background_color": "#0FA47A",
+                                "background_color_b": "#068462",
+                                "background_gradient_angle": {
+                                  "unit": "deg",
+                                  "size": 180,
+                                  "sizes": []
+                                },
+                                "button_background_hover_background": "classic",
+                                "button_background_hover_color": "#066A50",
+                                "border_radius": {
+                                  "unit": "px",
+                                  "top": "12",
+                                  "right": "12",
+                                  "bottom": "12",
+                                  "left": "12",
+                                  "isLinked": true
+                                },
+                                "text_padding": {
+                                  "unit": "px",
+                                  "top": "11",
+                                  "right": "24",
+                                  "bottom": "11",
+                                  "left": "24",
+                                  "isLinked": false
+                                },
+                                "button_box_shadow_box_shadow_type": "yes",
+                                "button_box_shadow_box_shadow": {
+                                  "horizontal": 0,
+                                  "vertical": 6,
+                                  "blur": 16,
+                                  "spread": 0,
+                                  "color": "rgba(6, 132, 98, 0.26)"
+                                },
+                                "_element_width": "auto"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "f6000017",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "_title": "اسلاید 3 — ویتامین‌های خانواده",
+                        "content_width": "full",
+                        "min_height": {
+                          "unit": "px",
+                          "size": 412,
+                          "sizes": []
+                        },
+                        "min_height_tablet": {
+                          "unit": "px",
+                          "size": 340,
+                          "sizes": []
+                        },
+                        "min_height_mobile": {
+                          "unit": "px",
+                          "size": 280,
+                          "sizes": []
+                        },
+                        "flex_direction": "row",
+                        "flex_justify_content": "flex-start",
+                        "flex_align_items": "center",
+                        "background_background": "classic",
+                        "background_color": "#EAF7F3",
+                        "background_image": {
+                          "url": "https://ariagh1386atomv1.github.io/dr-farzane-ghasemi-site/demo-media/banners/hero-vitamins.jpg",
+                          "id": ""
+                        },
+                        "background_position": "center left",
+                        "background_repeat": "no-repeat",
+                        "background_size": "cover",
+                        "background_overlay_background": "gradient",
+                        "background_overlay_color": "rgba(255, 255, 255, 0.93)",
+                        "background_overlay_color_b": "rgba(255, 255, 255, 0.15)",
+                        "background_overlay_gradient_angle": {
+                          "unit": "deg",
+                          "size": 270,
+                          "sizes": []
+                        },
+                        "background_overlay_opacity": {
+                          "unit": "px",
+                          "size": 0.92,
+                          "sizes": []
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "16",
+                          "right": "16",
+                          "bottom": "16",
+                          "left": "16",
+                          "isLinked": true
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "36",
+                          "right": "44",
+                          "bottom": "44",
+                          "left": "44",
+                          "isLinked": false
+                        },
+                        "padding_tablet": {
+                          "unit": "px",
+                          "top": "28",
+                          "right": "28",
+                          "bottom": "36",
+                          "left": "28",
+                          "isLinked": false
+                        },
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "22",
+                          "right": "18",
+                          "bottom": "34",
+                          "left": "18",
+                          "isLinked": false
+                        },
+                        "overflow": "hidden"
+                      },
+                      "elements": [
+                        {
+                          "id": "f6000018",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "_title": "محتوای متنی اسلاید 3",
+                            "content_width": "full",
+                            "width": {
+                              "unit": "px",
+                              "size": 500,
+                              "sizes": []
+                            },
+                            "width_tablet": {
+                              "unit": "%",
+                              "size": 75,
+                              "sizes": []
+                            },
+                            "width_mobile": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "flex_direction": "column",
+                            "flex_justify_content": "center",
+                            "flex_align_items": "flex-start",
+                            "flex_gap": {
+                              "column": "12",
+                              "row": "12",
+                              "isLinked": true,
+                              "unit": "px"
+                            },
+                            "padding": {
+                              "unit": "px",
+                              "top": "0",
+                              "right": "0",
+                              "bottom": "0",
+                              "left": "0",
+                              "isLinked": true
+                            }
+                          },
+                          "elements": [
+                            {
+                              "id": "f6000019",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "_title": "نشان اسلاید 3",
+                                "title": "سلامت خانواده · تا ۳۰٪ تخفیف",
+                                "header_size": "span",
+                                "align": "right",
+                                "title_color": "#FFFFFF",
+                                "typography_typography": "custom",
+                                "typography_font_size": {
+                                  "unit": "px",
+                                  "size": 11,
+                                  "sizes": []
+                                },
+                                "typography_font_weight": "800",
+                                "typography_line_height": {
+                                  "unit": "em",
+                                  "size": 1.6,
+                                  "sizes": []
+                                },
+                                "_background_background": "classic",
+                                "_background_color": "#0FA47A",
+                                "_padding": {
+                                  "unit": "px",
+                                  "top": "5",
+                                  "right": "12",
+                                  "bottom": "5",
+                                  "left": "12",
+                                  "isLinked": false
+                                },
+                                "_border_radius": {
+                                  "unit": "px",
+                                  "top": "8",
+                                  "right": "8",
+                                  "bottom": "8",
+                                  "left": "8",
+                                  "isLinked": true
+                                },
+                                "_element_width": "auto"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "f6000020",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "_title": "تیتر اسلاید 3",
+                                "title": "ویتامین‌ها و مکمل‌های روزانه خانواده",
+                                "header_size": "h2",
+                                "align": "right",
+                                "title_color": "#14212E",
+                                "typography_typography": "custom",
+                                "typography_font_size": {
+                                  "unit": "px",
+                                  "size": 34,
+                                  "sizes": []
+                                },
+                                "typography_font_size_tablet": {
+                                  "unit": "px",
+                                  "size": 26,
+                                  "sizes": []
+                                },
+                                "typography_font_size_mobile": {
+                                  "unit": "px",
+                                  "size": 21,
+                                  "sizes": []
+                                },
+                                "typography_font_weight": "800",
+                                "typography_line_height": {
+                                  "unit": "em",
+                                  "size": 1.6,
+                                  "sizes": []
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "f6000021",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "_title": "توضیح اسلاید 3",
+                                "title": "مولتی‌ویتامین، ویتامین D، امگا ۳ و مکمل کودکان؛ ارسال سریع به سراسر ایران.",
+                                "header_size": "p",
+                                "align": "right",
+                                "title_color": "#35485C",
+                                "typography_typography": "custom",
+                                "typography_font_size": {
+                                  "unit": "px",
+                                  "size": 13.5,
+                                  "sizes": []
+                                },
+                                "typography_font_size_mobile": {
+                                  "unit": "px",
+                                  "size": 12,
+                                  "sizes": []
+                                },
+                                "typography_font_weight": "500",
+                                "typography_line_height": {
+                                  "unit": "em",
+                                  "size": 1.95,
+                                  "sizes": []
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "f6000022",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "_title": "دکمه اقدام اسلاید 3",
+                                "text": "خرید ویتامین",
+                                "link": {
+                                  "url": "/product-category/vitamins/",
+                                  "is_external": false,
+                                  "nofollow": false
+                                },
+                                "typography_typography": "custom",
+                                "typography_font_size": {
+                                  "unit": "px",
+                                  "size": 14,
+                                  "sizes": []
+                                },
+                                "typography_font_weight": "700",
+                                "button_text_color": "#FFFFFF",
+                                "hover_color": "#FFFFFF",
+                                "background_background": "gradient",
+                                "background_color": "#0FA47A",
+                                "background_color_b": "#068462",
+                                "background_gradient_angle": {
+                                  "unit": "deg",
+                                  "size": 180,
+                                  "sizes": []
+                                },
+                                "button_background_hover_background": "classic",
+                                "button_background_hover_color": "#066A50",
+                                "border_radius": {
+                                  "unit": "px",
+                                  "top": "12",
+                                  "right": "12",
+                                  "bottom": "12",
+                                  "left": "12",
+                                  "isLinked": true
+                                },
+                                "text_padding": {
+                                  "unit": "px",
+                                  "top": "11",
+                                  "right": "24",
+                                  "bottom": "11",
+                                  "left": "24",
+                                  "isLinked": false
+                                },
+                                "button_box_shadow_box_shadow_type": "yes",
+                                "button_box_shadow_box_shadow": {
+                                  "horizontal": 0,
+                                  "vertical": 6,
+                                  "blur": 16,
+                                  "spread": 0,
+                                  "color": "rgba(6, 132, 98, 0.26)"
+                                },
+                                "_element_width": "auto"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "f6000023",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "_title": "ستون چپ — ۲ بنر کناری (۳۰۰ پیکسل)",
+                "content_width": "full",
+                "width": {
+                  "unit": "px",
+                  "size": 305,
+                  "sizes": []
+                },
+                "width_tablet": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "flex_direction_tablet": "row",
+                "flex_direction_mobile": "column",
+                "flex_wrap": "wrap",
+                "flex_gap": {
+                  "column": "12",
+                  "row": "12",
+                  "isLinked": true,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "_flex_size": "none"
+              },
+              "elements": [
+                {
+                  "id": "f6000024",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "_title": "بنر کناری ۱ — تجهیزات پزشکی خانگی",
+                    "html_tag": "a",
+                    "link": {
+                      "url": "/product-category/medical-devices/",
+                      "is_external": false,
+                      "nofollow": false
+                    },
+                    "content_width": "full",
+                    "width_tablet": {
+                      "unit": "%",
+                      "size": 48.5,
+                      "sizes": []
+                    },
+                    "width_mobile": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "min_height": {
+                      "unit": "px",
+                      "size": 200,
+                      "sizes": []
+                    },
+                    "min_height_mobile": {
+                      "unit": "px",
+                      "size": 165,
+                      "sizes": []
+                    },
+                    "flex_direction": "column",
+                    "flex_justify_content": "space-between",
+                    "flex_align_items": "flex-start",
+                    "background_background": "classic",
+                    "background_color": "#10253B",
+                    "background_image": {
+                      "url": "https://ariagh1386atomv1.github.io/dr-farzane-ghasemi-site/demo-media/banners/banner-devices.jpg",
+                      "id": ""
+                    },
+                    "background_position": "center left",
+                    "background_size": "cover",
+                    "background_overlay_background": "gradient",
+                    "background_overlay_color": "#16324F",
+                    "background_overlay_color_b": "rgba(11, 28, 45, 0.45)",
+                    "background_overlay_gradient_angle": {
+                      "unit": "deg",
+                      "size": 250,
+                      "sizes": []
+                    },
+                    "background_overlay_opacity": {
+                      "unit": "px",
+                      "size": 0.86,
+                      "sizes": []
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "16",
+                      "right": "16",
+                      "bottom": "16",
+                      "left": "16",
+                      "isLinked": true
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "18",
+                      "right": "18",
+                      "bottom": "18",
+                      "left": "18",
+                      "isLinked": true
+                    },
+                    "overflow": "hidden",
+                    "_flex_size": "grow"
+                  },
+                  "elements": [
+                    {
+                      "id": "f6000025",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "_title": "متن بنر تجهیزات پزشکی",
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_gap": {
+                          "column": "4",
+                          "row": "4",
+                          "isLinked": true,
+                          "unit": "px"
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      },
+                      "elements": [
+                        {
+                          "id": "f6000026",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "_title": "تیتر تجهیزات پزشکی خانگی",
+                            "title": "تجهیزات پزشکی خانگی",
+                            "header_size": "h3",
+                            "align": "right",
+                            "title_color": "#FFFFFF",
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 15,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "800"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "f6000027",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "_title": "زیرعنوان تجهیزات پزشکی",
+                            "title": "فشارسنج، گلوکومتر و نبولایزر",
+                            "header_size": "p",
+                            "align": "right",
+                            "title_color": "rgba(255, 255, 255, 0.76)",
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 11.5,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "500"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "f6000028",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "_title": "دکمه خرید با گارانتی",
+                        "title": "خرید با گارانتی",
+                        "header_size": "span",
+                        "title_color": "#FFFFFF",
+                        "typography_typography": "custom",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 11,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "700",
+                        "_background_background": "classic",
+                        "_background_color": "rgba(255, 255, 255, 0.18)",
+                        "_padding": {
+                          "unit": "px",
+                          "top": "5",
+                          "right": "11",
+                          "bottom": "5",
+                          "left": "11",
+                          "isLinked": false
+                        },
+                        "_border_radius": {
+                          "unit": "px",
+                          "top": "8",
+                          "right": "8",
+                          "bottom": "8",
+                          "left": "8",
+                          "isLinked": true
+                        },
+                        "_element_width": "auto"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "f6000029",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "_title": "بنر کناری ۲ — دنیای مادر و کودک",
+                    "html_tag": "a",
+                    "link": {
+                      "url": "/product-category/mom-baby/",
+                      "is_external": false,
+                      "nofollow": false
+                    },
+                    "content_width": "full",
+                    "width_tablet": {
+                      "unit": "%",
+                      "size": 48.5,
+                      "sizes": []
+                    },
+                    "width_mobile": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "min_height": {
+                      "unit": "px",
+                      "size": 200,
+                      "sizes": []
+                    },
+                    "min_height_mobile": {
+                      "unit": "px",
+                      "size": 165,
+                      "sizes": []
+                    },
+                    "flex_direction": "column",
+                    "flex_justify_content": "space-between",
+                    "flex_align_items": "flex-start",
+                    "background_background": "classic",
+                    "background_color": "#FDECE2",
+                    "background_image": {
+                      "url": "https://ariagh1386atomv1.github.io/dr-farzane-ghasemi-site/demo-media/banners/banner-mom.jpg",
+                      "id": ""
+                    },
+                    "background_position": "center left",
+                    "background_size": "cover",
+                    "background_overlay_background": "gradient",
+                    "background_overlay_color": "rgba(253, 236, 226, 0.94)",
+                    "background_overlay_color_b": "rgba(253, 236, 226, 0.35)",
+                    "background_overlay_gradient_angle": {
+                      "unit": "deg",
+                      "size": 260,
+                      "sizes": []
+                    },
+                    "background_overlay_opacity": {
+                      "unit": "px",
+                      "size": 0.9,
+                      "sizes": []
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "16",
+                      "right": "16",
+                      "bottom": "16",
+                      "left": "16",
+                      "isLinked": true
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "18",
+                      "right": "18",
+                      "bottom": "18",
+                      "left": "18",
+                      "isLinked": true
+                    },
+                    "overflow": "hidden",
+                    "_flex_size": "grow"
+                  },
+                  "elements": [
+                    {
+                      "id": "f6000030",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "_title": "متن بنر مادر و کودک",
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_gap": {
+                          "column": "4",
+                          "row": "4",
+                          "isLinked": true,
+                          "unit": "px"
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      },
+                      "elements": [
+                        {
+                          "id": "f6000031",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "_title": "تیتر دنیای مادر و کودک",
+                            "title": "دنیای مادر و کودک",
+                            "header_size": "h3",
+                            "align": "right",
+                            "title_color": "#14212E",
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 15,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "800"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "f6000032",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "_title": "زیرعنوان مادر و کودک",
+                            "title": "محصولات ملایم مخصوص پوست نوزاد",
+                            "header_size": "p",
+                            "align": "right",
+                            "title_color": "#35485C",
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 11.5,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "500"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "f6000033",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "_title": "دکمه مشاهده محصولات",
+                        "title": "مشاهده محصولات",
+                        "header_size": "span",
+                        "title_color": "#066A50",
+                        "typography_typography": "custom",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 11,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800",
+                        "_background_background": "classic",
+                        "_background_color": "#FFFFFF",
+                        "_padding": {
+                          "unit": "px",
+                          "top": "5",
+                          "right": "11",
+                          "bottom": "5",
+                          "left": "11",
+                          "isLinked": false
+                        },
+                        "_border_radius": {
+                          "unit": "px",
+                          "top": "8",
+                          "right": "8",
+                          "bottom": "8",
+                          "left": "8",
+                          "isLinked": true
+                        },
+                        "_element_width": "auto"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "f6000034",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "_title": "ردیف ۴ کارت تضمین و خدمات داروخانه",
+            "content_width": "full",
+            "flex_direction": "row",
+            "flex_wrap": "wrap",
+            "flex_gap": {
+              "column": "12",
+              "row": "12",
+              "isLinked": true,
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "f6000035",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "_title": "کارت اعتماد: ارسال سریع",
+                "content_width": "full",
+                "width": {
+                  "unit": "%",
+                  "size": 24,
+                  "sizes": []
+                },
+                "width_tablet": {
+                  "unit": "%",
+                  "size": 48.5,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 47.5,
+                  "sizes": []
+                },
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "flex_gap": {
+                  "column": "12",
+                  "row": "12",
+                  "isLinked": true,
+                  "unit": "px"
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "isLinked": true
+                },
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": {
+                  "horizontal": 0,
+                  "vertical": 2,
+                  "blur": 10,
+                  "spread": 0,
+                  "color": "rgba(20, 33, 46, 0.06)"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "isLinked": true
+                },
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12",
+                  "isLinked": true
+                },
+                "_flex_size": "grow"
+              },
+              "elements": [
+                {
+                  "id": "f6000036",
+                  "elType": "widget",
+                  "widgetType": "icon",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "آیکون ارسال سریع",
+                    "selected_icon": {
+                      "value": "fas fa-shipping-fast",
+                      "library": "fa-solid"
+                    },
+                    "view": "stacked",
+                    "shape": "square",
+                    "primary_color": "#EAFAF4",
+                    "secondary_color": "#068462",
+                    "size": {
+                      "unit": "px",
+                      "size": 20,
+                      "sizes": []
+                    },
+                    "icon_padding": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12",
+                      "isLinked": true
+                    },
+                    "_flex_size": "none"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "f6000037",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "_title": "متن ارسال سریع",
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "column": "2",
+                      "row": "2",
+                      "isLinked": true,
+                      "unit": "px"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "f6000038",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "_title": "ارسال سریع",
+                        "title": "ارسال سریع",
+                        "header_size": "h4",
+                        "align": "right",
+                        "title_color": "#14212E",
+                        "typography_typography": "custom",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 13.5,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "f6000039",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "_title": "تحویل درون‌شهری زیر ۴ ساعت",
+                        "title": "تحویل درون‌شهری زیر ۴ ساعت",
+                        "header_size": "span",
+                        "align": "right",
+                        "title_color": "#64798E",
+                        "typography_typography": "custom",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 11.5,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "500"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "f6000040",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "_title": "کارت اعتماد: تضمین اصالت",
+                "content_width": "full",
+                "width": {
+                  "unit": "%",
+                  "size": 24,
+                  "sizes": []
+                },
+                "width_tablet": {
+                  "unit": "%",
+                  "size": 48.5,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 47.5,
+                  "sizes": []
+                },
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "flex_gap": {
+                  "column": "12",
+                  "row": "12",
+                  "isLinked": true,
+                  "unit": "px"
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "isLinked": true
+                },
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": {
+                  "horizontal": 0,
+                  "vertical": 2,
+                  "blur": 10,
+                  "spread": 0,
+                  "color": "rgba(20, 33, 46, 0.06)"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "isLinked": true
+                },
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12",
+                  "isLinked": true
+                },
+                "_flex_size": "grow"
+              },
+              "elements": [
+                {
+                  "id": "f6000041",
+                  "elType": "widget",
+                  "widgetType": "icon",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "آیکون تضمین اصالت",
+                    "selected_icon": {
+                      "value": "fas fa-shield-alt",
+                      "library": "fa-solid"
+                    },
+                    "view": "stacked",
+                    "shape": "square",
+                    "primary_color": "#EAFAF4",
+                    "secondary_color": "#068462",
+                    "size": {
+                      "unit": "px",
+                      "size": 20,
+                      "sizes": []
+                    },
+                    "icon_padding": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12",
+                      "isLinked": true
+                    },
+                    "_flex_size": "none"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "f6000042",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "_title": "متن تضمین اصالت",
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "column": "2",
+                      "row": "2",
+                      "isLinked": true,
+                      "unit": "px"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "f6000043",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "_title": "تضمین اصالت",
+                        "title": "تضمین اصالت",
+                        "header_size": "h4",
+                        "align": "right",
+                        "title_color": "#14212E",
+                        "typography_typography": "custom",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 13.5,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "f6000044",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "_title": "تأمین از مسیر رسمی",
+                        "title": "تأمین از مسیر رسمی",
+                        "header_size": "span",
+                        "align": "right",
+                        "title_color": "#64798E",
+                        "typography_typography": "custom",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 11.5,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "500"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "f6000045",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "_title": "کارت اعتماد: مشاوره داروساز",
+                "content_width": "full",
+                "width": {
+                  "unit": "%",
+                  "size": 24,
+                  "sizes": []
+                },
+                "width_tablet": {
+                  "unit": "%",
+                  "size": 48.5,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 47.5,
+                  "sizes": []
+                },
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "flex_gap": {
+                  "column": "12",
+                  "row": "12",
+                  "isLinked": true,
+                  "unit": "px"
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "isLinked": true
+                },
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": {
+                  "horizontal": 0,
+                  "vertical": 2,
+                  "blur": 10,
+                  "spread": 0,
+                  "color": "rgba(20, 33, 46, 0.06)"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "isLinked": true
+                },
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12",
+                  "isLinked": true
+                },
+                "_flex_size": "grow"
+              },
+              "elements": [
+                {
+                  "id": "f6000046",
+                  "elType": "widget",
+                  "widgetType": "icon",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "آیکون مشاوره داروساز",
+                    "selected_icon": {
+                      "value": "fas fa-comment-medical",
+                      "library": "fa-solid"
+                    },
+                    "view": "stacked",
+                    "shape": "square",
+                    "primary_color": "#EAFAF4",
+                    "secondary_color": "#068462",
+                    "size": {
+                      "unit": "px",
+                      "size": 20,
+                      "sizes": []
+                    },
+                    "icon_padding": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12",
+                      "isLinked": true
+                    },
+                    "_flex_size": "none"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "f6000047",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "_title": "متن مشاوره داروساز",
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "column": "2",
+                      "row": "2",
+                      "isLinked": true,
+                      "unit": "px"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "f6000048",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "_title": "مشاوره داروساز",
+                        "title": "مشاوره داروساز",
+                        "header_size": "h4",
+                        "align": "right",
+                        "title_color": "#14212E",
+                        "typography_typography": "custom",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 13.5,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "f6000049",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "_title": "پاسخ‌گویی ۷ روز هفته",
+                        "title": "پاسخ‌گویی ۷ روز هفته",
+                        "header_size": "span",
+                        "align": "right",
+                        "title_color": "#64798E",
+                        "typography_typography": "custom",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 11.5,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "500"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "f6000050",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "_title": "کارت اعتماد: بازگشت کالا",
+                "content_width": "full",
+                "width": {
+                  "unit": "%",
+                  "size": 24,
+                  "sizes": []
+                },
+                "width_tablet": {
+                  "unit": "%",
+                  "size": 48.5,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 47.5,
+                  "sizes": []
+                },
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "flex_gap": {
+                  "column": "12",
+                  "row": "12",
+                  "isLinked": true,
+                  "unit": "px"
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "isLinked": true
+                },
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": {
+                  "horizontal": 0,
+                  "vertical": 2,
+                  "blur": 10,
+                  "spread": 0,
+                  "color": "rgba(20, 33, 46, 0.06)"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "16",
+                  "bottom": "16",
+                  "left": "16",
+                  "isLinked": true
+                },
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12",
+                  "isLinked": true
+                },
+                "_flex_size": "grow"
+              },
+              "elements": [
+                {
+                  "id": "f6000051",
+                  "elType": "widget",
+                  "widgetType": "icon",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "آیکون بازگشت کالا",
+                    "selected_icon": {
+                      "value": "fas fa-undo-alt",
+                      "library": "fa-solid"
+                    },
+                    "view": "stacked",
+                    "shape": "square",
+                    "primary_color": "#EAFAF4",
+                    "secondary_color": "#068462",
+                    "size": {
+                      "unit": "px",
+                      "size": 20,
+                      "sizes": []
+                    },
+                    "icon_padding": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12",
+                      "isLinked": true
+                    },
+                    "_flex_size": "none"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "f6000052",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "_title": "متن بازگشت کالا",
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_gap": {
+                      "column": "2",
+                      "row": "2",
+                      "isLinked": true,
+                      "unit": "px"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "f6000053",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "_title": "بازگشت کالا",
+                        "title": "بازگشت کالا",
+                        "header_size": "h4",
+                        "align": "right",
+                        "title_color": "#14212E",
+                        "typography_typography": "custom",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 13.5,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "f6000054",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "_title": "تا ۷ روز برای کالای پلمب",
+                        "title": "تا ۷ روز برای کالای پلمب",
+                        "header_size": "span",
+                        "align": "right",
+                        "title_color": "#64798E",
+                        "typography_typography": "custom",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 11.5,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "500"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": []
+}

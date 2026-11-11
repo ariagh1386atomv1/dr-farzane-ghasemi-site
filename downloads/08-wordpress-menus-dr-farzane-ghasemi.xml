@@ -1,0 +1,1488 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+  xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+  <title>فهرست‌های استاندارد هدر داروخانه آنلاین دکتر فرزانه قاسمی</title>
+  <link>https://dr-farzane-ghasemi-site.pages.dev</link>
+  <description>۴ فهرست کامل و چندسطحی هدر (نوار بالا، دسته‌بندی محصولات، منوی افقی و منوی موبایل)</description>
+  <language>fa-IR</language>
+  <wp:wxr_version>1.2</wp:wxr_version>
+  <wp:term>
+    <wp:term_id>901</wp:term_id>
+    <wp:term_taxonomy>nav_menu</wp:term_taxonomy>
+    <wp:term_slug>dfg-topbar-support-menu</wp:term_slug>
+    <wp:term_name><![CDATA[۰۱ — نوار بالای هدر (پشتیبانی و راهنما)]]></wp:term_name>
+  </wp:term>
+  <wp:term>
+    <wp:term_id>902</wp:term_id>
+    <wp:term_taxonomy>nav_menu</wp:term_taxonomy>
+    <wp:term_slug>dfg-categories-dropdown-menu</wp:term_slug>
+    <wp:term_name><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></wp:term_name>
+  </wp:term>
+  <wp:term>
+    <wp:term_id>903</wp:term_id>
+    <wp:term_taxonomy>nav_menu</wp:term_taxonomy>
+    <wp:term_slug>dfg-main-horizontal-menu</wp:term_slug>
+    <wp:term_name><![CDATA[۰۳ — منوی اصلی افقی هدر]]></wp:term_name>
+  </wp:term>
+  <wp:term>
+    <wp:term_id>904</wp:term_id>
+    <wp:term_taxonomy>nav_menu</wp:term_taxonomy>
+    <wp:term_slug>dfg-mobile-drawer-menu</wp:term_slug>
+    <wp:term_name><![CDATA[۰۴ — منوی کشویی موبایل (کامل)]]></wp:term_name>
+  </wp:term>
+  <item>
+    <title><![CDATA[شرایط و زمان ارسال]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9101</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9101</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>1</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-topbar-support-menu"><![CDATA[۰۱ — نوار بالای هدر (پشتیبانی و راهنما)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9101]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/shipping/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[سؤالات متداول]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9102</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9102</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>2</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-topbar-support-menu"><![CDATA[۰۱ — نوار بالای هدر (پشتیبانی و راهنما)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9102]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/faq/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[پیگیری سفارش]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9103</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9103</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>3</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-topbar-support-menu"><![CDATA[۰۱ — نوار بالای هدر (پشتیبانی و راهنما)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9103]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/my-account/orders/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مجله سلامت]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9104</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9104</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>4</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-topbar-support-menu"><![CDATA[۰۱ — نوار بالای هدر (پشتیبانی و راهنما)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9104]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/blog/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[درباره داروخانه دکتر قاسمی]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9105</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9105</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>5</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-topbar-support-menu"><![CDATA[۰۱ — نوار بالای هدر (پشتیبانی و راهنما)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9105]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/about/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[دسته‌بندی محصولات]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9200</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9200</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>1</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9200]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/shop/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مکمل‌های ورزشی]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9210</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9210</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>2</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9200]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9210]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/sports-supplements/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[پروتئین و وی]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9211</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9211</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>3</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9210]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9211]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/sports-supplements/protein/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[کراتین]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9212</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9212</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>4</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9210]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9212]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/sports-supplements/creatine/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[آمینو اسید و BCAA]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9213</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9213</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>5</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9210]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9213]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/sports-supplements/amino/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[گینر و افزایش وزن]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9214</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9214</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>6</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9210]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9214]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/sports-supplements/mass-gainer/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[پیش از تمرین]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9215</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9215</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>7</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9210]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9215]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/sports-supplements/pre-workout/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[ویتامین و مکمل]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9220</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9220</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>8</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9200]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9220]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/vitamins/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مولتی‌ویتامین]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9221</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9221</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>9</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9220]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9221]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/vitamins/multivitamin/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[ویتامین D]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9222</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9222</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>10</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9220]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9222]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/vitamins/vitamin-d/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[ویتامین C]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9223</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9223</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>11</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9220]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9223]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/vitamins/vitamin-c/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[امگا ۳ و روغن ماهی]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9224</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9224</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>12</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9220]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9224]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/vitamins/omega/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مینرال‌ها (زینک، منیزیم، آهن)]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9225</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9225</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>13</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9220]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9225]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/vitamins/minerals/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مکمل بانوان و کلاژن]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9226</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9226</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>14</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9220]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9226]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/vitamins/women-supplement/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مکمل کودکان]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9227</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9227</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>15</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9220]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9227]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/vitamins/kids-supplement/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مراقبت پوست]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9230</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9230</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>16</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9200]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9230]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/skin-care/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[ضدآفتاب]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9231</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9231</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>17</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9230]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9231]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/skin-care/sunscreen/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[سرم صورت]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9232</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9232</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>18</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9230]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9232]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/skin-care/face-serum/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مرطوب‌کننده و آبرسان]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9233</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9233</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>19</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9230]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9233]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/skin-care/moisturizer/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[پاک‌کننده و میسلار واتر]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9234</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9234</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>20</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9230]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9234]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/skin-care/cleanser/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[ضدجوش و ضدلک]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9235</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9235</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>21</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9230]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9235]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/skin-care/anti-acne/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مراقبت مو]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9240</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9240</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>22</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9200]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9240]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/hair-care/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[شامپو تخصصی و روزانه]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9241</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9241</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>23</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9240]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9241]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/hair-care/shampoo/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[سرم و روغن آرگان مو]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9242</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9242</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>24</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9240]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9242]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/hair-care/hair-serum/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[ضدریزش و تقویتی مو]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9243</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9243</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>25</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9240]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9243]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/hair-care/anti-hairloss/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[ماسک و نرم‌کننده مو]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9244</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9244</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>26</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9240]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9244]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/hair-care/hair-mask/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[بهداشت دهان و دندان]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9250</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9250</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>27</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9200]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9250]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/oral-care/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[خمیر دندان]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9251</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9251</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>28</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9250]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9251]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/oral-care/toothpaste/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[دهان‌شویه بدون الکل]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9252</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9252</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>29</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9250]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9252]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/oral-care/mouthwash/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مسواک و نخ دندان]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9253</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9253</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>30</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9250]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9253]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/oral-care/toothbrush/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[تجهیزات پزشکی خانگی]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9260</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9260</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>31</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9200]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9260]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/medical-devices/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[فشارسنج دیجیتال]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9261</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9261</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>32</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9260]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9261]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/medical-devices/blood-pressure/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[تست قند خون و نوار]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9262</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9262</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>33</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9260]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9262]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/medical-devices/glucose/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[دماسنج و تب‌سنج]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9263</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9263</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>34</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9260]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9263]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/medical-devices/thermometer/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[نبولایزر و بخور]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9264</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9264</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>35</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9260]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9264]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/medical-devices/nebulizer/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[پالس اکسیمتر و ارتوپدی]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9265</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9265</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>36</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9260]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9265]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/medical-devices/oximeter/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مادر و کودک]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9270</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9270</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>37</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9200]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9270]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/mom-baby/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[شامپو و شوینده کودک]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9271</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9271</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>38</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9270]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9271]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/mom-baby/baby-wash/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[کرم و مراقبت پوست کودک]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9272</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9272</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>39</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9270]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9272]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/mom-baby/baby-skin/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[شیشه شیر و تغذیه نوزاد]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9273</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9273</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>40</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-categories-dropdown-menu"><![CDATA[۰۲ — منوی جامع دسته‌بندی محصولات (چندسطحی دارونیک)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[9270]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9273]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/mom-baby/baby-feeding/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[فروشگاه]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9301</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9301</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>1</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-main-horizontal-menu"><![CDATA[۰۳ — منوی اصلی افقی هدر]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9301]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/shop/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[پرفروش‌ترین‌ها]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9302</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9302</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>2</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-main-horizontal-menu"><![CDATA[۰۳ — منوی اصلی افقی هدر]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9302]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/shop/?orderby=popularity]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[جدیدترین‌ها]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9303</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9303</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>3</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-main-horizontal-menu"><![CDATA[۰۳ — منوی اصلی افقی هدر]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9303]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/shop/?orderby=date]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[تجهیزات پزشکی]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9304</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9304</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>4</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-main-horizontal-menu"><![CDATA[۰۳ — منوی اصلی افقی هدر]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9304]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/medical-devices/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مراقبت پوست]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9305</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9305</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>5</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-main-horizontal-menu"><![CDATA[۰۳ — منوی اصلی افقی هدر]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9305]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/skin-care/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مجله سلامت]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9306</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9306</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>6</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-main-horizontal-menu"><![CDATA[۰۳ — منوی اصلی افقی هدر]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9306]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/blog/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[صفحه اصلی]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9401</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9401</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>1</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-mobile-drawer-menu"><![CDATA[۰۴ — منوی کشویی موبایل (کامل)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9401]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[همه محصولات فروشگاه]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9402</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9402</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>2</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-mobile-drawer-menu"><![CDATA[۰۴ — منوی کشویی موبایل (کامل)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9402]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/shop/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[تخفیف‌ها و پیشنهاد ویژه]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9403</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9403</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>3</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-mobile-drawer-menu"><![CDATA[۰۴ — منوی کشویی موبایل (کامل)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9403]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/shop/?on_sale=1]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مکمل‌های ورزشی]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9404</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9404</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>4</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-mobile-drawer-menu"><![CDATA[۰۴ — منوی کشویی موبایل (کامل)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9404]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/sports-supplements/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[ویتامین و مکمل روزانه]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9405</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9405</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>5</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-mobile-drawer-menu"><![CDATA[۰۴ — منوی کشویی موبایل (کامل)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9405]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/vitamins/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مراقبت پوست و ضدآفتاب]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9406</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9406</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>6</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-mobile-drawer-menu"><![CDATA[۰۴ — منوی کشویی موبایل (کامل)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9406]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/skin-care/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مراقبت مو]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9407</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9407</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>7</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-mobile-drawer-menu"><![CDATA[۰۴ — منوی کشویی موبایل (کامل)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9407]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/hair-care/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[بهداشت دهان و دندان]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9408</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9408</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>8</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-mobile-drawer-menu"><![CDATA[۰۴ — منوی کشویی موبایل (کامل)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9408]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/oral-care/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[تجهیزات پزشکی خانگی]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9409</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9409</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>9</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-mobile-drawer-menu"><![CDATA[۰۴ — منوی کشویی موبایل (کامل)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9409]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/medical-devices/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مادر و کودک]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9410</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9410</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>10</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-mobile-drawer-menu"><![CDATA[۰۴ — منوی کشویی موبایل (کامل)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9410]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/product-category/mom-baby/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[مجله سلامت]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9411</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9411</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>11</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-mobile-drawer-menu"><![CDATA[۰۴ — منوی کشویی موبایل (کامل)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9411]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/blog/]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[پیگیری سفارش و حساب من]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <content:encoded><![CDATA[]]></content:encoded>
+    <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+    <wp:post_id>9412</wp:post_id>
+    <wp:post_date>2026-11-10 12:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-11-10 12:00:00</wp:post_date_gmt>
+    <wp:comment_status>closed</wp:comment_status>
+    <wp:ping_status>closed</wp:ping_status>
+    <wp:post_name>menu-item-9412</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>12</wp:menu_order>
+    <wp:post_type>nav_menu_item</wp:post_type>
+    <category domain="nav_menu" nicename="dfg-mobile-drawer-menu"><![CDATA[۰۴ — منوی کشویی موبایل (کامل)]]></category>
+    <wp:postmeta><wp:meta_key>_menu_item_type</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_menu_item_parent</wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object_id</wp:meta_key><wp:meta_value><![CDATA[9412]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_object</wp:meta_key><wp:meta_value><![CDATA[custom]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_target</wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key>_menu_item_url</wp:meta_key><wp:meta_value><![CDATA[/my-account/]]></wp:meta_value></wp:postmeta>
+  </item>
+</channel>
+</rss>
