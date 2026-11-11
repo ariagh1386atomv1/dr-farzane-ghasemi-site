@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "پل مستقیم داشبورد دکتر فرزانه قاسمی ↔ چت آرنا",
+  "version": "1.0.0",
+  "description": "اتصال خودکار پیام‌های چت‌بات GitHub Pages (.io) به چت Arena.ai و شروع خودکار نوبت جدید بدون تایم‌اوت.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://arena.ai/*",
+        "https://*.arena.ai/*",
+        "https://lmarena.ai/*",
+        "https://*.lmarena.ai/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "https://*.e2b.app/*",
+    "https://*.e2b.dev/*"
+  ]
+}

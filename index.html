@@ -356,10 +356,10 @@
         </div>
       </header>
 
-      <!-- Collapsible Live Bridge URL Configuration (for GitHub Pages -> Arena Live Sandbox) -->
+      <!-- Collapsible Live Bridge & Auto-Turn Setup -->
       <div id="chat-settings-box" class="chat-settings" hidden>
         <label for="chat-bridge-input" class="chat-settings__label">
-          آدرس سرور پیش‌نمایش زنده آرنا (اختیاری در GitHub Pages):
+          ۱. آدرس سرور زنده آرنا (در لینک متصل خودکار پر می‌شود):
         </label>
         <div class="chat-settings__row">
           <input
@@ -372,19 +372,48 @@
             اتصال زنده
           </button>
         </div>
+
+        <div class="chat-settings__divider"></div>
+
+        <span class="chat-settings__label">
+          ۲. فعال‌سازی ارسال خودکار پیام به تب چت آرنا (بدون تایم‌اوت):
+        </span>
+        <div class="chat-settings__tools">
+          <a
+            id="chat-ext-download"
+            href="./downloads/arena-chat-bridge-extension.zip"
+            download="arena-chat-bridge-extension.zip"
+            class="chat-tool-btn is-primary"
+          >
+            دانلود افزونه کروم (.zip)
+          </a>
+          <button id="chat-copy-console-script" type="button" class="chat-tool-btn">
+            کپی اسکریپت کنسول تب آرنا
+          </button>
+          <a
+            id="chat-open-paired-io"
+            href="https://ariagh1386atomv1.github.io/dr-farzane-ghasemi-site/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="chat-tool-btn"
+            hidden
+          >
+            باز کردن سایت .io متصل ↗
+          </a>
+        </div>
         <p class="chat-settings__hint">
-          در تب پیش‌نمایش آرنا اتصال به‌صورت خودکار برقرار است. در GitHub Pages با وارد کردن لینک پیش‌نمایش، چت به حالت زنده دوطرفه (SSE) تبدیل می‌شود.
+          با نصب افزونه (یا Paste اسکریپت در Console تب آرنا)، هر پیامی در <code>.io</code> بفرستید خودکار یک پیام جدید در چت آرنا ثبت می‌کند، جواب داخل همین <code>.io</code> برمی‌گردد و چت آرنا هم بدون تایم‌اوت بسته می‌شود.
         </p>
       </div>
 
       <!-- Messages Stream -->
       <div id="chat-stream" class="chat-stream" aria-live="polite"></div>
 
-      <!-- Pending Inbox Wake-up Helper -->
+      <!-- Arena Tab Auto-Trigger Setup Helper (shown only if Arena Tab Bridge isn't connected yet) -->
       <div id="chat-wakeup-bar" class="chat-wakeup" hidden>
-        <span id="chat-wakeup-text">۱ پیام در صندوق آرنا منتظر بررسی است</span>
+        <span id="chat-wakeup-text">پل تب آرنا هنوز متصل نیست</span>
         <button id="chat-wakeup-copy" type="button" class="chat-wakeup__btn">
-          کپی دستور بیدارباش
+          اتصال خودکار تب آرنا
         </button>
       </div>
 

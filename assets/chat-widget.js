@@ -124,16 +124,45 @@
     return null;
   }
 
+  function extractBridgeParamFromUrl() {
+    try {
+      const hash = String(window.location.hash || "");
+      const hashMatch = hash.match(/(?:^|[#&])bridge=([^&]+)/i);
+      if (hashMatch && hashMatch[1]) {
+        const decoded = normalizeBaseUrl(decodeURIComponent(hashMatch[1]));
+        if (decoded && window.history && typeof window.history.replaceState === "function") {
+          const cleanUrl = window.location.pathname + window.location.search;
+          window.history.replaceState(null, "", cleanUrl);
+        }
+        return decoded;
+      }
+      const sp = new URLSearchParams(window.location.search || "");
+      const qBridge = sp.get("bridge");
+      if (qBridge) {
+        return normalizeBaseUrl(qBridge);
+      }
+    } catch {
+      /* ignore malformed URL params */
+    }
+    return "";
+  }
+
+  const initialUrlBridge = extractBridgeParamFromUrl();
+  if (initialUrlBridge) {
+    safeSetStorage(STORAGE_BRIDGE_KEY, initialUrlBridge);
+  }
+
   const state = {
     isOpen: false,
     settingsOpen: false,
     mode: "connecting", // "live" | "static"
-    bridgeUrl: normalizeBaseUrl(safeGetStorage(STORAGE_BRIDGE_KEY) || ""),
+    bridgeUrl: normalizeBaseUrl(initialUrlBridge || safeGetStorage(STORAGE_BRIDGE_KEY) || ""),
     messages: [],
     latestSeq: 0,
     unreadForAgent: 0,
     agentListening: false,
     agentTyping: false,
+    arenaTabConnected: false,
     unreadAgentReplies: 0,
     attachedSection: null, // { id, title }
     sending: false,
@@ -155,6 +184,8 @@
     settingsBox: document.getElementById("chat-settings-box"),
     bridgeInput: document.getElementById("chat-bridge-input"),
     bridgeSaveBtn: document.getElementById("chat-bridge-save"),
+    copyConsoleBtn: document.getElementById("chat-copy-console-script"),
+    openPairedIoLink: document.getElementById("chat-open-paired-io"),
     stream: document.getElementById("chat-stream"),
     wakeupBar: document.getElementById("chat-wakeup-bar"),
     wakeupText: document.getElementById("chat-wakeup-text"),
@@ -203,24 +234,47 @@
     return `${GITHUB_REPO_ISSUES_NEW}?${params.toString()}`;
   }
 
+  function effectiveLiveOrigin() {
+    if (state.bridgeUrl) return state.bridgeUrl;
+    if (state.mode === "live") return window.location.origin;
+    return "";
+  }
+
   function updateConnectionUI() {
     const isLive = state.mode === "live";
+    const autoReady = isLive && (state.arenaTabConnected || state.agentListening);
     els.statusPill.classList.toggle("is-static", !isLive);
-    els.statusPill.classList.toggle("is-listening", isLive && state.agentListening);
+    els.statusPill.classList.toggle("is-listening", autoReady);
     if (els.topbarDot) els.topbarDot.classList.toggle("is-static", !isLive);
 
     if (!isLive) {
-      els.statusText.textContent = "حالت GitHub Pages · پل همگام‌ساز";
-    } else if (state.agentListening) {
-      els.statusText.textContent = "آنلاین و گوش‌به‌زنگ · پاسخ مستقیم خودکار";
+      els.statusText.textContent = "حالت GitHub Pages · از تنظیمات متصل کنید";
+    } else if (state.arenaTabConnected) {
+      els.statusText.textContent = "متصل به تب چت آرنا · شروع خودکار چت";
     } else {
-      els.statusText.textContent = "متصل زنده به چت آرنا · SSE";
+      els.statusText.textContent = "متصل به سرور زنده · آماده اتصال تب آرنا";
+    }
+
+    if (els.openPairedIoLink) {
+      const liveOrig = effectiveLiveOrigin();
+      const onGithubIo = /github\.io$/i.test(window.location.hostname || "");
+      if (liveOrig && !onGithubIo) {
+        els.openPairedIoLink.hidden = false;
+        els.openPairedIoLink.href =
+          "https://ariagh1386atomv1.github.io/dr-farzane-ghasemi-site/#bridge=" +
+          encodeURIComponent(liveOrig);
+      } else {
+        els.openPairedIoLink.hidden = true;
+      }
     }
 
     if (els.wakeupBar) {
-      if (isLive && state.unreadForAgent > 0 && !state.agentListening && !state.agentTyping) {
+      if (isLive && !state.arenaTabConnected && !state.agentListening && !state.agentTyping) {
         els.wakeupBar.hidden = false;
-        els.wakeupText.textContent = `${toFa(state.unreadForAgent)} پیام در صندوق آرنا منتظر بررسی است`;
+        els.wakeupText.textContent =
+          state.unreadForAgent > 0
+            ? `${toFa(state.unreadForAgent)} پیام آماده ارسال خودکار به تب آرنا`
+            : "برای شروع خودکار چت با هر پیام، پل تب آرنا را فعال کنید";
       } else {
         els.wakeupBar.hidden = true;
       }
@@ -477,6 +531,9 @@
       if (typeof data.unreadForAgent === "number") state.unreadForAgent = data.unreadForAgent;
       if (typeof data.agentListening === "boolean") state.agentListening = data.agentListening;
       if (typeof data.agentTyping === "boolean") state.agentTyping = data.agentTyping;
+      if (typeof data.arenaTabConnected === "boolean") {
+        state.arenaTabConnected = data.arenaTabConnected;
+      }
       updateConnectionUI();
       if (prevTyping !== state.agentTyping) renderMessages(true);
       (data.messages || []).forEach((m) => upsertMessage(m, true));
@@ -502,6 +559,9 @@
             if (typeof payload.agentTyping === "boolean") {
               state.agentTyping = payload.agentTyping;
             }
+            if (typeof payload.arenaTabConnected === "boolean") {
+              state.arenaTabConnected = payload.arenaTabConnected;
+            }
             updateConnectionUI();
             renderMessages(false);
           } catch {
@@ -517,6 +577,9 @@
             }
             if (typeof payload.agentTyping === "boolean") {
               state.agentTyping = payload.agentTyping;
+            }
+            if (typeof payload.arenaTabConnected === "boolean") {
+              state.arenaTabConnected = payload.arenaTabConnected;
             }
             if (typeof payload.unreadForAgent === "number") {
               state.unreadForAgent = payload.unreadForAgent;
@@ -633,6 +696,9 @@
       state.unreadForAgent = histJson.unreadForAgent || 0;
       state.agentListening = Boolean(histJson.agentListening ?? statusJson.agentListening);
       state.agentTyping = Boolean(histJson.agentTyping ?? statusJson.agentTyping);
+      state.arenaTabConnected = Boolean(
+        histJson.arenaTabConnected ?? statusJson.arenaTabConnected,
+      );
 
       updateConnectionUI();
       renderMessages(true);
@@ -644,6 +710,7 @@
       state.unreadForAgent = 0;
       state.agentListening = false;
       state.agentTyping = false;
+      state.arenaTabConnected = false;
       loadStaticMessages();
       updateConnectionUI();
       renderMessages(true);
@@ -848,14 +915,28 @@
     }
   });
 
-  if (els.wakeupCopyBtn) {
-    els.wakeupCopyBtn.addEventListener("click", async () => {
+  if (els.copyConsoleBtn) {
+    els.copyConsoleBtn.addEventListener("click", async () => {
       try {
-        await navigator.clipboard.writeText("پیام‌های جدید داشبورد را بخوان و در چت داشبورد جواب بده");
-        notify("دستور بیدارباش کپی شد — در چت آرنا Paste کنید");
+        const res = await fetch("./downloads/arena-bridge-console.js", { cache: "no-store" });
+        const scriptBody = await res.text();
+        const orig = effectiveLiveOrigin();
+        const headerLine = orig
+          ? `window.__ARENA_BRIDGE_OVERRIDE_URL__ = ${JSON.stringify(orig)};\n`
+          : "";
+        await navigator.clipboard.writeText(headerLine + scriptBody);
+        notify("اسکریپت کپی شد — در تب چت آرنا (F12 → Console) Paste و Enter کنید");
       } catch {
-        notify("در چت آرنا بنویسید: بخوان");
+        notify("خطا در کپی اسکریپت — از دکمه دانلود افزونه استفاده کنید");
       }
+    });
+  }
+
+  if (els.wakeupCopyBtn) {
+    els.wakeupCopyBtn.addEventListener("click", () => {
+      state.settingsOpen = true;
+      els.settingsBox.hidden = false;
+      els.settingsToggle.classList.add("is-active");
     });
   }
 
@@ -945,6 +1026,7 @@
         unreadForAgent: state.unreadForAgent,
         agentListening: state.agentListening,
         agentTyping: state.agentTyping,
+        arenaTabConnected: state.arenaTabConnected,
         unreadAgentReplies: state.unreadAgentReplies,
         attachedSection: state.attachedSection ? { ...state.attachedSection } : null,
       };

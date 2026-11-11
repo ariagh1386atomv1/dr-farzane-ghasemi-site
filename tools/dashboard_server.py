@@ -128,7 +128,8 @@ class ChatStore:
         self._data: dict = {}
         self._agent_listening_until: float = 0.0
         self._agent_typing_until: float = 0.0
-        self._last_presence: tuple[bool, bool] = (False, False)
+        self._arena_tab_clients: int = 0
+        self._last_presence: tuple[bool, bool, bool] = (False, False, False)
         self._ensure_initialized()
 
     def _default_state(self) -> dict:
@@ -215,10 +216,36 @@ class ChatStore:
         return int(msgs[-1]["seq"]) if msgs else 0
 
     def is_agent_listening(self) -> bool:
-        return time.monotonic() < self._agent_listening_until
+        return time.monotonic() < self._agent_listening_until or self._arena_tab_clients > 0
 
     def is_agent_typing(self) -> bool:
         return time.monotonic() < self._agent_typing_until
+
+    def is_arena_tab_connected(self) -> bool:
+        return self._arena_tab_clients > 0
+
+    def update_arena_tab_clients(self, delta: int) -> None:
+        with self._lock:
+            self._arena_tab_clients = max(0, self._arena_tab_clients + delta)
+            cur = (
+                self.is_agent_listening(),
+                self.is_agent_typing(),
+                self.is_arena_tab_connected(),
+            )
+            changed = cur != self._last_presence
+            self._last_presence = cur
+            unread = self._unread_for_agent_locked()
+        if changed:
+            self.broker.publish(
+                "presence",
+                {
+                    "ok": True,
+                    "agentListening": cur[0],
+                    "agentTyping": cur[1],
+                    "arenaTabConnected": cur[2],
+                    "unreadForAgent": unread,
+                },
+            )
 
     def set_agent_heartbeat(self, ttl: float = 12.0, typing: bool | None = None) -> dict:
         now_m = time.monotonic()
@@ -234,7 +261,11 @@ class ChatStore:
             elif typing is False:
                 self._agent_typing_until = 0.0
 
-            cur = (self.is_agent_listening(), self.is_agent_typing())
+            cur = (
+                self.is_agent_listening(),
+                self.is_agent_typing(),
+                self.is_arena_tab_connected(),
+            )
             changed = cur != self._last_presence
             self._last_presence = cur
             unread = self._unread_for_agent_locked()
@@ -243,6 +274,7 @@ class ChatStore:
             "ok": True,
             "agentListening": cur[0],
             "agentTyping": cur[1],
+            "arenaTabConnected": cur[2],
             "unreadForAgent": unread,
         }
         if changed:
@@ -251,7 +283,11 @@ class ChatStore:
 
     def check_presence_expiry_and_notify(self) -> None:
         with self._lock:
-            cur = (self.is_agent_listening(), self.is_agent_typing())
+            cur = (
+                self.is_agent_listening(),
+                self.is_agent_typing(),
+                self.is_arena_tab_connected(),
+            )
             if cur == self._last_presence:
                 return
             self._last_presence = cur
@@ -262,6 +298,7 @@ class ChatStore:
                 "ok": True,
                 "agentListening": cur[0],
                 "agentTyping": cur[1],
+                "arenaTabConnected": cur[2],
                 "unreadForAgent": unread,
             },
         )
@@ -274,6 +311,7 @@ class ChatStore:
                 "mode": "live-bridge",
                 "agentListening": self.is_agent_listening(),
                 "agentTyping": self.is_agent_typing(),
+                "arenaTabConnected": self.is_arena_tab_connected(),
                 "totalMessages": len(self._data["messages"]),
                 "unreadForAgent": self._unread_for_agent_locked(),
                 "latestSeq": self._latest_seq_locked(),
@@ -291,6 +329,7 @@ class ChatStore:
                 "messages": filtered,
                 "agentListening": self.is_agent_listening(),
                 "agentTyping": self.is_agent_typing(),
+                "arenaTabConnected": self.is_arena_tab_connected(),
                 "unreadForAgent": self._unread_for_agent_locked(),
                 "latestSeq": self._latest_seq_locked(),
             }
@@ -368,6 +407,7 @@ class ChatStore:
                 "sectionTitle": clean_text(section_title, 160) or None,
                 "source": clean_text(source, 60) or "dashboard",
                 "externalId": clean_text(external_id, 80) or None,
+                "arenaTriggered": False,
                 "status": "queued_for_arena",
                 "action": None,
                 "createdAt": now,
@@ -402,6 +442,7 @@ class ChatStore:
 
         for msg in created:
             self.broker.publish("message", {"message": msg, "unreadForAgent": unread})
+        self.broker.publish("arena_trigger", {"message": user_msg})
 
         return {
             "ok": True,
@@ -409,6 +450,29 @@ class ChatStore:
             "created": created,
             "unreadForAgent": unread,
         }
+
+    def list_pending_triggers(self) -> list[dict]:
+        with self._lock:
+            self._reload_if_changed_locked()
+            return [
+                m
+                for m in self._data["messages"]
+                if m.get("role") == "user"
+                and m.get("status") == "queued_for_arena"
+                and not m.get("arenaTriggered")
+            ]
+
+    def claim_arena_trigger(self, message_id: str) -> dict:
+        with self._lock:
+            self._reload_if_changed_locked()
+            for m in self._data["messages"]:
+                if m.get("id") == message_id:
+                    if m.get("arenaTriggered"):
+                        return {"ok": True, "claimed": False, "alreadyTriggered": True}
+                    m["arenaTriggered"] = True
+                    self._write_locked()
+                    return {"ok": True, "claimed": True, "alreadyTriggered": False, "message": m}
+            return {"ok": False, "claimed": False, "error": "پیام یافت نشد."}
 
     def mark_read_by_arena(self, set_typing: bool = False) -> dict:
         with self._lock:
@@ -425,11 +489,12 @@ class ChatStore:
                 now_m = time.monotonic()
                 self._agent_listening_until = max(self._agent_listening_until, now_m + 90.0)
                 self._agent_typing_until = now_m + 90.0
-                self._last_presence = (True, True)
+                self._last_presence = (True, True, self.is_arena_tab_connected())
 
             unread = self._unread_for_agent_locked()
             listening = self.is_agent_listening()
             typing = self.is_agent_typing()
+            tab_conn = self.is_arena_tab_connected()
 
         if updated_ids:
             self.broker.publish(
@@ -443,6 +508,7 @@ class ChatStore:
                     "ok": True,
                     "agentListening": listening,
                     "agentTyping": typing,
+                    "arenaTabConnected": tab_conn,
                     "unreadForAgent": unread,
                 },
             )
@@ -486,7 +552,7 @@ class ChatStore:
             self._write_locked()
 
             self._agent_typing_until = 0.0
-            cur = (self.is_agent_listening(), False)
+            cur = (self.is_agent_listening(), False, self.is_arena_tab_connected())
             self._last_presence = cur
             unread = self._unread_for_agent_locked()
 
@@ -496,6 +562,7 @@ class ChatStore:
                 "ok": True,
                 "agentListening": cur[0],
                 "agentTyping": False,
+                "arenaTabConnected": cur[2],
                 "unreadForAgent": unread,
             },
         )
@@ -636,8 +703,15 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
             self._send_json(HTTPStatus.OK, {"ok": True, "count": len(items), "messages": items})
             return
 
+        if route == "/api/chat/pending-triggers":
+            items = self.app_server.store.list_pending_triggers()
+            self._send_json(HTTPStatus.OK, {"ok": True, "count": len(items), "messages": items})
+            return
+
         if route == "/api/chat/stream":
-            self._handle_sse()
+            qs = parse_qs(parsed.query)
+            is_arena_tab = qs.get("role", [""])[0] == "arena-tab"
+            self._handle_sse(is_arena_tab=is_arena_tab)
             return
 
         if route.startswith("/api/"):
@@ -705,6 +779,15 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
             self._send_json(HTTPStatus.CREATED, res)
             return
 
+        if route == "/api/chat/claim-trigger":
+            msg_id = str(body.get("messageId") or "").strip()
+            if not msg_id:
+                self._send_json(HTTPStatus.BAD_REQUEST, {"ok": False, "error": "شناسه پیام الزامی است."})
+                return
+            res = self.app_server.store.claim_arena_trigger(msg_id)
+            self._send_json(HTTPStatus.OK if res.get("ok") else HTTPStatus.NOT_FOUND, res)
+            return
+
         if route == "/api/chat/mark-read":
             res = self.app_server.store.mark_read_by_arena(set_typing=bool(body.get("typing")))
             self._send_json(HTTPStatus.OK, res)
@@ -725,7 +808,7 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
             return
         self._send_json(HTTPStatus.NOT_FOUND, {"ok": False, "error": "مسیر API یافت نشد."})
 
-    def _handle_sse(self) -> None:
+    def _handle_sse(self, is_arena_tab: bool = False) -> None:
         self.send_response(HTTPStatus.OK)
         self._send_cors_headers()
         self.send_header("Content-Type", "text/event-stream; charset=utf-8")
@@ -735,6 +818,8 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
         sub_q = self.app_server.store.broker.subscribe()
+        if is_arena_tab:
+            self.app_server.store.update_arena_tab_clients(+1)
         try:
             init_payload = json.dumps(self.app_server.store.get_status(), ensure_ascii=False)
             self.wfile.write(f"event: connected\ndata: {init_payload}\n\n".encode("utf-8"))
@@ -753,6 +838,8 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
         except (BrokenPipeError, ConnectionResetError, OSError):
             pass
         finally:
+            if is_arena_tab:
+                self.app_server.store.update_arena_tab_clients(-1)
             self.app_server.store.broker.unsubscribe(sub_q)
 
     def _serve_static(self, raw_path: str, head_only: bool) -> None:

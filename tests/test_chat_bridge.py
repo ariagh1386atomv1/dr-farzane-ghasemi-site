@@ -235,13 +235,15 @@ class ChatBridgeBackendTests(unittest.TestCase):
         self._req("POST", "/api/chat/agent-reply", {"text": "پاسخ زنده ایجنت از طریق SSE"})
 
         deadline = time.monotonic() + 3.0
-        while time.monotonic() < deadline and len(received_events) < 4:
+        while time.monotonic() < deadline and len(received_events) < 6:
             time.sleep(0.05)
 
         stop_evt.set()
         event_names = [e[0] for e in received_events]
         self.assertIn("connected", event_names)
         self.assertIn("message", event_names)
+        self.assertIn("arena_trigger", event_names)
+        self.assertIn("presence", event_names)
         self.assertIn("status_update", event_names)
 
     def test_06_concurrent_stress_integrity(self) -> None:
