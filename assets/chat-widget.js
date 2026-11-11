@@ -9,6 +9,8 @@
   const STORAGE_STATIC_MSGS_KEY = "studio_chat_static_msgs_v1";
   const GITHUB_REPO_ISSUES_NEW =
     "https://github.com/ariagh1386atomv1/dr-farzane-ghasemi-site/issues/new";
+  const GITHUB_REPO_COMMENTS_API =
+    "https://api.github.com/repos/ariagh1386atomv1/dr-farzane-ghasemi-site/issues/comments?sort=created&direction=desc&per_page=10";
 
   const FA_DIGITS = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
   const toFa = (val) => String(val).replace(/\d/g, (d) => FA_DIGITS[Number(d)]);
@@ -409,6 +411,59 @@
     }
   }
 
+  async function pollGithubRepliesInStaticMode() {
+    if (state.mode !== "static") return;
+    try {
+      const res = await fetch(GITHUB_REPO_COMMENTS_API, {
+        headers: { Accept: "application/vnd.github+json" },
+      });
+      if (!res.ok) return;
+      const comments = await res.json();
+      if (!Array.isArray(comments)) return;
+
+      const marker = "### پاسخ زنده ایجنت چت آرنا:";
+      const ordered = [...comments].reverse();
+      let changed = false;
+      for (const c of ordered) {
+        const body = String(c?.body || "");
+        if (!body.startsWith(marker)) continue;
+        const cleanReply = body.slice(marker.length).trim();
+        if (!cleanReply) continue;
+        const msgId = `gh_reply_${c.id}`;
+        const added = upsertMessage(
+          {
+            id: msgId,
+            seq: state.messages.length + 1,
+            role: "agent",
+            author: "ایجنت اصلی چت آرنا (از گیت‌هاب)",
+            text: cleanReply,
+            sectionId: null,
+            sectionTitle: null,
+            source: "github-issue-reply",
+            status: "delivered",
+            action: null,
+            createdAt: c.created_at || new Date().toISOString(),
+          },
+          true,
+        );
+        if (added) {
+          changed = true;
+          state.messages.forEach((m) => {
+            if (m.role === "user" && m.status === "local_only") {
+              m.status = "replied";
+            }
+          });
+        }
+      }
+      if (changed) {
+        renderMessages(true);
+        saveStaticMessages();
+      }
+    } catch {
+      /* ignore network/rate-limit errors in static mode */
+    }
+  }
+
   async function pollIncremental() {
     if (state.mode !== "live") return;
     try {
@@ -592,6 +647,10 @@
       loadStaticMessages();
       updateConnectionUI();
       renderMessages(true);
+      pollGithubRepliesInStaticMode();
+      state.pollTimer = setInterval(() => {
+        if (state.isOpen) pollGithubRepliesInStaticMode();
+      }, 15000);
       return false;
     }
   }
