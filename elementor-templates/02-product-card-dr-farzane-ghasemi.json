@@ -1,0 +1,768 @@
+{
+  "version": "0.4",
+  "title": "۰۲ — کارت محصول اختصاصی داروخانه دکتر فرزانه قاسمی (Loop Item)",
+  "type": "loop-item",
+  "content": [
+    {
+      "id": "b2000001",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_title": "کارت محصول اختصاصی دارونیک (Loop Item)",
+        "html_tag": "article",
+        "content_width": "full",
+        "min_height": {
+          "unit": "px",
+          "size": 355,
+          "sizes": []
+        },
+        "flex_direction": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "stretch",
+        "flex_gap": {
+          "column": "4",
+          "row": "4",
+          "isLinked": true,
+          "unit": "px"
+        },
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "border_border": "solid",
+        "border_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+        },
+        "border_color": "#EEF2F6",
+        "border_hover_border": "solid",
+        "border_hover_width": {
+          "unit": "px",
+          "top": "1",
+          "right": "1",
+          "bottom": "1",
+          "left": "1",
+          "isLinked": true
+        },
+        "border_hover_color": "#7CE3C2",
+        "border_radius": {
+          "unit": "px",
+          "top": "16",
+          "right": "16",
+          "bottom": "16",
+          "left": "16",
+          "isLinked": true
+        },
+        "box_shadow_hover_box_shadow_type": "yes",
+        "box_shadow_hover_box_shadow": {
+          "horizontal": 0,
+          "vertical": 10,
+          "blur": 30,
+          "spread": 0,
+          "color": "rgba(20, 33, 46, 0.10)"
+        },
+        "border_hover_transition": {
+          "unit": "px",
+          "size": 0.2,
+          "sizes": []
+        },
+        "padding": {
+          "unit": "px",
+          "top": "12",
+          "right": "12",
+          "bottom": "12",
+          "left": "12",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "b2000002",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "_title": "قاب خاکستری روشن تصویر محصول",
+            "content_width": "full",
+            "min_height": {
+              "unit": "px",
+              "size": 192,
+              "sizes": []
+            },
+            "min_height_mobile": {
+              "unit": "px",
+              "size": 156,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_justify_content": "center",
+            "flex_align_items": "center",
+            "background_background": "classic",
+            "background_color": "#F4F7F9",
+            "border_radius": {
+              "unit": "px",
+              "top": "12",
+              "right": "12",
+              "bottom": "12",
+              "left": "12",
+              "isLinked": true
+            },
+            "padding": {
+              "unit": "px",
+              "top": "12",
+              "right": "12",
+              "bottom": "12",
+              "left": "12",
+              "isLinked": true
+            },
+            "overflow": "hidden"
+          },
+          "elements": [
+            {
+              "id": "b2000003",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "_title": "نشان‌های گوشه راست تصویر",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_align_items": "flex-start",
+                "flex_gap": {
+                  "column": "4",
+                  "row": "4",
+                  "isLinked": true,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "position": "absolute",
+                "_offset_orientation_h": "start",
+                "_offset_x": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": []
+                },
+                "_offset_orientation_v": "start",
+                "_offset_y": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": []
+                },
+                "z_index": 5
+              },
+              "elements": [
+                {
+                  "id": "b2000004",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "نشان تخفیف ویژه (پویا)",
+                    "title": "تخفیف ویژه",
+                    "header_size": "span",
+                    "__dynamic__": {
+                      "title": "[elementor-tag id=\"b2d0001\" name=\"woocommerce-product-sale-tag\" settings=\"%7B%22text%22%3A%22%D9%88%DB%8C%DA%98%D9%87%20%25%22%7D\"]"
+                    },
+                    "title_color": "#FFFFFF",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 11,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "800",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.5,
+                      "sizes": []
+                    },
+                    "_background_background": "classic",
+                    "_background_color": "#E5322D",
+                    "_padding": {
+                      "unit": "px",
+                      "top": "3",
+                      "right": "8",
+                      "bottom": "3",
+                      "left": "8",
+                      "isLinked": false
+                    },
+                    "_border_radius": {
+                      "unit": "px",
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8",
+                      "isLinked": true
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "b2000016",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "نشان برچسب محصول (مثل پرفروش / جدید)",
+                    "title": "",
+                    "header_size": "span",
+                    "__dynamic__": {
+                      "title": "[elementor-tag id=\"b2d0010\" name=\"woocommerce-product-terms-tag\" settings=\"%7B%22taxonomy%22%3A%22product_tag%22%2C%22separator%22%3A%22%20%C2%B7%20%22%2C%22before%22%3A%22%22%7D\"]"
+                    },
+                    "title_color": "#B45309",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 10,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "800",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.5,
+                      "sizes": []
+                    },
+                    "_background_background": "classic",
+                    "_background_color": "#FFFBEB",
+                    "_padding": {
+                      "unit": "px",
+                      "top": "2",
+                      "right": "8",
+                      "bottom": "2",
+                      "left": "8",
+                      "isLinked": false
+                    },
+                    "_border_radius": {
+                      "unit": "px",
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8",
+                      "isLinked": true
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "b2000005",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "_title": "دکمه‌های علاقه‌مندی و مقایسه (گوشه چپ)",
+                "content_width": "full",
+                "width": {
+                  "unit": "px",
+                  "size": 34,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "flex_gap": {
+                  "column": "5",
+                  "row": "5",
+                  "isLinked": true,
+                  "unit": "px"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "position": "absolute",
+                "_offset_orientation_h": "end",
+                "_offset_x_end": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": []
+                },
+                "_offset_orientation_v": "start",
+                "_offset_y": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": []
+                },
+                "z_index": 5,
+                "hide_mobile": "hidden-mobile"
+              },
+              "elements": [
+                {
+                  "id": "b2000006",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "دکمه علاقه‌مندی",
+                    "text": "",
+                    "__dynamic__": {
+                      "link": "[elementor-tag id=\"b2d0002\" name=\"post-url\" settings=\"%7B%7D\"]"
+                    },
+                    "selected_icon": {
+                      "value": "far fa-heart",
+                      "library": "fa-regular"
+                    },
+                    "icon_indent": {
+                      "unit": "px",
+                      "size": 0,
+                      "sizes": []
+                    },
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 13,
+                      "sizes": []
+                    },
+                    "button_text_color": "#64798E",
+                    "hover_color": "#E5322D",
+                    "background_background": "classic",
+                    "background_color": "#FFFFFF",
+                    "button_background_hover_background": "classic",
+                    "button_background_hover_color": "#FFF5F5",
+                    "button_hover_border_color": "#E5322D",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "border_color": "#E6ECF1",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "99",
+                      "right": "99",
+                      "bottom": "99",
+                      "left": "99",
+                      "isLinked": true
+                    },
+                    "text_padding": {
+                      "unit": "px",
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8",
+                      "isLinked": true
+                    },
+                    "button_box_shadow_box_shadow_type": "yes",
+                    "button_box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 2,
+                      "blur": 6,
+                      "spread": 0,
+                      "color": "rgba(20, 33, 46, 0.06)"
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "b2000007",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "_title": "دکمه مقایسه محصول",
+                    "text": "",
+                    "__dynamic__": {
+                      "link": "[elementor-tag id=\"b2d0003\" name=\"post-url\" settings=\"%7B%7D\"]"
+                    },
+                    "selected_icon": {
+                      "value": "fas fa-exchange-alt",
+                      "library": "fa-solid"
+                    },
+                    "icon_indent": {
+                      "unit": "px",
+                      "size": 0,
+                      "sizes": []
+                    },
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "button_text_color": "#64798E",
+                    "hover_color": "#068462",
+                    "background_background": "classic",
+                    "background_color": "#FFFFFF",
+                    "button_background_hover_background": "classic",
+                    "button_background_hover_color": "#EAFAF4",
+                    "button_hover_border_color": "#26BD91",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "border_color": "#E6ECF1",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "99",
+                      "right": "99",
+                      "bottom": "99",
+                      "left": "99",
+                      "isLinked": true
+                    },
+                    "text_padding": {
+                      "unit": "px",
+                      "top": "8",
+                      "right": "8",
+                      "bottom": "8",
+                      "left": "8",
+                      "isLinked": true
+                    },
+                    "button_box_shadow_box_shadow_type": "yes",
+                    "button_box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 2,
+                      "blur": 6,
+                      "spread": 0,
+                      "color": "rgba(20, 33, 46, 0.06)"
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "b2000008",
+              "elType": "widget",
+              "widgetType": "image",
+              "isInner": false,
+              "settings": {
+                "_title": "تصویر شاخص محصول",
+                "image": {
+                  "url": "",
+                  "id": ""
+                },
+                "image_size": "woocommerce_thumbnail",
+                "align": "center",
+                "link_to": "custom",
+                "__dynamic__": {
+                  "image": "[elementor-tag id=\"b2d0004\" name=\"woocommerce-product-image-tag\" settings=\"%7B%7D\"]",
+                  "link": "[elementor-tag id=\"b2d0005\" name=\"post-url\" settings=\"%7B%7D\"]"
+                },
+                "width": {
+                  "unit": "px",
+                  "size": 168,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "px",
+                  "size": 136,
+                  "sizes": []
+                },
+                "height": {
+                  "unit": "px",
+                  "size": 168,
+                  "sizes": []
+                },
+                "height_mobile": {
+                  "unit": "px",
+                  "size": 136,
+                  "sizes": []
+                },
+                "object-fit": "contain",
+                "hover_animation": "grow"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "b2000009",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "_title": "مشخصات و امتیاز محصول",
+            "content_width": "full",
+            "flex_direction": "column",
+            "flex_align_items": "stretch",
+            "flex_gap": {
+              "column": "4",
+              "row": "4",
+              "isLinked": true,
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "8",
+              "right": "2",
+              "bottom": "4",
+              "left": "2",
+              "isLinked": false
+            },
+            "_flex_size": "grow"
+          },
+          "elements": [
+            {
+              "id": "b2000010",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "_title": "برند / دسته‌بندی محصول",
+                "title": "دسته محصول",
+                "header_size": "span",
+                "align": "right",
+                "__dynamic__": {
+                  "title": "[elementor-tag id=\"b2d0006\" name=\"woocommerce-product-terms-tag\" settings=\"%7B%22taxonomy%22%3A%22product_cat%22%2C%22separator%22%3A%22%20%C2%B7%20%22%2C%22before%22%3A%22%22%7D\"]"
+                },
+                "title_color": "#9AABBB",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 11,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.6,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "b2000011",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "_title": "عنوان محصول (۲ خطی استاندارد)",
+                "title": "عنوان محصول داروخانه",
+                "header_size": "h3",
+                "align": "right",
+                "__dynamic__": {
+                  "title": "[elementor-tag id=\"b2d0007\" name=\"woocommerce-product-title-tag\" settings=\"%7B%7D\"]",
+                  "link": "[elementor-tag id=\"b2d0008\" name=\"post-url\" settings=\"%7B%7D\"]"
+                },
+                "title_color": "#14212E",
+                "title_hover_color": "#068462",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 13,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.85,
+                  "sizes": []
+                },
+                "_margin": {
+                  "unit": "px",
+                  "top": "2",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "b2000012",
+              "elType": "widget",
+              "widgetType": "woocommerce-product-rating",
+              "isInner": false,
+              "settings": {
+                "_title": "امتیاز ستاره‌ای و تعداد دیدگاه",
+                "star_color": "#F5A623",
+                "empty_star_color": "#E3EAEF",
+                "link_color": "#9AABBB",
+                "star_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "space_between": {
+                  "unit": "px",
+                  "size": 4,
+                  "sizes": []
+                },
+                "alignment": "right",
+                "text_typography_typography": "custom",
+                "text_typography_font_size": {
+                  "unit": "px",
+                  "size": 11,
+                  "sizes": []
+                },
+                "text_typography_font_weight": "600"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "b2000013",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "_title": "ردیف پایین کارت (دکمه خرید و قیمت)",
+            "content_width": "full",
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "flex_align_items": "flex-end",
+            "flex_gap": {
+              "column": "8",
+              "row": "8",
+              "isLinked": true,
+              "unit": "px"
+            },
+            "padding": {
+              "unit": "px",
+              "top": "8",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "b2000015",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "_title": "دکمه سبز + افزودن به سبد خرید",
+                "text": "",
+                "__dynamic__": {
+                  "link": "[elementor-tag id=\"b2d0009\" name=\"woocommerce-add-to-cart\" settings=\"%7B%22quantity%22%3A%221%22%7D\"]"
+                },
+                "selected_icon": {
+                  "value": "fas fa-plus",
+                  "library": "fa-solid"
+                },
+                "icon_indent": {
+                  "unit": "px",
+                  "size": 0,
+                  "sizes": []
+                },
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 15,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "button_text_color": "#FFFFFF",
+                "hover_color": "#FFFFFF",
+                "background_background": "gradient",
+                "background_color": "#0FA47A",
+                "background_color_b": "#068462",
+                "background_gradient_angle": {
+                  "unit": "deg",
+                  "size": 180,
+                  "sizes": []
+                },
+                "button_background_hover_background": "classic",
+                "button_background_hover_color": "#066A50",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12",
+                  "isLinked": true
+                },
+                "text_padding": {
+                  "unit": "px",
+                  "top": "10",
+                  "right": "10",
+                  "bottom": "10",
+                  "left": "10",
+                  "isLinked": true
+                },
+                "button_box_shadow_box_shadow_type": "yes",
+                "button_box_shadow_box_shadow": {
+                  "horizontal": 0,
+                  "vertical": 6,
+                  "blur": 16,
+                  "spread": 0,
+                  "color": "rgba(6, 132, 98, 0.24)"
+                },
+                "_flex_size": "none"
+              },
+              "elements": []
+            },
+            {
+              "id": "b2000014",
+              "elType": "widget",
+              "widgetType": "woocommerce-product-price",
+              "isInner": false,
+              "settings": {
+                "_title": "قیمت محصول (تخفیف‌خورده پله‌ای)",
+                "text_align": "end",
+                "price_color": "#14212E",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.4,
+                  "sizes": []
+                },
+                "sale_price_color": "#14212E",
+                "sale_price_typography_typography": "custom",
+                "sale_price_typography_font_size": {
+                  "unit": "px",
+                  "size": 17,
+                  "sizes": []
+                },
+                "sale_price_typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 15,
+                  "sizes": []
+                },
+                "sale_price_typography_font_weight": "800",
+                "price_block": "yes",
+                "sale_price_spacing": {
+                  "unit": "px",
+                  "size": 2,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {
+    "source": "product"
+  }
+}

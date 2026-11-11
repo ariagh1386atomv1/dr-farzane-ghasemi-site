@@ -2133,3 +2133,375 @@ a {
   cursor: not-allowed;
   box-shadow: none;
 }
+
+/* ==================== DARUNIK PRODUCT CARD & ARCHIVE PREVIEWS ==================== */
+.prv-dk-surface {
+  direction: rtl;
+  font-family: var(--font-sans);
+  background: #f4f7f9;
+  padding: 18px;
+  color: #14212e;
+  user-select: none;
+}
+
+.prv-dk-sec-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.prv-dk-sec-head__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prv-dk-sec-bar {
+  width: 6px;
+  height: 28px;
+  border-radius: 99px;
+  background: #0fa47a;
+  flex-shrink: 0;
+}
+
+.prv-dk-sec-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: #14212e;
+  line-height: 1.3;
+}
+
+.prv-dk-sec-sub {
+  font-size: 11.5px;
+  color: #64798e;
+  margin-top: 2px;
+}
+
+.prv-dk-viewall {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #068462;
+}
+
+.prv-dk-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 2px 10px rgba(20, 33, 46, 0.06);
+}
+
+.prv-dk-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 12px;
+}
+
+.prv-dk-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid #e6ecf1;
+  background: #ffffff;
+  color: #35485c;
+  font-size: 11.5px;
+  font-weight: 700;
+  transition: all 0.16s ease;
+}
+
+.prv-dk-chip:hover {
+  border-color: #5fd4b0;
+  color: #068462;
+}
+
+.prv-dk-chip.is-active {
+  background: #0fa47a;
+  border-color: #0fa47a;
+  color: #ffffff;
+}
+
+.prv-dk-rail {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.prv-dk-rail--six {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.prv-dk-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 16px;
+  padding: 11px;
+  transition: all 0.2s ease;
+}
+
+.prv-dk-card:hover,
+.prv-dk-card.is-hovered {
+  border-color: #7ce3c2;
+  box-shadow: 0 10px 28px rgba(20, 33, 46, 0.1);
+}
+
+.prv-dk-card__imgbox {
+  position: relative;
+  background: #f4f7f9;
+  border-radius: 12px;
+  height: 138px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.prv-dk-badges {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 2;
+}
+
+.prv-dk-badge-sale {
+  background: #e5322d;
+  color: #ffffff;
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 7px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.prv-dk-badge-best {
+  background: #fffbeb;
+  color: #b45309;
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 7px;
+  line-height: 1.5;
+}
+
+.prv-dk-qactions {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+  z-index: 2;
+}
+
+.prv-dk-card:hover .prv-dk-qactions,
+.prv-dk-card.is-hovered .prv-dk-qactions {
+  opacity: 1;
+}
+
+.prv-dk-qbtn {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #e6ecf1;
+  color: #64798e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(20, 33, 46, 0.06);
+}
+
+.prv-dk-brand {
+  margin-top: 8px;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #9aabbb;
+}
+
+.prv-dk-title {
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #14212e;
+  line-height: 1.75;
+  min-height: 41px;
+}
+
+.prv-dk-rating {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10.5px;
+}
+
+.prv-dk-stars {
+  color: #f5a623;
+  letter-spacing: 0.5px;
+  font-size: 11px;
+}
+
+.prv-dk-score {
+  font-weight: 700;
+  color: #35485c;
+}
+
+.prv-dk-reviews {
+  color: #9aabbb;
+  font-size: 10px;
+}
+
+.prv-dk-foot {
+  margin-top: auto;
+  padding-top: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.prv-dk-plus {
+  width: 33px;
+  height: 33px;
+  border-radius: 11px;
+  background: linear-gradient(180deg, #0fa47a, #068462);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 6px 14px rgba(6, 132, 98, 0.24);
+  flex-shrink: 0;
+}
+
+.prv-dk-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.3;
+}
+
+.prv-dk-old {
+  font-size: 10.5px;
+  color: #9aabbb;
+  text-decoration: line-through;
+}
+
+.prv-dk-cur {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #14212e;
+}
+
+.prv-dk-toman {
+  font-size: 10px;
+  font-weight: 700;
+  color: #64798e;
+  margin-right: 2px;
+}
+
+/* Archive & Shop Two-Column Preview */
+.prv-dk-crumbs {
+  font-size: 11px;
+  color: #64798e;
+  margin-bottom: 10px;
+}
+
+.prv-dk-banner {
+  background: linear-gradient(255deg, #14212e 0%, #0a3c32 60%, #0fa47a 100%);
+  border-radius: 14px;
+  padding: 18px 22px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.prv-dk-banner__t {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.prv-dk-banner__d {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 4px;
+}
+
+.prv-dk-arch-layout {
+  display: grid;
+  grid-template-columns: 205px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.prv-dk-sidebar {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 2px 10px rgba(20, 33, 46, 0.05);
+}
+
+.prv-dk-side-group {
+  border-top: 1px solid #e6ecf1;
+  padding-top: 9px;
+  margin-top: 9px;
+}
+
+.prv-dk-side-label {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #14212e;
+  margin-bottom: 6px;
+}
+
+.prv-dk-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #35485c;
+  padding: 4px 0;
+}
+
+.prv-dk-sortbar {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 9px 12px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  box-shadow: 0 2px 10px rgba(20, 33, 46, 0.05);
+}
+
+.preview-viewport.is-mobile .prv-dk-rail,
+.preview-viewport.is-mobile .prv-dk-rail--six,
+.modal__stage.is-mobile .prv-dk-rail,
+.modal__stage.is-mobile .prv-dk-rail--six {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.preview-viewport.is-mobile .prv-dk-arch-layout,
+.modal__stage.is-mobile .prv-dk-arch-layout {
+  grid-template-columns: 1fr;
+}
+
