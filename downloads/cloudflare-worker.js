@@ -2,17 +2,15 @@
  * ============================================================================
  * Dr. Farzane Ghasemi Studio — 24/7 Serverless Cloudflare AI Chat Worker
  * ============================================================================
+ * Copy this ENTIRE file into Cloudflare Dashboard -> Worker -> Edit Code -> Deploy.
+ *
  * Works 24/7 on Cloudflare's Edge even when your computer is completely OFF.
  * Runs ONLY for ~1-3 seconds per message (zero idle runtime, zero timeouts).
  *
  * Supported AI Backends (auto-detected in priority order):
  *   1. GEMINI_API_KEY   (Secret)  -> Google Gemini 2.5 Flash / 2.0 Flash
  *   2. OPENAI_API_KEY   (Secret)  -> OpenAI / OpenRouter / Compatible API
- *   3. AI               (Binding) -> Cloudflare Built-in Workers AI (100% Free, no API key!)
- *
- * Optional Bindings:
- *   - CHAT_KV           (KV Namespace) -> Syncs chat history across mobile & desktop
- *   - GITHUB_TOKEN      (Secret)       -> Syncs notes/templates to GitHub repo
+ *   3. AI               (Binding) -> Cloudflare Built-in Workers AI (100% Free!)
  * ============================================================================
  */
 
@@ -55,6 +53,49 @@ function jsonResponse(status, payload) {
   });
 }
 
+function safeEnvString(env, key) {
+  try {
+    const val = env ? env[key] : undefined;
+    return typeof val === "string" ? val.trim() : "";
+  } catch {
+    return "";
+  }
+}
+
+function hasAiBinding(env) {
+  try {
+    return Boolean(env && env.AI && typeof env.AI.run === "function");
+  } catch {
+    return false;
+  }
+}
+
+function hasKvBinding(env) {
+  try {
+    return Boolean(env && env.CHAT_KV && typeof env.CHAT_KV.get === "function");
+  } catch {
+    return false;
+  }
+}
+
+function utf8ToBase64(str) {
+  const bytes = new TextEncoder().encode(str);
+  let binary = "";
+  for (let i = 0; i < bytes.length; i++) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+  return btoa(binary);
+}
+
+function base64ToUtf8(b64) {
+  const binary = atob(String(b64 || "").replace(/\s/g, ""));
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) {
+    bytes[i] = binary.charCodeAt(i);
+  }
+  return new TextDecoder().decode(bytes);
+}
+
 function cleanText(raw, maxLen = MAX_MESSAGE_CHARS) {
   if (typeof raw !== "string") return "";
   return raw
@@ -69,14 +110,13 @@ function makeId(prefix = "cf") {
 }
 
 function detectProvider(env) {
-  if (env && typeof env.GEMINI_API_KEY === "string" && env.GEMINI_API_KEY.trim()) {
+  if (safeEnvString(env, "GEMINI_API_KEY")) {
     return "gemini";
   }
-  const oaiKey = (env && (env.OPENAI_API_KEY || env.AI_API_KEY)) || "";
-  if (typeof oaiKey === "string" && oaiKey.trim()) {
+  if (safeEnvString(env, "OPENAI_API_KEY") || safeEnvString(env, "AI_API_KEY")) {
     return "openai-compatible";
   }
-  if (env && env.AI && typeof env.AI.run === "function") {
+  if (hasAiBinding(env)) {
     return "cloudflare-workers-ai";
   }
   return "setup-needed";
@@ -111,7 +151,7 @@ function defaultWelcomeMessage(provider) {
 }
 
 async function loadKvMessages(env, provider) {
-  if (!env || !env.CHAT_KV || typeof env.CHAT_KV.get !== "function") {
+  if (!hasKvBinding(env)) {
     return [defaultWelcomeMessage(provider)];
   }
   try {
@@ -126,7 +166,7 @@ async function loadKvMessages(env, provider) {
 }
 
 async function saveKvMessages(env, messages) {
-  if (!env || !env.CHAT_KV || typeof env.CHAT_KV.put !== "function") return false;
+  if (!hasKvBinding(env)) return false;
   try {
     const trimmed = messages.slice(-100);
     await env.CHAT_KV.put(KV_HISTORY_KEY, JSON.stringify(trimmed));
@@ -153,8 +193,10 @@ function buildConversationTurns(history, userText, sectionTitle) {
 
 async function callCloudflareWorkersAI(env, turns) {
   const messages = [{ role: "system", content: SYSTEM_PROMPT }, ...turns];
+  const customModel = safeEnvString(env, "CF_AI_MODEL");
   const models = [
-    (env && env.CF_AI_MODEL) || "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    ...(customModel ? [customModel] : []),
+    "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
     "@cf/meta/llama-3.1-8b-instruct",
   ];
 
@@ -182,8 +224,9 @@ async function callCloudflareWorkersAI(env, turns) {
 }
 
 async function callGeminiAPI(env, turns) {
-  const apiKey = env.GEMINI_API_KEY.trim();
-  const models = [(env && env.GEMINI_MODEL) || "gemini-2.5-flash", "gemini-2.0-flash"];
+  const apiKey = safeEnvString(env, "GEMINI_API_KEY");
+  const customModel = safeEnvString(env, "GEMINI_MODEL");
+  const models = [...(customModel ? [customModel] : []), "gemini-2.5-flash", "gemini-2.0-flash"];
 
   const contents = turns.map((t) => ({
     role: t.role === "user" ? "user" : "model",
@@ -224,9 +267,12 @@ async function callGeminiAPI(env, turns) {
 }
 
 async function callOpenAICompatible(env, turns) {
-  const apiKey = (env.OPENAI_API_KEY || env.AI_API_KEY || "").trim();
-  const baseUrl = String(env.AI_BASE_URL || "https://api.openai.com/v1").replace(/\/+$/, "");
-  const model = env.AI_MODEL || "gpt-4o-mini";
+  const apiKey = safeEnvString(env, "OPENAI_API_KEY") || safeEnvString(env, "AI_API_KEY");
+  const baseUrl = (safeEnvString(env, "AI_BASE_URL") || "https://api.openai.com/v1").replace(
+    /\/+$/,
+    "",
+  );
+  const model = safeEnvString(env, "AI_MODEL") || "gpt-4o-mini";
 
   const res = await fetch(`${baseUrl}/chat/completions`, {
     method: "POST",
@@ -259,7 +305,7 @@ async function generateAIReply(env, turns) {
         "✅ **ارتباط سایت شما با Cloudflare Worker کاملاً برقرار شد!**\n\n" +
         "فقط یک قدم ۳۰ ثانیه‌ای در پنل کلادفلر باقی مانده تا هوش مصنوعی رایگان آن فعال شود:\n" +
         "۱. در پنل کلادفلر وارد همین Worker شوید و به تب **Settings → Bindings** بروید.\n" +
-        "۲. روی **Add** کلیک کنید، گزینه **Workers AI** را انتخاب کنید و نام متغیر (Variable name) را دقیقاً `AI` بگذارید و **Deploy** بزنید.\n" +
+        "۲. روی **+ Add** کلیک کنید، گزینه **Workers AI** را انتخاب کنید و نام متغیر (Variable name) را دقیقاً `AI` بگذارید و **Deploy** بزنید.\n" +
         "*(یا در بخش Variables and Secrets یک کلید رایگان `GEMINI_API_KEY` اضافه کنید).* \n\n" +
         "بلافاصله پس از آن، بدون روشن بودن کامپیوتر ۲۴ ساعته پاسخگوی شما هستم!",
     };
@@ -278,13 +324,13 @@ async function generateAIReply(env, turns) {
 }
 
 async function optionalSyncLogToGithub(env, userMsg, replyMsg) {
-  const token = env && typeof env.GITHUB_TOKEN === "string" ? env.GITHUB_TOKEN.trim() : "";
+  const token = safeEnvString(env, "GITHUB_TOKEN");
   if (!token) return false;
 
-  const repo = (env.GITHUB_REPO || DEFAULT_GITHUB_REPO).trim();
-  const branch = (env.GITHUB_BRANCH || DEFAULT_GITHUB_BRANCH).trim();
-  const path = "cloud-chat-log.json";
-  const apiUrl = `https://api.github.com/repos/${repo}/contents/${path}`;
+  const repo = safeEnvString(env, "GITHUB_REPO") || DEFAULT_GITHUB_REPO;
+  const branch = safeEnvString(env, "GITHUB_BRANCH") || DEFAULT_GITHUB_BRANCH;
+  const filePath = "cloud-chat-log.json";
+  const apiUrl = `https://api.github.com/repos/${repo}/contents/${filePath}`;
   const headers = {
     Authorization: `Bearer ${token}`,
     Accept: "application/vnd.github+json",
@@ -299,18 +345,23 @@ async function optionalSyncLogToGithub(env, userMsg, replyMsg) {
     if (getRes.ok) {
       const fileJson = await getRes.json();
       sha = fileJson.sha;
-      const decoded = decodeURIComponent(escape(atob(String(fileJson.content || "").replace(/\s/g, ""))));
+      const decoded = base64ToUtf8(fileJson.content || "");
       const parsed = JSON.parse(decoded);
       if (Array.isArray(parsed)) existing = parsed;
     }
 
     existing.push(
-      { id: userMsg.id, role: "user", text: userMsg.text, sectionTitle: userMsg.sectionTitle, createdAt: userMsg.createdAt },
+      {
+        id: userMsg.id,
+        role: "user",
+        text: userMsg.text,
+        sectionTitle: userMsg.sectionTitle,
+        createdAt: userMsg.createdAt,
+      },
       { id: replyMsg.id, role: "agent", text: replyMsg.text, createdAt: replyMsg.createdAt },
     );
     const trimmed = existing.slice(-60);
-    const utf8Str = JSON.stringify(trimmed, null, 2);
-    const b64 = btoa(unescape(encodeURIComponent(utf8Str)));
+    const b64 = utf8ToBase64(JSON.stringify(trimmed, null, 2));
 
     await fetch(apiUrl, {
       method: "PUT",
@@ -338,8 +389,8 @@ function normalizeRoute(pathname) {
   return "unknown";
 }
 
-export async function handleChatRequest(request, env, ctx) {
-  const method = request.method.toUpperCase();
+async function handleChatRequest(request, env, ctx) {
+  const method = String(request?.method || "GET").toUpperCase();
   if (method === "OPTIONS") {
     return new Response(null, { status: 204, headers: CORS_HEADERS });
   }
@@ -347,8 +398,8 @@ export async function handleChatRequest(request, env, ctx) {
   const url = new URL(request.url);
   const route = normalizeRoute(url.pathname);
   const provider = detectProvider(env);
-  const hasKv = Boolean(env && env.CHAT_KV && typeof env.CHAT_KV.get === "function");
-  const hasGithubSync = Boolean(env && typeof env.GITHUB_TOKEN === "string" && env.GITHUB_TOKEN.trim());
+  const hasKv = hasKvBinding(env);
+  const hasGithubSync = Boolean(safeEnvString(env, "GITHUB_TOKEN"));
 
   if (route === "root" || route === "status") {
     if (method !== "GET" && method !== "HEAD") {
@@ -444,7 +495,8 @@ export async function handleChatRequest(request, env, ctx) {
       createdAt: nowUser,
     };
 
-    const historyInput = Array.isArray(body?.history) && body.history.length > 0 ? body.history : existing;
+    const historyInput =
+      Array.isArray(body?.history) && body.history.length > 0 ? body.history : existing;
     const turns = buildConversationTurns(historyInput, text, sectionTitle);
 
     let aiResult;
@@ -521,6 +573,15 @@ export async function handleChatRequest(request, env, ctx) {
 
 export default {
   async fetch(request, env, ctx) {
-    return handleChatRequest(request, env, ctx);
+    try {
+      return await handleChatRequest(request, env || {}, ctx || {});
+    } catch (err) {
+      return jsonResponse(500, {
+        ok: false,
+        mode: "cloudflare-edge",
+        error: "خطای داخلی در اجرای Worker رخ داد.",
+        detail: String(err?.message || err),
+      });
+    }
   },
 };

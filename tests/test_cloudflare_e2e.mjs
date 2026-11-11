@@ -76,7 +76,26 @@ async function runWorkerUnitTests() {
     const unconfData = await unconfRes.json();
     assert.equal(unconfData.provider, "setup-needed");
     assert.match(unconfData.reply.text, /Workers AI/);
-    console.log("✔ [1/6] CORS preflight & friendly setup-needed fallback verified");
+
+    // Verify hostile/throwing env proxy NEVER triggers Error 1101 uncaught exception
+    const hostileEnv = new Proxy(
+      {},
+      {
+        get() {
+          throw new Error("Simulated Cloudflare RpcStub property trap");
+        },
+      },
+    );
+    const safeRes = await workerDefault.fetch(
+      new Request("https://chat.workers.dev/"),
+      hostileEnv,
+      undefined,
+    );
+    assert.equal(safeRes.status, 200);
+    const safeJson = await safeRes.json();
+    assert.equal(safeJson.ok, true);
+    assert.equal(safeJson.mode, "cloudflare-edge");
+    console.log("✔ [1/6] CORS preflight, hostile-env resilience & setup-needed fallback verified");
   }
 
   // 2. Cloudflare Built-in Workers AI (Primary + Fallback Model + KV Persistence)
