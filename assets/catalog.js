@@ -3,7 +3,9 @@
    Each new section built in this project is registered here for 1-click download.
    ========================================================================== */
 
-window.STUDIO_DEFAULT_WORKER_URL = window.STUDIO_DEFAULT_WORKER_URL || "";
+window.STUDIO_DEFAULT_WORKER_URL =
+  window.STUDIO_DEFAULT_WORKER_URL ||
+  "https://raspy-butterfly-bd83.warm-orchard-3899.workers.dev";
 
 window.STUDIO_CATEGORIES = [
   { id: "all", label: "همه بخش‌ها" },

@@ -7,7 +7,8 @@
 (function () {
   "use strict";
 
-  const STORAGE_BRIDGE_KEY = "studio_chat_bridge_url_v1";
+  const STORAGE_BRIDGE_KEY = "studio_chat_worker_url_v2";
+  const LEGACY_BRIDGE_KEY = "studio_chat_bridge_url_v1";
   const STORAGE_CLOUD_MSGS_KEY = "studio_chat_cloud_msgs_v1";
   const STORAGE_STATIC_MSGS_KEY = "studio_chat_static_msgs_v1";
 
@@ -195,6 +196,7 @@
     return null;
   }
 
+  safeSetStorage(LEGACY_BRIDGE_KEY, "");
   const initialUrlBridge = extractWorkerParamFromUrl();
   if (initialUrlBridge) {
     safeSetStorage(STORAGE_BRIDGE_KEY, initialUrlBridge);
@@ -491,13 +493,13 @@
     state.pollTimer = setInterval(pollIncremental, 4000);
   }
 
-  async function probeStatusJson() {
+  async function probeStatusJson(base) {
     const paths = ["/api/chat/status", "/status"];
     for (const p of paths) {
       try {
         const controller = typeof AbortController !== "undefined" ? new AbortController() : null;
-        const timer = controller ? setTimeout(() => controller.abort(), 4000) : null;
-        const res = await fetch(apiEndpoint(p), {
+        const timer = controller ? setTimeout(() => controller.abort(), 4500) : null;
+        const res = await fetch(`${base}${p}`, {
           cache: "no-store",
           signal: controller ? controller.signal : undefined,
         });
@@ -512,15 +514,30 @@
 
   async function connectBridge(customBaseUrl) {
     closeLiveStreams();
+    let candidates = [];
     if (customBaseUrl !== undefined) {
-      state.bridgeUrl = normalizeBaseUrl(customBaseUrl);
-      safeSetStorage(STORAGE_BRIDGE_KEY, state.bridgeUrl);
+      const normalized = normalizeBaseUrl(customBaseUrl);
+      state.bridgeUrl = normalized;
+      safeSetStorage(STORAGE_BRIDGE_KEY, normalized);
+      candidates = [normalized];
+    } else {
+      const defWorker = normalizeBaseUrl(window.STUDIO_DEFAULT_WORKER_URL || "");
+      candidates = [...new Set([state.bridgeUrl, defWorker, ""])];
     }
+
+    let statusJson = null;
+    for (const cand of candidates) {
+      const probed = await probeStatusJson(cand);
+      if (probed) {
+        state.bridgeUrl = cand;
+        statusJson = probed;
+        break;
+      }
+    }
+
     if (els.bridgeInput) {
       els.bridgeInput.value = state.bridgeUrl;
     }
-
-    const statusJson = await probeStatusJson();
 
     /* 1. Serverless 24/7 Cloudflare Edge Mode */
     if (statusJson && statusJson.mode === "cloudflare-edge") {

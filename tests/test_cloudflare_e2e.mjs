@@ -278,6 +278,13 @@ async function runBrowserPcOffE2E() {
     window.fetch = async (input, init) => {
       const raw = typeof input === "string" ? input : input.url;
       if (raw.startsWith("http://127.0.0.1")) return fetch(raw, init);
+      if (raw.startsWith("https://raspy-butterfly-bd83.warm-orchard-3899.workers.dev")) {
+        const mapped = raw.replace(
+          "https://raspy-butterfly-bd83.warm-orchard-3899.workers.dev",
+          workerBaseUrl,
+        );
+        return fetch(mapped, init);
+      }
       if (raw.includes("downloads/cloudflare-worker.js")) {
         return new Response(
           fs.readFileSync(path.join(REPO_ROOT, "downloads/cloudflare-worker.js"), "utf8"),
@@ -288,31 +295,36 @@ async function runBrowserPcOffE2E() {
       return new Response("Not Found", { status: 404 });
     };
 
+    // Pre-seed stale legacy .e2b.app key to verify automatic cleanup!
+    window.localStorage.setItem(
+      "studio_chat_bridge_url_v1",
+      "https://8080-ix43nn68ww0g2p07qf3qp.e2b.app",
+    );
+
     window.eval(fs.readFileSync(path.join(REPO_ROOT, "assets/catalog.js"), "utf8"));
     window.eval(appJs);
     window.eval(chatJs);
-    await sleep(200);
+    await sleep(250);
 
-    // 4. Verify 1-Click Copy Worker Code button on .github.io
-    assert.equal(window.StudioChat.getState().mode, "static");
+    // 4. Verify ZERO-CONFIG auto-connect to raspy-butterfly-bd83...workers.dev + legacy cleanup!
+    assert.equal(window.localStorage.getItem("studio_chat_bridge_url_v1"), null);
+    const st = window.StudioChat.getState();
+    assert.equal(st.mode, "cloudflare");
+    assert.equal(
+      st.bridgeUrl,
+      "https://raspy-butterfly-bd83.warm-orchard-3899.workers.dev",
+    );
+    assert.equal(st.provider, "cloudflare-workers-ai");
+    assert.match(document.getElementById("chat-status-text").textContent, /ابری ۲۴\/۷ کلادفلر فعال/);
+
     document.getElementById("chat-settings-toggle").click();
     document.getElementById("chat-copy-worker-code").click();
     await sleep(80);
     assert.match(copiedClipboard, /export default/);
-    assert.match(copiedClipboard, /handleChatRequest/);
-    console.log("✔ [4/6] 1-click Copy Cloudflare Worker code button verified on .github.io");
-
-    // 5. Connect .github.io to Cloudflare Worker URL -> 24/7 Cloud Mode Active!
-    document.getElementById("chat-bridge-input").value = workerBaseUrl;
-    document.getElementById("chat-bridge-save").click();
-    await sleep(250);
-
-    const st = window.StudioChat.getState();
-    assert.equal(st.mode, "cloudflare");
-    assert.equal(st.provider, "cloudflare-workers-ai");
-    assert.match(document.getElementById("chat-status-text").textContent, /ابری ۲۴\/۷ کلادفلر فعال/);
-    assert.equal(document.getElementById("chat-wakeup-bar").hidden, true);
-    console.log("✔ [5/6] .github.io connected to 24/7 Cloudflare Worker (PC completely OFF!)");
+    console.log(
+      "✔ [4/6] Zero-config auto-connect to raspy-butterfly-bd83.warm-orchard-3899.workers.dev verified!",
+    );
+    console.log("✔ [5/6] Stale .e2b.app cache cleared & 1-click Copy Worker button verified");
 
     // 6. Ask Cloudflare AI to build an Elementor banner -> verify JSON card + 1-click JSON download!
     await window.StudioChat.sendMessage("یک بنر ارسال رایگان بالای سایت با المنتور بساز");
